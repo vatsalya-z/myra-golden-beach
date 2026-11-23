@@ -87,7 +87,7 @@ export function HeroSlider() {
             className="block md:hidden object-cover object-center w-full h-full"
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#041B21]/75 via-[#072A32]/35 to-[#041B21]/80" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#082B38]/75 via-[#063B49]/40 to-[#082B38]/80" />
 
           {/* Centered Content */}
           <div className="absolute inset-0 flex items-center justify-center">
@@ -114,7 +114,7 @@ export function HeroSlider() {
                       initial="hidden"
                       animate="visible"
                       exit="exit"
-                      className="font-playfair text-[clamp(1.95rem,5.5vw,4rem)] font-bold text-white leading-tight mb-5 text-center"
+                      className="font-playfair text-[clamp(1.95rem,5.5vw,4rem)] font-bold text-white leading-tight mb-5 text-center drop-shadow-[0_4px_18px_rgba(8,43,56,0.55)]"
                     >
                       {slide.heading}
                     </motion.h1>
@@ -142,7 +142,7 @@ export function HeroSlider() {
                     >
                       <Link
                         href={slide.ctaHref}
-                        className="inline-flex items-center justify-center px-8 py-3.5 bg-[#E0B45C] hover:bg-[#C6953B] text-[#072A32] font-bold rounded-sm transition-all duration-300 hover:-translate-y-0.5 shadow-lg hover:shadow-xl tracking-wide text-sm min-w-[210px]"
+                        className="luxury-btn-sheen inline-flex items-center justify-center px-8 py-3.5 bg-[#F6C46A] hover:bg-[#DCA94F] text-[#082B38] font-bold rounded-md transition-all duration-300 hover:-translate-y-0.5 shadow-lg hover:shadow-xl tracking-wide text-sm min-w-[210px]"
                       >
                         {slide.ctaLabel}
                       </Link>
@@ -181,11 +181,10 @@ export function HeroSlider() {
             onClick={() => goTo(idx)}
             aria-label={`Go to slide ${idx + 1}`}
             aria-current={idx === current ? "true" : undefined}
-            className={`rounded-full transition-all duration-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#E0B45C] ${
-              idx === current
-                ? "w-8 h-2.5 bg-[#E0B45C]"
-                : "w-2.5 h-2.5 bg-white/40 hover:bg-white/70"
-            }`}
+            className={`rounded-full transition-all duration-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#E0B45C] ${idx === current
+              ? "w-8 h-2.5 bg-[#E0B45C]"
+              : "w-2.5 h-2.5 bg-white/40 hover:bg-white/70"
+              }`}
           />
         ))}
       </div>

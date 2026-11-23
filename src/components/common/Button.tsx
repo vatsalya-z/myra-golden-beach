@@ -25,19 +25,19 @@ export function Button({
   type = "button",
 }: ButtonProps) {
   const base =
-    "inline-flex items-center justify-center gap-2 font-semibold transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:opacity-60 disabled:cursor-not-allowed rounded-sm";
+    "inline-flex items-center justify-center gap-2 font-semibold transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:opacity-60 disabled:cursor-not-allowed rounded-md";
 
   const variants = {
     primary:
-      "bg-gradient-to-r from-[#C89435] via-[#EBC878] to-[#C89435] hover:from-[#B88428] hover:via-[#E0B45C] hover:to-[#B88428] text-[#041B21] font-bold focus-visible:ring-[#E0B45C] shadow-[0_6px_20px_rgba(224,180,92,0.3)] hover:shadow-[0_10px_28px_rgba(224,180,92,0.45)] hover:-translate-y-0.5 active:translate-y-0",
+      "luxury-btn-sheen bg-[#F6C46A] hover:bg-[#DCA94F] text-[#082B38] font-bold focus-visible:ring-[#F6C46A] shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0",
     secondary:
-      "bg-gradient-to-r from-[#041B21] via-[#072A32] to-[#0E3E49] hover:from-[#C89435] hover:via-[#EBC878] hover:to-[#C89435] text-white hover:text-[#041B21] border border-[#E0B45C]/35 focus-visible:ring-[#072A32] shadow-md hover:shadow-[0_8px_24px_rgba(224,180,92,0.35)] hover:-translate-y-0.5 active:translate-y-0",
+      "bg-[#063B49] hover:bg-[#0B7285] text-white border border-[#F6C46A]/35 hover:border-[#F6C46A] focus-visible:ring-[#063B49] shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0",
     outline:
-      "border-2 border-[#072A32] text-[#072A32] hover:border-[#E0B45C] hover:text-[#946B1E] hover:bg-[#E0B45C]/10 focus-visible:ring-[#E0B45C] hover:-translate-y-0.5 active:translate-y-0",
+      "bg-transparent border-2 border-[#063B49] text-[#063B49] hover:border-[#0B7285] hover:bg-[#E8F6F7] hover:text-[#082B38] focus-visible:ring-[#0B7285] hover:-translate-y-0.5 active:translate-y-0",
     ghost:
-      "border border-white/35 text-white backdrop-blur-sm bg-white/5 hover:bg-white/15 hover:border-[#E0B45C] hover:text-[#F2D28B] focus-visible:ring-white/50",
+      "bg-transparent border border-white/40 text-white hover:bg-white/10 hover:border-[#F6C46A] hover:text-[#F6C46A] focus-visible:ring-white/50",
     accent:
-      "bg-gradient-to-r from-[#C89435] via-[#EBC878] to-[#C89435] hover:from-[#B88428] hover:via-[#E0B45C] hover:to-[#B88428] text-[#041B21] font-bold focus-visible:ring-[#E0B45C] shadow-[0_6px_20px_rgba(224,180,92,0.3)] hover:shadow-[0_10px_28px_rgba(224,180,92,0.45)] hover:-translate-y-0.5 active:translate-y-0",
+      "luxury-btn-sheen bg-[#F6C46A] hover:bg-[#DCA94F] text-[#082B38] font-bold focus-visible:ring-[#F6C46A] shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0",
   };
 
   const sizes = {

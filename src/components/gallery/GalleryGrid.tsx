@@ -174,7 +174,7 @@ export function GalleryGrid() {
     <>
       {/* Sticky Frosted Glass Filter Toolbar (Desktop + Horizontal Scroll Mobile) */}
       <div className="sticky top-[68px] md:top-[76px] z-30 mb-8 sm:mb-12">
-        <div className="bg-[#FCFAF6]/90 backdrop-blur-md border border-[#E5D9C3] rounded-2xl p-2 sm:p-2.5 shadow-[0_10px_30px_rgba(7,42,50,0.07)] flex flex-col md:flex-row items-stretch md:items-center justify-between gap-2.5">
+        <div className="bg-[#F9FBFC]/90 backdrop-blur-md border border-[#D9EEF2] rounded-2xl p-2 sm:p-2.5 shadow-[0_10px_30px_rgba(6,59,73,0.07)] flex flex-col md:flex-row items-stretch md:items-center justify-between gap-2.5">
           {/* Category Pills — Horizontal scrollable on mobile, clean wrap on desktop */}
           <div
             className="flex items-center gap-1.5 overflow-x-auto scrollbar-none pb-0.5 md:pb-0"
@@ -193,17 +193,17 @@ export function GalleryGrid() {
                     setLightboxIdx(null);
                   }}
                   aria-pressed={isActive}
-                  className={`relative shrink-0 px-3.5 sm:px-4 py-2 rounded-xl text-xs sm:text-[13px] font-medium transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#E0B45C] ${
+                  className={`relative shrink-0 px-3.5 sm:px-4 py-2 rounded-xl text-xs sm:text-[13px] font-medium transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F6C46A] ${
                     isActive
                       ? "text-white font-semibold"
-                      : "text-[#566970] hover:text-[#072A32] hover:bg-[#F3ECE0]/70"
+                      : "text-[#607780] hover:text-[#063B49] hover:bg-[#E8F6F7]/70"
                   }`}
                 >
                   {isActive && (
                     <motion.span
                       layoutId="gallery-active-pill"
                       transition={{ type: "spring", stiffness: 380, damping: 32 }}
-                      className="absolute inset-0 rounded-xl bg-gradient-to-r from-[#041B21] via-[#072A32] to-[#0E3E49] shadow-md border border-[#E0B45C]/40"
+                      className="absolute inset-0 rounded-xl bg-gradient-to-r from-[#082B38] via-[#063B49] to-[#0B7285] shadow-md border border-[#F6C46A]/40"
                     />
                   )}
                   <span className="relative z-10 inline-flex items-center gap-1.5">
@@ -211,8 +211,8 @@ export function GalleryGrid() {
                     <span
                       className={`text-[10px] font-mono px-1.5 py-0.5 rounded-full ${
                         isActive
-                          ? "bg-[#E0B45C]/20 text-[#F2D28B]"
-                          : "bg-[#072A32]/[0.06] text-[#566970]"
+                          ? "bg-[#F6C46A]/20 text-[#F6C46A]"
+                          : "bg-[#063B49]/[0.06] text-[#607780]"
                       }`}
                     >
                       {count}
@@ -224,7 +224,7 @@ export function GalleryGrid() {
           </div>
 
           {/* Right: Editorial / Grid View Toggle (Desktop & Tablet) */}
-          <div className="hidden md:flex items-center gap-1 pl-3 border-l border-[#E5D9C3] shrink-0">
+          <div className="hidden md:flex items-center gap-1 pl-3 border-l border-[#D9EEF2] shrink-0">
             <button
               type="button"
               onClick={() => setViewMode("editorial")}
@@ -232,8 +232,8 @@ export function GalleryGrid() {
               title="Editorial Lookbook"
               className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-all ${
                 viewMode === "editorial"
-                  ? "bg-[#E0B45C]/20 text-[#072A32] font-semibold"
-                  : "text-[#566970] hover:text-[#072A32]"
+                  ? "bg-[#F6C46A]/20 text-[#063B49] font-semibold"
+                  : "text-[#607780] hover:text-[#063B49]"
               }`}
             >
               <HiViewColumns size={15} />
@@ -246,8 +246,8 @@ export function GalleryGrid() {
               title="Uniform Grid"
               className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-all ${
                 viewMode === "grid"
-                  ? "bg-[#E0B45C]/20 text-[#072A32] font-semibold"
-                  : "text-[#566970] hover:text-[#072A32]"
+                  ? "bg-[#F6C46A]/20 text-[#063B49] font-semibold"
+                  : "text-[#607780] hover:text-[#063B49]"
               }`}
             >
               <HiSquares2X2 size={15} />
@@ -283,7 +283,7 @@ export function GalleryGrid() {
               <button
                 type="button"
                 onClick={() => setLightboxIdx(idx)}
-                className="relative w-full h-full block overflow-hidden rounded-2xl group bg-[#041B21] border border-[#E5D9C3]/80 hover:border-[#E0B45C]/70 shadow-[0_10px_28px_rgba(7,42,50,0.08)] hover:shadow-[0_22px_50px_rgba(7,42,50,0.22)] transition-all duration-500 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#E0B45C]"
+                className="relative w-full h-full block overflow-hidden rounded-2xl group bg-[#082B38] border border-[#D9EEF2]/80 hover:border-[#F6C46A]/70 shadow-[0_10px_28px_rgba(6,59,73,0.08)] hover:shadow-[0_22px_50px_rgba(6,59,73,0.22)] transition-all duration-500 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F6C46A]"
                 aria-label={`View ${img.alt}`}
               >
                 <Image
@@ -299,27 +299,27 @@ export function GalleryGrid() {
                 />
 
                 {/* Smooth Atmospheric Hover Scrim */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#041B21]/85 via-[#041B21]/15 to-transparent opacity-45 sm:opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#082B38]/85 via-[#082B38]/15 to-transparent opacity-45 sm:opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
                 {/* Subtle Inner Gold Hairline Frame on Hover */}
                 <div
                   aria-hidden="true"
-                  className="pointer-events-none absolute inset-2.5 rounded-xl border border-white/0 group-hover:border-[#E0B45C]/45 transition-colors duration-500"
+                  className="pointer-events-none absolute inset-2.5 rounded-xl border border-white/0 group-hover:border-[#F6C46A]/45 transition-colors duration-500"
                 />
 
                 {/* Top Corner Index & Expand Icon */}
                 <div className="absolute top-3.5 left-3.5 right-3.5 flex items-center justify-between opacity-0 group-hover:opacity-100 -translate-y-1 group-hover:translate-y-0 transition-all duration-400 z-10">
-                  <span className="font-mono text-[10px] tracking-[0.22em] px-2.5 py-1 rounded-full bg-[#041B21]/70 backdrop-blur-md border border-[#E0B45C]/40 text-[#F2D28B]">
+                  <span className="font-mono text-[10px] tracking-[0.22em] px-2.5 py-1 rounded-full bg-[#082B38]/70 backdrop-blur-md border border-[#F6C46A]/40 text-[#F6C46A]">
                     {photoNum}
                   </span>
-                  <span className="w-8 h-8 rounded-full bg-[#E0B45C] text-[#041B21] flex items-center justify-center shadow-lg transition-transform duration-300 group-hover:rotate-12">
+                  <span className="w-8 h-8 rounded-full bg-[#F6C46A] text-[#082B38] flex items-center justify-center shadow-lg transition-transform duration-300 group-hover:rotate-12">
                     <HiArrowUpRight size={14} />
                   </span>
                 </div>
 
                 {/* Bottom Glass Editorial Caption */}
                 <div className="absolute inset-x-0 bottom-0 p-3.5 sm:p-5 translate-y-2 opacity-90 sm:opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-400 z-10">
-                  <span className="inline-block text-[9px] sm:text-[10px] font-semibold uppercase tracking-[0.24em] text-[#E0B45C] mb-1">
+                  <span className="inline-block text-[9px] sm:text-[10px] font-semibold uppercase tracking-[0.24em] text-[#F6C46A] mb-1">
                     {catName}
                   </span>
                   <p className="text-white text-xs sm:text-sm font-medium leading-snug line-clamp-2">
@@ -335,14 +335,14 @@ export function GalleryGrid() {
       {/* Progressive Curated Load More CTA */}
       {hasMore && (
         <div className="mt-10 sm:mt-14 flex flex-col items-center gap-3">
-          <p className="text-xs text-[#566970] tracking-wide">
-            Showing <span className="font-semibold text-[#072A32]">{displayed.length}</span> of{" "}
-            <span className="font-semibold text-[#072A32]">{filtered.length}</span> resort photographs
+          <p className="text-xs text-[#607780] tracking-wide">
+            Showing <span className="font-semibold text-[#063B49]">{displayed.length}</span> of{" "}
+            <span className="font-semibold text-[#063B49]">{filtered.length}</span> resort photographs
           </p>
           <button
             type="button"
             onClick={() => setVisibleCount((prev) => prev + 12)}
-            className="luxury-btn-sheen group inline-flex items-center gap-2.5 px-8 py-3.5 bg-gradient-to-r from-[#041B21] via-[#072A32] to-[#0E3E49] hover:from-[#C89435] hover:via-[#EBC878] hover:to-[#C89435] text-white hover:text-[#041B21] border border-[#E0B45C]/40 font-semibold rounded-full text-xs sm:text-sm tracking-wide shadow-[0_10px_28px_rgba(7,42,50,0.18)] hover:shadow-[0_12px_32px_rgba(224,180,92,0.35)] hover:-translate-y-0.5 transition-all duration-300"
+            className="luxury-btn-sheen group inline-flex items-center gap-2.5 px-8 py-3.5 bg-gradient-to-r from-[#082B38] via-[#063B49] to-[#0B7285] hover:from-[#DCA94F] hover:via-[#F6C46A] hover:to-[#DCA94F] text-white hover:text-[#082B38] border border-[#F6C46A]/40 font-semibold rounded-full text-xs sm:text-sm tracking-wide shadow-[0_10px_28px_rgba(6,59,73,0.18)] hover:shadow-[0_12px_32px_rgba(246,196,106,0.35)] hover:-translate-y-0.5 transition-all duration-300"
           >
             <span>
               Explore More Photographs (+{Math.min(12, filtered.length - displayed.length)})
@@ -356,7 +356,7 @@ export function GalleryGrid() {
       )}
 
       {filtered.length === 0 && (
-        <p className="text-center text-[#566970] text-sm py-12">
+        <p className="text-center text-[#607780] text-sm py-12">
           No images in this category yet. Check back soon.
         </p>
       )}
@@ -370,7 +370,7 @@ export function GalleryGrid() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.25 }}
-            className="fixed inset-0 z-[100] flex flex-col justify-between bg-[#041B21]/95 backdrop-blur-xl p-4 sm:p-6"
+            className="fixed inset-0 z-[100] flex flex-col justify-between bg-[#082B38]/95 backdrop-blur-xl p-4 sm:p-6"
             onClick={close}
             role="dialog"
             aria-modal="true"
@@ -382,7 +382,7 @@ export function GalleryGrid() {
               onClick={(e) => e.stopPropagation()}
             >
               <div className="flex items-center gap-3">
-                <span className="font-mono text-xs tracking-[0.22em] text-[#E0B45C] bg-white/[0.06] border border-[#E0B45C]/30 px-3 py-1 rounded-full">
+                <span className="font-mono text-xs tracking-[0.22em] text-[#F6C46A] bg-white/[0.06] border border-[#F6C46A]/30 px-3 py-1 rounded-full">
                   {String((lightboxIdx ?? 0) + 1).padStart(2, "0")} /{" "}
                   {String(filtered.length).padStart(2, "0")}
                 </span>
@@ -393,7 +393,7 @@ export function GalleryGrid() {
 
               <button
                 type="button"
-                className="w-10 h-10 rounded-full bg-white/[0.08] border border-white/20 text-white hover:border-[#E0B45C] hover:text-[#E0B45C] transition-all flex items-center justify-center"
+                className="w-10 h-10 rounded-full bg-white/[0.08] border border-white/20 text-white hover:border-[#F6C46A] hover:text-[#F6C46A] transition-all flex items-center justify-center"
                 aria-label="Close image viewer"
                 onClick={close}
               >
@@ -405,7 +405,7 @@ export function GalleryGrid() {
             <div className="relative flex-1 flex items-center justify-center my-4 min-h-0">
               <button
                 type="button"
-                className="absolute left-0 sm:left-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-[#041B21]/70 border border-white/20 text-white hover:bg-[#E0B45C] hover:text-[#041B21] hover:border-[#E0B45C] transition-all flex items-center justify-center backdrop-blur-md"
+                className="absolute left-0 sm:left-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-[#082B38]/70 border border-white/20 text-white hover:bg-[#F6C46A] hover:text-[#082B38] hover:border-[#F6C46A] transition-all flex items-center justify-center backdrop-blur-md"
                 aria-label="Previous image"
                 onClick={(e) => {
                   e.stopPropagation();
@@ -417,7 +417,7 @@ export function GalleryGrid() {
 
               <button
                 type="button"
-                className="absolute right-0 sm:right-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-[#041B21]/70 border border-white/20 text-white hover:bg-[#E0B45C] hover:text-[#041B21] hover:border-[#E0B45C] transition-all flex items-center justify-center backdrop-blur-md"
+                className="absolute right-0 sm:right-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-[#082B38]/70 border border-white/20 text-white hover:bg-[#F6C46A] hover:text-[#082B38] hover:border-[#F6C46A] transition-all flex items-center justify-center backdrop-blur-md"
                 aria-label="Next image"
                 onClick={(e) => {
                   e.stopPropagation();
@@ -475,7 +475,7 @@ export function GalleryGrid() {
                       aria-label={`Jump to photo ${tIdx + 1}`}
                       className={`relative w-12 h-9 sm:w-14 sm:h-10 rounded-md overflow-hidden shrink-0 border-2 transition-all duration-300 ${
                         isCurrent
-                          ? "border-[#E0B45C] scale-110 opacity-100 shadow-[0_0_12px_rgba(224,180,92,0.5)]"
+                          ? "border-[#F6C46A] scale-110 opacity-100 shadow-[0_0_12px_rgba(246,196,106,0.5)]"
                           : "border-white/15 opacity-45 hover:opacity-85"
                       }`}
                     >

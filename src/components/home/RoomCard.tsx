@@ -18,10 +18,10 @@ export function RoomCard({ room }: RoomCardProps) {
   return (
     <motion.article
       whileHover={{ y: -5, transition: { duration: 0.25 } }}
-      className="h-full flex flex-col justify-between group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow border border-[#E5D9C3]"
+      className="h-full flex flex-col justify-between group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow border border-[#D9EEF2]"
     >
       <div>
-        <div className="relative h-56 sm:h-64 overflow-hidden bg-[#F3ECE0]">
+        <div className="relative h-56 sm:h-64 overflow-hidden bg-[#E8F6F7]">
           <AnimatePresence mode="wait">
             <motion.div
               key={activeImage}
@@ -42,7 +42,7 @@ export function RoomCard({ room }: RoomCardProps) {
           </AnimatePresence>
 
           {room.badge && (
-            <span className="absolute top-3.5 left-3.5 bg-[#E0B45C] text-[#072A32] text-[11px] sm:text-xs font-bold px-2.5 sm:px-3 py-1 rounded-sm tracking-wide shadow-md z-10">
+            <span className="absolute top-3.5 left-3.5 bg-[#F6C46A] text-[#063B49] text-[11px] sm:text-xs font-bold px-2.5 sm:px-3 py-1 rounded-sm tracking-wide shadow-md z-10">
               {room.badge}
             </span>
           )}
@@ -55,7 +55,7 @@ export function RoomCard({ room }: RoomCardProps) {
                   type="button"
                   onClick={() => setActiveIdx(i)}
                   className={`w-2 h-2 rounded-full transition-all ${
-                    activeIdx === i ? "bg-[#E0B45C] w-5" : "bg-white/70 hover:bg-white"
+                    activeIdx === i ? "bg-[#F6C46A] w-5" : "bg-white/70 hover:bg-white"
                   }`}
                   aria-label={`View ${room.name} image ${i + 1}`}
                 />
@@ -65,14 +65,14 @@ export function RoomCard({ room }: RoomCardProps) {
         </div>
 
         {room.images.length > 1 && (
-          <div className="px-4 pt-2.5 pb-1 flex gap-2 overflow-x-auto scrollbar-none bg-[#FCFAF6] border-b border-[#E5D9C3]">
+          <div className="px-4 pt-2.5 pb-1 flex gap-2 overflow-x-auto scrollbar-none bg-[#F9FBFC] border-b border-[#D9EEF2]">
             {room.images.slice(0, 4).map((img, i) => (
               <button
                 key={img}
                 type="button"
                 onClick={() => setActiveIdx(i)}
                 className={`relative w-12 h-9 rounded overflow-hidden shrink-0 transition-all border ${
-                  activeIdx === i ? "border-[#E0B45C] ring-1 ring-[#E0B45C]" : "border-[#E5D9C3] opacity-70 hover:opacity-100"
+                  activeIdx === i ? "border-[#F6C46A] ring-1 ring-[#F6C46A]" : "border-[#D9EEF2] opacity-70 hover:opacity-100"
                 }`}
                 aria-label={`Thumbnail ${i + 1}`}
               >
@@ -90,18 +90,18 @@ export function RoomCard({ room }: RoomCardProps) {
 
         {/* Card Content */}
         <div className="p-5 sm:p-6">
-          <h3 className="font-playfair text-xl sm:text-2xl font-bold text-[#072A32] mb-1 group-hover:text-[#E0B45C] transition-colors">
+          <h3 className="font-playfair text-xl sm:text-2xl font-bold text-[#063B49] mb-1 group-hover:text-[#F6C46A] transition-colors">
             {room.name}
           </h3>
-          <p className="text-[#E0B45C] text-xs font-medium tracking-wide mb-2.5">
+          <p className="text-[#F6C46A] text-xs font-medium tracking-wide mb-2.5">
             {room.tagline}
           </p>
-          <p className="text-[#566970] text-xs sm:text-sm leading-relaxed mb-4 line-clamp-2">
+          <p className="text-[#607780] text-xs sm:text-sm leading-relaxed mb-4 line-clamp-2">
             {room.description}
           </p>
 
-          <div className="flex items-center gap-2 text-xs text-[#566970] mb-4 pb-3.5 border-b border-[#E5D9C3]">
-            <span className="font-semibold uppercase tracking-wider text-[10px] bg-[#E0B45C]/15 text-[#946B1E] px-2 py-0.5 rounded-sm">
+          <div className="flex items-center gap-2 text-xs text-[#607780] mb-4 pb-3.5 border-b border-[#D9EEF2]">
+            <span className="font-semibold uppercase tracking-wider text-[10px] bg-[#F6C46A]/15 text-[#0B7285] px-2 py-0.5 rounded-sm">
               Guests
             </span>
             <span>
@@ -115,7 +115,7 @@ export function RoomCard({ room }: RoomCardProps) {
             {room.amenities.slice(0, 4).map((a) => (
               <span
                 key={a.label}
-                className="text-[11px] sm:text-xs bg-[#FCFAF6] text-[#566970] px-2 py-1 rounded-sm border border-[#E5D9C3] truncate text-center"
+                className="text-[11px] sm:text-xs bg-[#F9FBFC] text-[#607780] px-2 py-1 rounded-sm border border-[#D9EEF2] truncate text-center"
               >
                 {a.label}
               </span>
@@ -125,8 +125,8 @@ export function RoomCard({ room }: RoomCardProps) {
       </div>
 
       {/* Footer Action */}
-      <div className="px-5 pb-5 sm:px-6 sm:pb-6 pt-3 flex items-center justify-between border-t border-[#E5D9C3] mt-auto">
-        <span className="text-xs text-[#566970] italic">
+      <div className="px-5 pb-5 sm:px-6 sm:pb-6 pt-3 flex items-center justify-between border-t border-[#D9EEF2] mt-auto">
+        <span className="text-xs text-[#607780] italic">
           {room.priceNote}
         </span>
         <Button href="/contact" size="sm" variant="primary">

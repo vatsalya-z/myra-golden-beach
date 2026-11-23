@@ -37,7 +37,7 @@ export function MobileMenu({ isOpen, onClose, currentPath }: MobileMenuProps) {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3, ease: "easeOut" }}
-            className="absolute inset-0 bg-[#041B21]/75 backdrop-blur-md"
+            className="absolute inset-0 bg-[#082B38]/75 backdrop-blur-md"
             onClick={onClose}
             aria-hidden="true"
           />
@@ -54,27 +54,27 @@ export function MobileMenu({ isOpen, onClose, currentPath }: MobileMenuProps) {
               duration: reducedMotion ? 0.15 : 0.42,
               ease: [0.22, 1, 0.36, 1],
             }}
-            className="absolute top-0 right-0 bottom-0 h-[100dvh] w-[86vw] max-w-[380px] bg-gradient-to-b from-[#041B21] via-[#072A32] to-[#041B21] border-l border-[#E0B45C]/30 shadow-[-16px_0_50px_rgba(0,0,0,0.65)] flex flex-col justify-between overflow-hidden"
+            className="absolute top-0 right-0 bottom-0 h-[100dvh] w-[86vw] max-w-[380px] bg-gradient-to-b from-[#082B38] via-[#063B49] to-[#082B38] border-l border-[#F6C46A]/30 shadow-[-16px_0_50px_rgba(0,0,0,0.65)] flex flex-col justify-between overflow-hidden"
           >
             {/* Subtle ambient gold glow inside drawer */}
             <div
               aria-hidden="true"
-              className="pointer-events-none absolute -top-24 -right-24 w-64 h-64 rounded-full bg-[#E0B45C]/12 blur-3xl"
+              className="pointer-events-none absolute -top-24 -right-24 w-64 h-64 rounded-full bg-[#F6C46A]/12 blur-3xl"
             />
             <div
               aria-hidden="true"
-              className="pointer-events-none absolute bottom-20 -left-20 w-56 h-56 rounded-full bg-[#0E3E49]/45 blur-3xl"
+              className="pointer-events-none absolute bottom-20 -left-20 w-56 h-56 rounded-full bg-[#0B7285]/45 blur-3xl"
             />
 
             {/* Header: Brand Lockup + Gold-Ringed Close Button */}
-            <div className="relative z-10 flex items-center justify-between px-6 py-5 border-b border-[#E0B45C]/18 shrink-0">
+            <div className="relative z-10 flex items-center justify-between px-6 py-5 border-b border-[#F6C46A]/18 shrink-0">
               <Link
                 href="/"
                 onClick={onClose}
                 className="flex items-center gap-3"
                 aria-label="MYRA Golden Beach Resort — Home"
               >
-                <div className="relative w-10 h-10 rounded-lg overflow-hidden ring-1 ring-[#E0B45C]/40 bg-[#041B21] shrink-0">
+                <div className="relative w-10 h-10 rounded-lg overflow-hidden ring-1 ring-[#F6C46A]/40 bg-[#082B38] shrink-0">
                   <Image
                     src="/logo/logo.png"
                     alt="MYRA Golden Beach Resort"
@@ -84,7 +84,7 @@ export function MobileMenu({ isOpen, onClose, currentPath }: MobileMenuProps) {
                   />
                 </div>
                 <div className="flex flex-col leading-none">
-                  <span className="text-[#EBC878] font-playfair font-bold text-base tracking-wide">
+                  <span className="text-[#F6C46A] font-playfair font-bold text-base tracking-wide">
                     MYRA GOLDEN
                   </span>
                   <span className="text-white/55 text-[9px] uppercase tracking-[0.26em] mt-1">
@@ -97,7 +97,7 @@ export function MobileMenu({ isOpen, onClose, currentPath }: MobileMenuProps) {
                 type="button"
                 onClick={onClose}
                 aria-label="Close navigation menu"
-                className="w-9 h-9 rounded-full border border-white/20 hover:border-[#E0B45C] bg-white/[0.04] hover:bg-[#E0B45C]/15 text-white/80 hover:text-[#E0B45C] flex items-center justify-center transition-all duration-300 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#E0B45C]"
+                className="w-9 h-9 rounded-full border border-white/20 hover:border-[#F6C46A] bg-white/[0.04] hover:bg-[#F6C46A]/15 text-white/80 hover:text-[#F6C46A] flex items-center justify-center transition-all duration-300 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F6C46A]"
               >
                 <HiXMark size={20} />
               </button>
@@ -109,7 +109,7 @@ export function MobileMenu({ isOpen, onClose, currentPath }: MobileMenuProps) {
               aria-label="Mobile menu links"
             >
               <div>
-                <p className="text-[10px] font-semibold uppercase tracking-[0.3em] text-[#E0B45C]/80 mb-3">
+                <p className="text-[10px] font-semibold uppercase tracking-[0.3em] text-[#F6C46A]/80 mb-3">
                   Explore Resort
                 </p>
 
@@ -138,8 +138,8 @@ export function MobileMenu({ isOpen, onClose, currentPath }: MobileMenuProps) {
                           className={cn(
                             "group flex items-center justify-between py-3.5 transition-all duration-300",
                             isActive
-                              ? "text-[#F2D28B]"
-                              : "text-white/85 hover:text-[#EBC878]"
+                              ? "text-[#F6C46A]"
+                              : "text-white/85 hover:text-[#F6C46A]"
                           )}
                           aria-current={isActive ? "page" : undefined}
                         >
@@ -148,8 +148,8 @@ export function MobileMenu({ isOpen, onClose, currentPath }: MobileMenuProps) {
                               className={cn(
                                 "font-mono text-[11px] tracking-[0.18em] transition-colors",
                                 isActive
-                                  ? "text-[#E0B45C]"
-                                  : "text-white/35 group-hover:text-[#E0B45C]/80"
+                                  ? "text-[#F6C46A]"
+                                  : "text-white/35 group-hover:text-[#F6C46A]/80"
                               )}
                             >
                               {num}
@@ -167,7 +167,7 @@ export function MobileMenu({ isOpen, onClose, currentPath }: MobileMenuProps) {
                           <div className="flex items-center gap-2">
                             {isActive && (
                               <span
-                                className="w-1.5 h-1.5 rounded-full bg-[#E0B45C] shadow-[0_0_8px_rgba(224,180,92,0.8)]"
+                                className="w-1.5 h-1.5 rounded-full bg-[#F6C46A] shadow-[0_0_8px_rgba(246,196,106,0.8)]"
                                 aria-hidden="true"
                               />
                             )}
@@ -176,8 +176,8 @@ export function MobileMenu({ isOpen, onClose, currentPath }: MobileMenuProps) {
                               className={cn(
                                 "transition-all duration-300",
                                 isActive
-                                  ? "text-[#E0B45C] opacity-100"
-                                  : "text-white/30 group-hover:text-[#E0B45C] group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                                  ? "text-[#F6C46A] opacity-100"
+                                  : "text-white/30 group-hover:text-[#F6C46A] group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
                               )}
                             />
                           </div>
@@ -193,10 +193,10 @@ export function MobileMenu({ isOpen, onClose, currentPath }: MobileMenuProps) {
                 initial={reducedMotion ? false : { opacity: 0, y: 12 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.35, duration: 0.45 }}
-                className="mt-6 rounded-xl bg-white/[0.04] border border-[#E0B45C]/20 p-4 backdrop-blur-sm"
+                className="mt-6 rounded-xl bg-white/[0.04] border border-[#F6C46A]/20 p-4 backdrop-blur-sm"
               >
                 <div className="mb-2">
-                  <span className="text-[10px] font-semibold uppercase tracking-[0.24em] text-[#E0B45C]">
+                  <span className="text-[10px] font-semibold uppercase tracking-[0.24em] text-[#F6C46A]">
                     24/7 Resort Concierge
                   </span>
                 </div>
@@ -204,19 +204,19 @@ export function MobileMenu({ isOpen, onClose, currentPath }: MobileMenuProps) {
                   {siteConfig.phoneDisplay}
                 </p>
                 <div className="flex items-start gap-1.5 mt-1.5 text-white/55 text-[11px] leading-relaxed">
-                  <HiMapPin size={13} className="text-[#E0B45C] shrink-0 mt-0.5" />
+                  <HiMapPin size={13} className="text-[#F6C46A] shrink-0 mt-0.5" />
                   <span>Kotha Peta Rural, Chirala, Andhra Pradesh 523157</span>
                 </div>
               </motion.div>
             </nav>
 
             {/* Footer Action Dock — Compact, Safe-Area Aware, Never Cut Off */}
-            <div className="relative z-10 px-6 pt-4 pb-[max(1.25rem,env(safe-area-inset-bottom))] border-t border-[#E0B45C]/18 bg-[#041B21]/95 space-y-2.5 shrink-0">
+            <div className="relative z-10 px-6 pt-4 pb-[max(1.25rem,env(safe-area-inset-bottom))] border-t border-[#F6C46A]/18 bg-[#082B38]/95 space-y-2.5 shrink-0">
               {/* Primary Luxury CTA */}
               <Link
                 href="/contact"
                 onClick={onClose}
-                className="luxury-btn-sheen flex items-center justify-center gap-2 w-full py-3 px-4 bg-gradient-to-r from-[#C89435] via-[#EBC878] to-[#C89435] text-[#041B21] rounded-lg text-xs font-bold uppercase tracking-[0.18em] shadow-[0_8px_22px_rgba(224,180,92,0.3)] active:scale-[0.98] transition-transform"
+                className="luxury-btn-sheen flex items-center justify-center gap-2 w-full py-3 px-4 bg-gradient-to-r from-[#DCA94F] via-[#F6C46A] to-[#DCA94F] text-[#082B38] rounded-lg text-xs font-bold uppercase tracking-[0.18em] shadow-[0_8px_22px_rgba(246,196,106,0.3)] active:scale-[0.98] transition-transform"
               >
                 <span>Book Your Stay</span>
                 <HiArrowUpRight size={15} />
@@ -242,7 +242,7 @@ export function MobileMenu({ isOpen, onClose, currentPath }: MobileMenuProps) {
                   className="flex items-center justify-center gap-2 py-2.5 px-3 bg-white/[0.06] hover:bg-white/15 border border-white/20 text-white rounded-lg text-xs font-semibold tracking-wide transition-all active:scale-[0.98]"
                   aria-label={`Call ${siteConfig.phoneDisplay}`}
                 >
-                  <FaPhoneAlt size={12} className="text-[#E0B45C]" />
+                  <FaPhoneAlt size={12} className="text-[#F6C46A]" />
                   <span>Call Now</span>
                 </a>
               </div>

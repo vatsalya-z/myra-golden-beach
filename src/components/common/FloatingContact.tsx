@@ -18,10 +18,10 @@ export function FloatingContact() {
       <a
         href={`tel:${siteConfig.phone}`}
         aria-label="Call MYRA Golden Beach Resort"
-        className="flex items-center justify-center rounded-full bg-[#072A32] text-white shadow-lg hover:bg-[#041B21] hover:scale-110 transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#E0B45C] focus-visible:ring-offset-2 border border-[#E0B45C]/30"
+        className="flex items-center justify-center rounded-full bg-[#063B49] text-white shadow-lg hover:bg-[#082B38] hover:scale-110 transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F6C46A] focus-visible:ring-offset-2 border border-[#F6C46A]/30"
         style={{ width: "52px", height: "52px" }}
       >
-        <FaPhoneAlt size={18} className="text-[#E0B45C]" />
+        <FaPhoneAlt size={18} className="text-[#F6C46A]" />
       </a>
 
       {/* WhatsApp Button */}

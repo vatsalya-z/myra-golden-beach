@@ -3,13 +3,20 @@ import { SectionHeading } from "@/components/common/SectionHeading";
 import { Button } from "@/components/common/Button";
 import { FadeIn } from "@/components/animations/FadeIn";
 import { RoomCard } from "@/components/home/RoomCard";
+import { CoastalDecorations } from "@/components/common/CoastalDecorations";
 
 export function RoomsPreview() {
   const featured = rooms.filter((r) => r.featured).slice(0, 3);
 
   return (
-    <section className="py-16 md:py-24 bg-[#072A32]" aria-labelledby="rooms-preview-heading">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+    <section className="relative overflow-hidden py-16 md:py-24 bg-[#063B49]" aria-labelledby="rooms-preview-heading">
+      <CoastalDecorations
+        palmSide="right"
+        waveSide="left"
+        palmCorner="top"
+        tone="dark"
+      />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
         <FadeIn>
           <SectionHeading
             id="rooms-preview-heading"

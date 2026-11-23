@@ -71,7 +71,7 @@ export default function ContactPage() {
           className="block md:hidden object-cover object-center w-full h-full"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#041B21]/65 via-[#072A32]/35 to-[#041B21]/75" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#082B38]/65 via-[#063B49]/35 to-[#082B38]/75" />
         <div className="relative z-10 w-full max-w-4xl mx-auto px-4 sm:px-6 text-center flex flex-col items-center justify-center">
           <h1 className="font-playfair text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white text-center leading-tight">
             Contact Us
@@ -83,7 +83,7 @@ export default function ContactPage() {
       </section>
 
       {/* Contact + Form */}
-      <section className="py-16 md:py-24 bg-[#FCFAF6]">
+      <section className="py-16 md:py-24 bg-[#F9FBFC]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           {/* Centered Main Section Heading */}
           <FadeIn className="text-center mb-12 lg:mb-16">
@@ -98,19 +98,19 @@ export default function ContactPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             {/* Contact details */}
             <FadeIn direction="left">
-              <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-[#E5D9C3]">
-                <h2 className="font-playfair text-xl md:text-2xl font-bold text-[#072A32] mb-6 pb-3 border-b border-[#E5D9C3] text-center sm:text-left">
+              <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-[#D9EEF2]">
+                <h2 className="font-playfair text-xl md:text-2xl font-bold text-[#063B49] mb-6 pb-3 border-b border-[#D9EEF2] text-center sm:text-left">
                   Resort Information
                 </h2>
 
                 <div className="space-y-6">
                   <div className="flex gap-4">
-                    <div className="w-12 h-12 rounded-full bg-[#E0B45C]/15 flex items-center justify-center shrink-0">
-                      <HiMapPin size={22} className="text-[#E0B45C]" />
+                    <div className="w-12 h-12 rounded-full bg-[#F6C46A]/15 flex items-center justify-center shrink-0">
+                      <HiMapPin size={22} className="text-[#F6C46A]" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-[#072A32] mb-1">Address</h3>
-                      <p className="text-[#566970] text-sm leading-relaxed">
+                      <h3 className="font-semibold text-[#063B49] mb-1">Address</h3>
+                      <p className="text-[#607780] text-sm leading-relaxed">
                         RC3F+QW, Kotha Peta Rural,
                         <br />
                         Chirala, Andhra Pradesh 523157, India
@@ -119,7 +119,7 @@ export default function ContactPage() {
                         href={siteConfig.googleBusinessProfile}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1.5 text-xs text-[#E0B45C] font-semibold mt-2 hover:underline"
+                        className="inline-flex items-center gap-1.5 text-xs text-[#F6C46A] font-semibold mt-2 hover:underline"
                       >
                         Open in Google Maps &rarr;
                       </a>
@@ -127,14 +127,14 @@ export default function ContactPage() {
                   </div>
 
                   <div className="flex gap-4">
-                    <div className="w-12 h-12 rounded-full bg-[#E0B45C]/15 flex items-center justify-center shrink-0">
-                      <FaPhoneAlt size={18} className="text-[#E0B45C]" />
+                    <div className="w-12 h-12 rounded-full bg-[#F6C46A]/15 flex items-center justify-center shrink-0">
+                      <FaPhoneAlt size={18} className="text-[#F6C46A]" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-[#072A32] mb-1">Phone</h3>
+                      <h3 className="font-semibold text-[#063B49] mb-1">Phone</h3>
                       <a
                         href={`tel:${siteConfig.phone}`}
-                        className="text-[#566970] text-sm hover:text-[#E0B45C] transition-colors"
+                        className="text-[#607780] text-sm hover:text-[#F6C46A] transition-colors"
                       >
                         {siteConfig.phoneDisplay}
                       </a>
@@ -143,14 +143,14 @@ export default function ContactPage() {
 
                   {siteConfig.email && (
                     <div className="flex gap-4">
-                      <div className="w-12 h-12 rounded-full bg-[#E0B45C]/15 flex items-center justify-center shrink-0">
-                        <HiEnvelope size={20} className="text-[#E0B45C]" />
+                      <div className="w-12 h-12 rounded-full bg-[#F6C46A]/15 flex items-center justify-center shrink-0">
+                        <HiEnvelope size={20} className="text-[#F6C46A]" />
                       </div>
                       <div>
-                        <h3 className="font-semibold text-[#072A32] mb-1">Email</h3>
+                        <h3 className="font-semibold text-[#063B49] mb-1">Email</h3>
                         <a
                           href={`mailto:${siteConfig.email}`}
-                          className="text-[#566970] text-sm hover:text-[#E0B45C] transition-colors"
+                          className="text-[#607780] text-sm hover:text-[#F6C46A] transition-colors"
                         >
                           {siteConfig.email}
                         </a>
@@ -163,12 +163,12 @@ export default function ContactPage() {
                       <FaWhatsapp size={22} className="text-[#25D366]" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-[#072A32] mb-1">WhatsApp</h3>
+                      <h3 className="font-semibold text-[#063B49] mb-1">WhatsApp</h3>
                       <a
                         href={whatsappUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-[#566970] text-sm hover:text-[#25D366] transition-colors"
+                        className="text-[#607780] text-sm hover:text-[#25D366] transition-colors"
                       >
                         {siteConfig.phoneDisplay}
                       </a>
@@ -178,18 +178,18 @@ export default function ContactPage() {
 
                 {/* Map */}
                 <div className="mt-8">
-                  <GoogleMap className="h-64 shadow-sm rounded-xl border border-[#E5D9C3]" />
+                  <GoogleMap className="h-64 shadow-sm rounded-xl border border-[#D9EEF2]" />
                 </div>
               </div>
             </FadeIn>
 
             {/* Form */}
             <FadeIn direction="right" delay={0.1}>
-              <div className="bg-white rounded-2xl p-6 sm:p-10 shadow-sm border border-[#E5D9C3]">
-                <h2 className="font-playfair text-xl md:text-2xl font-bold text-[#072A32] mb-2 text-center sm:text-left">
+              <div className="bg-white rounded-2xl p-6 sm:p-10 shadow-sm border border-[#D9EEF2]">
+                <h2 className="font-playfair text-xl md:text-2xl font-bold text-[#063B49] mb-2 text-center sm:text-left">
                   Send a Room Enquiry
                 </h2>
-                <p className="text-[#566970] text-sm mb-7 leading-relaxed text-center sm:text-left">
+                <p className="text-[#607780] text-sm mb-7 leading-relaxed text-center sm:text-left">
                   Fill in the form below and our team will respond to confirm
                   availability and share rates. This is an enquiry, not a booking.
                 </p>

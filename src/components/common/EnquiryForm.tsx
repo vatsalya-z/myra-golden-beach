@@ -71,8 +71,8 @@ export function EnquiryForm() {
   };
 
   const inputClass =
-    "w-full px-4 py-3 rounded-lg border border-[#E5D9C3] bg-white text-[#102026] text-sm focus:outline-none focus:ring-2 focus:ring-[#E0B45C] focus:border-[#E0B45C] transition-all placeholder:text-[#566970]/60";
-  const labelClass = "block text-sm font-medium text-[#072A32] mb-1.5";
+    "w-full px-4 py-3 rounded-lg border border-[#D9EEF2] bg-white text-[#17313B] text-sm focus:outline-none focus:ring-2 focus:ring-[#F6C46A] focus:border-[#F6C46A] transition-all placeholder:text-[#607780]/60";
+  const labelClass = "block text-sm font-medium text-[#063B49] mb-1.5";
   const errorClass = "text-xs text-red-500 mt-1";
 
   return (
@@ -255,10 +255,10 @@ export function EnquiryForm() {
           <div className="inline-flex items-center justify-center w-11 h-11 rounded-full bg-[#25D366]/20 text-[#25D366]">
             <FaWhatsapp size={24} />
           </div>
-          <h3 className="font-semibold text-[#072A32] text-base">
+          <h3 className="font-semibold text-[#063B49] text-base">
             WhatsApp Opened with Your Enquiry
           </h3>
-          <p className="text-[#566970] text-xs sm:text-sm leading-relaxed max-w-md mx-auto">
+          <p className="text-[#607780] text-xs sm:text-sm leading-relaxed max-w-md mx-auto">
             Your enquiry details have been formatted and pre-filled in WhatsApp.
             Please tap <strong>Send</strong> in your chat to reach our reservations team.
           </p>
@@ -274,7 +274,7 @@ export function EnquiryForm() {
             <button
               type="button"
               onClick={handleReset}
-              className="inline-flex items-center gap-1.5 px-4 py-2 bg-[#F3ECE0] text-[#072A32] text-xs font-semibold rounded hover:bg-[#E5D9C3] transition-colors"
+              className="inline-flex items-center gap-1.5 px-4 py-2 bg-[#E8F6F7] text-[#063B49] text-xs font-semibold rounded hover:bg-[#D9EEF2] transition-colors"
             >
               <HiArrowPath size={14} />
               Reset Form
@@ -296,7 +296,7 @@ export function EnquiryForm() {
         </Button>
       </div>
 
-      <p className="text-xs text-[#566970] text-center italic">
+      <p className="text-xs text-[#607780] text-center italic">
         Submitting this form redirects to WhatsApp with your details pre-filled.
         You can review and send the message directly to our reservations desk.
       </p>

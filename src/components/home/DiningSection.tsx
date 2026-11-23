@@ -6,11 +6,18 @@ import { Button } from "@/components/common/Button";
 import { SectionHeading } from "@/components/common/SectionHeading";
 import { SectionCTA } from "@/components/common/SectionCTA";
 import { FadeIn } from "@/components/animations/FadeIn";
+import { CoastalDecorations } from "@/components/common/CoastalDecorations";
 
 export function DiningSection() {
   return (
-    <section className="py-16 md:py-24 bg-[#072A32]" aria-label="Restaurant and dining">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+    <section className="relative overflow-hidden py-16 md:py-24 bg-[#063B49]" aria-label="Restaurant and dining">
+      <CoastalDecorations
+        palmSide="right"
+        waveSide="left"
+        palmCorner="bottom"
+        tone="dark"
+      />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
         {/* Centered Section Heading */}
         <FadeIn className="text-center mb-12 lg:mb-16">
           <SectionHeading
@@ -77,9 +84,9 @@ export function DiningSection() {
                   viewport={{ once: true }}
                   transition={{ delay: 0.15 + idx * 0.08, duration: 0.4 }}
                   whileHover={{ y: -3, transition: { duration: 0.2 } }}
-                  className="flex items-start gap-3 p-4 bg-white/10 backdrop-blur-md rounded-xl border border-white/15 hover:border-[#E0B45C]/50 transition-all text-white"
+                  className="flex items-start gap-3 p-4 bg-white/10 backdrop-blur-md rounded-xl border border-white/15 hover:border-[#F6C46A]/50 transition-all text-white"
                 >
-                  <div className="w-2 h-2 rounded-full bg-[#E0B45C] mt-1.5 shrink-0" />
+                  <div className="w-2 h-2 rounded-full bg-[#F6C46A] mt-1.5 shrink-0" />
                   <div>
                     <div className="text-sm font-semibold text-white">{item.label}</div>
                     <div className="text-xs text-white/75">{item.desc}</div>

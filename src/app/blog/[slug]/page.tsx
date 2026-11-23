@@ -81,7 +81,7 @@ export default async function BlogPostPage({ params }: PageProps) {
           sizes="100vw"
         />
         {/* Flat solid overlay — no gradient */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#041B21]/80 via-[#072A32]/45 to-[#041B21]/85" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#082B38]/80 via-[#063B49]/45 to-[#082B38]/85" />
         <div className="relative z-10 w-full max-w-4xl mx-auto px-4 sm:px-8 text-center flex flex-col items-center justify-center">
           <Breadcrumbs
             items={[
@@ -94,7 +94,7 @@ export default async function BlogPostPage({ params }: PageProps) {
             {post.title}
           </h1>
           <div className="flex flex-wrap items-center justify-center gap-3 mt-4 text-white/80 text-xs sm:text-sm">
-            <span className="text-[#E0B45C] font-semibold">{post.category}</span>
+            <span className="text-[#F6C46A] font-semibold">{post.category}</span>
             <span>·</span>
             <span>{post.readingTime} min read</span>
             <span>·</span>
@@ -104,41 +104,41 @@ export default async function BlogPostPage({ params }: PageProps) {
       </section>
 
       {/* Article */}
-      <section className="py-14 md:py-20 bg-[#FCFAF6]">
+      <section className="py-14 md:py-20 bg-[#F9FBFC]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <FadeIn>
-            <article className="bg-white rounded-2xl shadow-sm border border-[#E5D9C3] p-6 md:p-12">
-              <p className="text-[#566970] text-lg leading-relaxed mb-6 font-medium border-l-4 border-[#E0B45C] pl-5 italic">
+            <article className="bg-white rounded-2xl shadow-sm border border-[#D9EEF2] p-6 md:p-12">
+              <p className="text-[#607780] text-lg leading-relaxed mb-6 font-medium border-l-4 border-[#F6C46A] pl-5 italic">
                 {post.excerpt}
               </p>
 
               {/* Render markdown-like content */}
               <div
                 className="prose prose-lg max-w-none
-                  prose-headings:font-playfair prose-headings:text-[#072A32]
+                  prose-headings:font-playfair prose-headings:text-[#063B49]
                   prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-4
-                  prose-p:text-[#566970] prose-p:leading-relaxed
-                  prose-strong:text-[#072A32]
-                  prose-a:text-[#E0B45C] prose-a:no-underline hover:prose-a:underline"
+                  prose-p:text-[#607780] prose-p:leading-relaxed
+                  prose-strong:text-[#063B49]
+                  prose-a:text-[#F6C46A] prose-a:no-underline hover:prose-a:underline"
               >
                 {post.content.split("\n").map((line, i) => {
                   if (line.startsWith("## ")) {
                     return (
-                      <h2 key={i} className="font-playfair text-2xl font-bold text-[#072A32] mt-10 mb-4">
+                      <h2 key={i} className="font-playfair text-2xl font-bold text-[#063B49] mt-10 mb-4">
                         {line.replace("## ", "")}
                       </h2>
                     );
                   }
                   if (line.startsWith("**") && line.endsWith("**")) {
                     return (
-                      <p key={i} className="font-semibold text-[#072A32] mb-2">
+                      <p key={i} className="font-semibold text-[#063B49] mb-2">
                         {line.replace(/\*\*/g, "")}
                       </p>
                     );
                   }
                   if (line.trim() === "") return null;
                   return (
-                    <p key={i} className="text-[#566970] leading-relaxed mb-4">
+                    <p key={i} className="text-[#607780] leading-relaxed mb-4">
                       {line}
                     </p>
                   );
@@ -146,12 +146,12 @@ export default async function BlogPostPage({ params }: PageProps) {
               </div>
 
               {/* Tags */}
-              <div className="flex flex-wrap items-center gap-2 mt-10 pt-8 border-t border-[#E5D9C3]">
-                <span className="text-xs font-semibold text-[#072A32] uppercase tracking-wider">Tags:</span>
+              <div className="flex flex-wrap items-center gap-2 mt-10 pt-8 border-t border-[#D9EEF2]">
+                <span className="text-xs font-semibold text-[#063B49] uppercase tracking-wider">Tags:</span>
                 {post.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="text-xs bg-[#FCFAF6] text-[#566970] px-3 py-1 rounded-full border border-[#E5D9C3]"
+                    className="text-xs bg-[#F9FBFC] text-[#607780] px-3 py-1 rounded-full border border-[#D9EEF2]"
                   >
                     {tag}
                   </span>
@@ -163,7 +163,7 @@ export default async function BlogPostPage({ params }: PageProps) {
             <div className="mt-8 flex items-center gap-4">
               <Link
                 href="/blog"
-                className="inline-flex items-center gap-1.5 text-[#E0B45C] text-sm font-semibold hover:underline"
+                className="inline-flex items-center gap-1.5 text-[#F6C46A] text-sm font-semibold hover:underline"
               >
                 &larr; Back to Travel Journal
               </Link>
@@ -174,9 +174,9 @@ export default async function BlogPostPage({ params }: PageProps) {
 
       {/* Related posts */}
       {related.length > 0 && (
-        <section className="py-14 md:py-20 bg-[#F3ECE0]">
+        <section className="py-14 md:py-20 bg-[#E8F6F7]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6">
-            <h2 className="font-playfair text-2xl md:text-3xl font-bold text-[#072A32] mb-8 text-center">
+            <h2 className="font-playfair text-2xl md:text-3xl font-bold text-[#063B49] mb-8 text-center">
               More Articles
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
@@ -184,16 +184,16 @@ export default async function BlogPostPage({ params }: PageProps) {
                 <Link
                   key={p.id}
                   href={`/blog/${p.slug}`}
-                  className="h-full flex flex-col justify-between group bg-white hover:bg-[#FCFAF6] border border-[#E5D9C3] hover:border-[#E0B45C]/40 rounded-xl p-5 transition-all shadow-sm hover:shadow-md"
+                  className="h-full flex flex-col justify-between group bg-white hover:bg-[#F9FBFC] border border-[#D9EEF2] hover:border-[#F6C46A]/40 rounded-xl p-5 transition-all shadow-sm hover:shadow-md"
                 >
                   <div>
-                    <span className="text-[#E0B45C] text-xs font-semibold tracking-wider uppercase">
+                    <span className="text-[#F6C46A] text-xs font-semibold tracking-wider uppercase">
                       {p.category}
                     </span>
-                    <h3 className="font-playfair text-lg font-bold text-[#072A32] mt-2 mb-2 group-hover:text-[#E0B45C] transition-colors leading-snug">
+                    <h3 className="font-playfair text-lg font-bold text-[#063B49] mt-2 mb-2 group-hover:text-[#F6C46A] transition-colors leading-snug">
                       {p.title}
                     </h3>
-                    <p className="text-[#566970] text-xs sm:text-sm line-clamp-2 leading-relaxed">
+                    <p className="text-[#607780] text-xs sm:text-sm line-clamp-2 leading-relaxed">
                       {p.excerpt}
                     </p>
                   </div>
@@ -208,7 +208,7 @@ export default async function BlogPostPage({ params }: PageProps) {
       <RelatedPages currentPath="/blog" />
 
       {/* CTA */}
-      <section className="py-14 md:py-20 bg-[#FCFAF6] text-center">
+      <section className="py-14 md:py-20 bg-[#F9FBFC] text-center">
         <div className="max-w-3xl mx-auto px-4 sm:px-6">
           <SectionHeading
             eyebrow="Plan Your Visit"

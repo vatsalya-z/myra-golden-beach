@@ -8,6 +8,7 @@ import { rooms } from "@/data/rooms";
 import { EnquiryForm } from "@/components/common/EnquiryForm";
 import { RoomDetailCard } from "@/components/rooms/RoomDetailCard";
 import { RelatedPages } from "@/components/common/RelatedPages";
+import { CoastalDecorations } from "@/components/common/CoastalDecorations";
 
 export const metadata: Metadata = generateMetadata({
   title: "Rooms at MYRA Golden Beach Resort | Accommodation Enquiries",
@@ -58,7 +59,7 @@ export default function RoomsPage() {
           sizes="100vw"
         />
         {/* Flat solid overlay — no gradient */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#041B21]/80 via-[#072A32]/45 to-[#041B21]/85" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#082B38]/80 via-[#063B49]/45 to-[#082B38]/85" />
         <div className="relative z-10 w-full max-w-4xl mx-auto px-4 sm:px-6 text-center flex flex-col items-center justify-center">
           <h1 className="font-playfair text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white text-center leading-tight">
             Rooms & Packages
@@ -70,8 +71,14 @@ export default function RoomsPage() {
       </section>
 
       {/* Rooms */}
-      <section className="py-16 md:py-24 bg-[#FCFAF6]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+      <section className="relative overflow-hidden py-16 md:py-24 bg-[#F9FBFC]">
+        <CoastalDecorations
+          palmSide="left"
+          waveSide="right"
+          palmCorner="both"
+          tone="light"
+        />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
           <FadeIn>
             <SectionHeading
               eyebrow="Our Accommodation"
@@ -94,7 +101,7 @@ export default function RoomsPage() {
       <RelatedPages currentPath="/rooms" />
 
       {/* Enquiry Form */}
-      <section className="py-16 md:py-20 bg-[#F3ECE0]">
+      <section className="py-16 md:py-20 bg-[#E8F6F7]">
         <div className="max-w-3xl mx-auto px-4 sm:px-6">
           <FadeIn>
             <SectionHeading
@@ -103,7 +110,7 @@ export default function RoomsPage() {
               subtitle="Fill in the form below and our team will contact you to confirm availability and pricing."
             />
           </FadeIn>
-          <div className="mt-10 bg-white rounded-2xl p-6 md:p-10 shadow-lg border border-[#E5D9C3]">
+          <div className="mt-10 bg-white rounded-2xl p-6 md:p-10 shadow-lg border border-[#D9EEF2]">
             <EnquiryForm />
           </div>
         </div>

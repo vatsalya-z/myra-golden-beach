@@ -49,7 +49,7 @@ export default function GalleryPage() {
       <GalleryHero />
 
       {/* Curated Gallery Lookbook */}
-      <section className="py-14 sm:py-18 md:py-24 bg-gradient-to-b from-[#FCFAF6] via-[#F7F2E8] to-[#FCFAF6]">
+      <section className="py-14 sm:py-18 md:py-24 bg-gradient-to-b from-[#FFFFFF] via-[#F9FBFC] to-[#FFFFFF]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <FadeIn>
             <SectionHeading

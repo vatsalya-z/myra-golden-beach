@@ -47,7 +47,7 @@ export default function HomePage() {
       <LocationSection />
 
       {/* FAQ Section */}
-      <section className="py-16 md:py-24 bg-[#FCFAF6]" aria-labelledby="faq-heading">
+      <section className="py-16 md:py-24 bg-[#F9FBFC]" aria-labelledby="faq-heading">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <FadeIn>
             <SectionHeading

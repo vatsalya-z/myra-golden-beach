@@ -63,7 +63,7 @@ export function GalleryHero() {
   return (
     <section
       ref={sectionRef}
-      className="relative w-full h-[380px] sm:h-[440px] md:h-[500px] lg:h-[540px] overflow-hidden flex items-center justify-center bg-[#041B21]"
+      className="relative w-full h-[380px] sm:h-[440px] md:h-[500px] lg:h-[540px] overflow-hidden flex items-center justify-center bg-[#082B38]"
       aria-label="Gallery page hero"
     >
       {/* Responsive HD Parallax Backdrop */}
@@ -89,7 +89,7 @@ export function GalleryHero() {
       </div>
 
       {/* Layered Atmospheric Scrim */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#041B21]/80 via-[#072A32]/50 to-[#041B21]/90 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#082B38]/80 via-[#063B49]/50 to-[#082B38]/90 pointer-events-none" />
 
       {/* Subtle Cinematic Motion Graphics: Architectural Gold Framing & Ambient Glows */}
       <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
@@ -105,7 +105,7 @@ export function GalleryHero() {
                 }
           }
           transition={{ duration: 14, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute -top-20 left-1/4 w-72 h-72 sm:w-96 sm:h-96 rounded-full bg-[#E0B45C]/20 blur-3xl"
+          className="absolute -top-20 left-1/4 w-72 h-72 sm:w-96 sm:h-96 rounded-full bg-[#F6C46A]/20 blur-3xl"
         />
         <motion.div
           animate={
@@ -118,14 +118,14 @@ export function GalleryHero() {
                 }
           }
           transition={{ duration: 16, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute -bottom-24 right-1/4 w-72 h-72 sm:w-96 sm:h-96 rounded-full bg-[#0E3E49]/50 blur-3xl"
+          className="absolute -bottom-24 right-1/4 w-72 h-72 sm:w-96 sm:h-96 rounded-full bg-[#0B7285]/50 blur-3xl"
         />
 
         {/* Delicate architectural corner brackets */}
-        <div className="hidden sm:block absolute top-6 left-6 w-10 h-10 border-t border-l border-[#E0B45C]/40" />
-        <div className="hidden sm:block absolute top-6 right-6 w-10 h-10 border-t border-r border-[#E0B45C]/40" />
-        <div className="hidden sm:block absolute bottom-6 left-6 w-10 h-10 border-b border-l border-[#E0B45C]/40" />
-        <div className="hidden sm:block absolute bottom-6 right-6 w-10 h-10 border-b border-r border-[#E0B45C]/40" />
+        <div className="hidden sm:block absolute top-6 left-6 w-10 h-10 border-t border-l border-[#F6C46A]/40" />
+        <div className="hidden sm:block absolute top-6 right-6 w-10 h-10 border-t border-r border-[#F6C46A]/40" />
+        <div className="hidden sm:block absolute bottom-6 left-6 w-10 h-10 border-b border-l border-[#F6C46A]/40" />
+        <div className="hidden sm:block absolute bottom-6 right-6 w-10 h-10 border-b border-r border-[#F6C46A]/40" />
       </div>
 
       {/* Centered Editorial Content */}
@@ -137,15 +137,15 @@ export function GalleryHero() {
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           className="inline-flex items-center gap-3 mb-4"
         >
-          <span className="h-px w-6 sm:w-10 bg-gradient-to-r from-transparent to-[#E0B45C]" />
-          <span className="text-[#E0B45C] text-[10px] sm:text-xs font-semibold uppercase tracking-[0.32em]">
+          <span className="h-px w-6 sm:w-10 bg-gradient-to-r from-transparent to-[#F6C46A]" />
+          <span className="text-[#F6C46A] text-[10px] sm:text-xs font-semibold uppercase tracking-[0.32em]">
             Visual Lookbook · Chirala Coast
           </span>
-          <span className="h-px w-6 sm:w-10 bg-gradient-to-l from-transparent to-[#E0B45C]" />
+          <span className="h-px w-6 sm:w-10 bg-gradient-to-l from-transparent to-[#F6C46A]" />
         </motion.div>
 
         {/* Word-by-word Editorial Serif Title */}
-        <h1 className="font-playfair text-4xl sm:text-5xl md:text-6xl lg:text-[4.25rem] font-bold text-white leading-[1.08] tracking-tight drop-shadow-[0_6px_24px_rgba(4,27,33,0.65)]">
+        <h1 className="font-playfair text-4xl sm:text-5xl md:text-6xl lg:text-[4.25rem] font-bold text-white leading-[1.08] tracking-tight drop-shadow-[0_6px_24px_rgba(8,43,56,0.65)]">
           <span className="inline-block overflow-hidden align-bottom pb-1">
             <span data-hero-word className="inline-block">
               Photo
@@ -154,7 +154,7 @@ export function GalleryHero() {
           <span className="inline-block overflow-hidden align-bottom pb-1">
             <span
               data-hero-word
-              className="inline-block italic font-normal text-[#EBC878]"
+              className="inline-block italic font-normal text-[#F6C46A]"
             >
               Gallery
             </span>
@@ -177,9 +177,9 @@ export function GalleryHero() {
           initial={reducedMotion ? false : { opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.75, delay: 0.45, ease: [0.22, 1, 0.36, 1] }}
-          className="mt-6 inline-flex items-center gap-3 px-4 py-1.5 rounded-full bg-white/[0.07] backdrop-blur-md border border-[#E0B45C]/30 text-[11px] sm:text-xs text-white/85 tracking-wider"
+          className="mt-6 inline-flex items-center gap-3 px-4 py-1.5 rounded-full bg-white/[0.07] backdrop-blur-md border border-[#F6C46A]/30 text-[11px] sm:text-xs text-white/85 tracking-wider"
         >
-          <span className="text-[#E0B45C] font-mono font-semibold">
+          <span className="text-[#F6C46A] font-mono font-semibold">
             {galleryImages.length}
           </span>
           <span className="text-white/30">|</span>

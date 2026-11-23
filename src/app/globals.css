@@ -2,43 +2,53 @@
 @import "../styles/animations.css";
 
 :root {
-  --color-pine: #072A32;
-  --color-pine-luxury: #072A32;
-  --color-pine-dark: #041B21;
-  --color-primary-dark: #072A32;
-  --color-deep-green: #072A32;
-  --color-secondary-dark: #0E3E49;
-
-  --color-gold: #E0B45C;
-  --color-gold-hover: #C6953B;
-
-  --color-sand: #F3ECE0;
-  --color-ivory: #FCFAF6;
+  /* Andhra Coastal Retreat — Primary & Supporting Colour System */
+  --color-deep-ocean-teal: #063b49;
+  --color-ocean-blue: #0b7285;
+  --color-light-aqua: #e8f6f7;
+  --color-pearl-white: #f9fbfc;
+  --color-sand-gold: #f6c46a;
+  --color-deep-navy: #082b38;
+  --color-soft-blue: #d9eef2;
+  --color-muted-teal: #5b8990;
+  --color-warm-gold: #dca94f;
+  --color-dark-text: #17313b;
+  --color-secondary-text: #607780;
   --color-white: #ffffff;
 
-  --color-charcoal: #102026;
-  --color-text: #102026;
-  --color-muted: #566970;
-  --color-border: #E5D9C3;
+  /* Compatibility aliases */
+  --color-pine: var(--color-deep-ocean-teal);
+  --color-pine-luxury: var(--color-deep-ocean-teal);
+  --color-pine-dark: var(--color-deep-navy);
+  --color-primary-dark: var(--color-deep-ocean-teal);
+  --color-deep-green: var(--color-deep-ocean-teal);
+  --color-secondary-dark: var(--color-ocean-blue);
+  --color-gold: var(--color-sand-gold);
+  --color-gold-hover: var(--color-warm-gold);
+  --color-sand: var(--color-light-aqua);
+  --color-ivory: var(--color-pearl-white);
+  --color-charcoal: var(--color-dark-text);
+  --color-text: var(--color-dark-text);
+  --color-muted: var(--color-secondary-text);
+  --color-border: var(--color-soft-blue);
 
-  /* Legacy & compatibility aliases */
-  --primary: #072A32;
-  --primary-foreground: #FCFAF6;
-  --primary-dark: #072A32;
-  --accent: #E0B45C;
-  --accent-hover: #C6953B;
-  --gold: #E0B45C;
-  --gold-hover: #C6953B;
-  --background: #FCFAF6;
-  --section: #FCFAF6;
-  --section-alt: #072A32;
-  --card: #ffffff;
-  --border-light: #E5D9C3;
-  --text-dark: #102026;
-  --text-muted: #566970;
-  --text-light: #ffffff;
+  --primary: var(--color-deep-ocean-teal);
+  --primary-foreground: var(--color-pearl-white);
+  --primary-dark: var(--color-deep-navy);
+  --accent: var(--color-sand-gold);
+  --accent-hover: var(--color-warm-gold);
+  --gold: var(--color-sand-gold);
+  --gold-hover: var(--color-warm-gold);
+  --background: var(--color-pearl-white);
+  --section: var(--color-pearl-white);
+  --section-alt: var(--color-deep-ocean-teal);
+  --card: var(--color-white);
+  --border-light: var(--color-soft-blue);
+  --text-dark: var(--color-dark-text);
+  --text-muted: var(--color-secondary-text);
+  --text-light: var(--color-white);
   --whatsapp: #25d366;
-  --shadow: 0 10px 30px rgba(7, 42, 50, 0.08);
+  --shadow: 0 10px 30px rgba(6, 59, 73, 0.08);
 }
 
 @theme inline {
@@ -109,7 +119,7 @@ body {
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #F3ECE0;
+  background: #E8F6F7;
 }
 ::-webkit-scrollbar-thumb {
   background: var(--accent);

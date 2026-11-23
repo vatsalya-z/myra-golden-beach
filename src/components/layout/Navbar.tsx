@@ -45,8 +45,8 @@ export function Navbar() {
     <>
       <nav
         className={cn(
-          "bg-gradient-to-r from-[#041B21]/95 via-[#072A32]/95 to-[#0B3540]/95 backdrop-blur-md border-b border-[#E0B45C]/25 transition-shadow duration-300",
-          isScrolled && "shadow-[0_10px_30px_rgba(4,27,33,0.45)]"
+          "bg-[#063B49]/95 backdrop-blur-md border-b border-[#F6C46A]/20 transition-all duration-300",
+          isScrolled && "bg-[#063B49] shadow-[0_10px_30px_rgba(8,43,56,0.35)]"
         )}
         aria-label="Main navigation"
       >
@@ -64,10 +64,10 @@ export function Navbar() {
               />
             </div>
             <div className="hidden sm:flex flex-col leading-tight">
-              <span className="text-[#E0B45C] font-playfair font-bold text-base md:text-lg leading-none tracking-wide">
+              <span className="text-white font-playfair font-bold text-base md:text-lg leading-none tracking-wide">
                 MYRA GOLDEN
               </span>
-              <span className="text-white/80 text-[10px] tracking-[0.2em] uppercase font-medium">
+              <span className="text-[#F6C46A] text-[10px] tracking-[0.22em] uppercase font-medium">
                 Beach Resort
               </span>
             </div>
@@ -85,15 +85,15 @@ export function Navbar() {
                   <Link
                     href={link.href}
                     className={cn(
-                      "relative px-3 py-2 text-sm font-medium transition-colors duration-200 hover:text-[#E0B45C] group",
-                      isActive ? "text-[#E0B45C]" : "text-white/85"
+                      "relative px-3.5 py-2 text-sm font-medium transition-colors duration-200 hover:text-[#F6C46A] group",
+                      isActive ? "text-[#F6C46A] font-semibold" : "text-white/90"
                     )}
                     aria-current={isActive ? "page" : undefined}
                   >
                     {link.label}
                     <span
                       className={cn(
-                        "absolute bottom-0 left-0 w-full h-0.5 bg-[#E0B45C] transition-transform duration-300 origin-left",
+                        "absolute bottom-0 left-0 w-full h-0.5 bg-[#F6C46A] transition-transform duration-300 origin-left",
                         isActive ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"
                       )}
                     />
@@ -107,7 +107,7 @@ export function Navbar() {
           <div className="flex items-center gap-3">
             <Link
               href="/contact"
-              className="hidden lg:inline-flex items-center px-5 py-2 bg-gradient-to-r from-[#C89435] via-[#EBC878] to-[#C89435] hover:from-[#B88428] hover:via-[#E0B45C] hover:to-[#B88428] text-[#041B21] text-sm font-bold rounded-sm transition-all duration-300 hover:-translate-y-0.5 shadow-[0_4px_16px_rgba(224,180,92,0.3)] hover:shadow-[0_8px_24px_rgba(224,180,92,0.45)] tracking-wide"
+              className="luxury-btn-sheen hidden lg:inline-flex items-center px-5 py-2.5 bg-[#F6C46A] hover:bg-[#DCA94F] text-[#082B38] text-sm font-bold rounded-md transition-all duration-300 hover:-translate-y-0.5 shadow-md hover:shadow-lg tracking-wide"
             >
               Book Your Stay
             </Link>
@@ -118,7 +118,7 @@ export function Navbar() {
               aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
               aria-expanded={menuOpen}
               aria-controls="mobile-drawer"
-              className="lg:hidden flex items-center justify-center w-10 h-10 text-white hover:text-[#E0B45C] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#E0B45C]"
+              className="lg:hidden flex items-center justify-center w-10 h-10 text-white hover:text-[#F6C46A] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F6C46A]"
             >
               {menuOpen ? <HiXMark size={24} /> : <HiBars3 size={24} />}
             </button>

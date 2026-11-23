@@ -15,15 +15,15 @@ export default function ErrorPage({
   }, [error]);
 
   return (
-    <div className="min-h-screen bg-[#FCFAF6] flex items-center justify-center px-4">
+    <div className="min-h-screen bg-[#F9FBFC] flex items-center justify-center px-4">
       <div className="text-center max-w-lg">
-        <div className="font-playfair text-6xl font-bold text-[#E0B45C] mb-4">
+        <div className="font-playfair text-6xl font-bold text-[#F6C46A] mb-4">
           Oops
         </div>
-        <h2 className="font-playfair text-2xl font-bold text-[#072A32] mb-4">
+        <h2 className="font-playfair text-2xl font-bold text-[#063B49] mb-4">
           Something Went Wrong
         </h2>
-        <p className="text-[#566970] mb-8 leading-relaxed">
+        <p className="text-[#607780] mb-8 leading-relaxed">
           An unexpected error occurred. Please try again or contact us
           directly if the problem persists.
         </p>

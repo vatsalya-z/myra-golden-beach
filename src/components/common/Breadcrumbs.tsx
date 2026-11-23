@@ -28,7 +28,7 @@ export function Breadcrumbs({ items, light = false }: BreadcrumbsProps) {
       <nav
         aria-label="Breadcrumb"
         className={`flex items-center flex-wrap gap-1 text-xs sm:text-sm ${
-          light ? "text-white/70" : "text-[#566970]"
+          light ? "text-white/70" : "text-[#607780]"
         }`}
       >
         {allItems.map((item, idx) => (
@@ -36,15 +36,15 @@ export function Breadcrumbs({ items, light = false }: BreadcrumbsProps) {
             {idx === 0 && (
               <HiHome
                 size={14}
-                className={light ? "text-white/50" : "text-[#566970]"}
+                className={light ? "text-white/50" : "text-[#607780]"}
               />
             )}
             {idx < allItems.length - 1 ? (
               <>
                 <Link
                   href={item.href}
-                  className={`hover:text-[#E0B45C] transition-colors ${
-                    light ? "text-white/70" : "text-[#566970]"
+                  className={`hover:text-[#F6C46A] transition-colors ${
+                    light ? "text-white/70" : "text-[#607780]"
                   }`}
                 >
                   {item.label}
@@ -54,7 +54,7 @@ export function Breadcrumbs({ items, light = false }: BreadcrumbsProps) {
             ) : (
               <span
                 className={`font-medium ${
-                  light ? "text-[#E0B45C]" : "text-[#E0B45C]"
+                  light ? "text-[#F6C46A]" : "text-[#F6C46A]"
                 }`}
               >
                 {item.label}

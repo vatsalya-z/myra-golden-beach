@@ -32,13 +32,13 @@ export function BookingCTA() {
           sizes="100vw"
         />
         {/* Balanced gradient scrim for crisp text readability while keeping photo visible */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#041B21]/65 via-[#041B21]/40 to-[#041B21]/75" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#082B38]/65 via-[#082B38]/40 to-[#082B38]/75" />
       </div>
 
       <div className="relative max-w-4xl mx-auto px-4 sm:px-6 text-center">
         <FadeIn>
           {/* Centered Section Heading */}
-          <div className="drop-shadow-[0_2px_12px_rgba(4,27,33,0.9)]">
+          <div className="drop-shadow-[0_2px_12px_rgba(8,43,56,0.9)]">
             <SectionHeading
               eyebrow="Plan Your Stay"
               title="Ready for a Coastal Escape?"
@@ -60,17 +60,17 @@ export function BookingCTA() {
             </Button>
             <a
               href={`tel:${siteConfig.phone}`}
-              className="inline-flex items-center justify-center gap-2 px-7 py-4 bg-[#041B21]/65 backdrop-blur-md border-2 border-white/40 text-white font-semibold rounded-sm hover:bg-white/15 hover:border-[#E0B45C] transition-all text-sm min-w-[210px] w-full sm:w-auto shadow-md"
+              className="inline-flex items-center justify-center gap-2 px-7 py-4 bg-[#082B38]/65 backdrop-blur-md border-2 border-white/40 text-white font-semibold rounded-sm hover:bg-white/15 hover:border-[#F6C46A] transition-all text-sm min-w-[210px] w-full sm:w-auto shadow-md"
               aria-label={`Call ${siteConfig.phoneDisplay}`}
             >
-              <FaPhoneAlt size={14} className="text-[#E0B45C]" />
+              <FaPhoneAlt size={14} className="text-[#F6C46A]" />
               {siteConfig.phoneDisplay}
             </a>
             <a
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 px-7 py-4 bg-[#041B21]/65 backdrop-blur-md border-2 border-[#25D366]/65 text-[#25D366] font-semibold rounded-sm hover:bg-[#25D366] hover:text-[#041B21] transition-all text-sm min-w-[210px] w-full sm:w-auto shadow-md"
+              className="inline-flex items-center justify-center gap-2 px-7 py-4 bg-[#082B38]/65 backdrop-blur-md border-2 border-[#25D366]/65 text-[#25D366] font-semibold rounded-sm hover:bg-[#25D366] hover:text-[#082B38] transition-all text-sm min-w-[210px] w-full sm:w-auto shadow-md"
               aria-label="WhatsApp enquiry"
             >
               <FaWhatsapp size={17} />

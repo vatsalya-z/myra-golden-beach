@@ -57,7 +57,7 @@ export default function AboutPage() {
           sizes="100vw"
         />
         {/* Flat solid overlay — no gradient */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#041B21]/80 via-[#072A32]/45 to-[#041B21]/85" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#082B38]/80 via-[#063B49]/45 to-[#082B38]/85" />
         <div className="relative z-10 w-full max-w-4xl mx-auto px-4 sm:px-6 text-center flex flex-col items-center justify-center">
           <h1 className="font-playfair text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white text-center leading-tight">
             About MYRA Golden Beach Resort
@@ -69,7 +69,7 @@ export default function AboutPage() {
       </section>
 
       {/* Introduction */}
-      <section className="py-16 md:py-24 bg-[#FCFAF6]">
+      <section className="py-16 md:py-24 bg-[#F9FBFC]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           {/* Centered Heading */}
           <FadeIn className="text-center mb-12 lg:mb-16">
@@ -83,7 +83,7 @@ export default function AboutPage() {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <FadeIn direction="left">
-              <div className="relative h-96 rounded-xl overflow-hidden shadow-xl border border-[#E5D9C3]">
+              <div className="relative h-96 rounded-xl overflow-hidden shadow-xl border border-[#D9EEF2]">
                 <Image
                   src="/images/gmaps/myra-resort-signboard.jpg"
                   alt="MYRA Golden Beach Resort official bamboo entrance and grounds"
@@ -95,7 +95,7 @@ export default function AboutPage() {
             </FadeIn>
 
             <FadeIn direction="right" delay={0.1}>
-              <div className="space-y-4 text-[#566970] leading-relaxed">
+              <div className="space-y-4 text-[#607780] leading-relaxed">
                 <p>
                   MYRA Golden Beach Resort is a comfortable and welcoming coastal retreat
                   situated in the scenic coastal region of Andhra Pradesh, near Chirala.
@@ -129,7 +129,7 @@ export default function AboutPage() {
       </section>
 
       {/* Our Story */}
-      <section className="py-16 md:py-20 bg-[#F3ECE0]">
+      <section className="py-16 md:py-20 bg-[#E8F6F7]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
           <FadeIn>
             <SectionHeading
@@ -137,7 +137,7 @@ export default function AboutPage() {
               title="A Resort Built on Warm Hospitality"
               align="center"
             />
-            <div className="mt-6 space-y-4 text-[#566970] leading-relaxed text-left md:text-center">
+            <div className="mt-6 space-y-4 text-[#607780] leading-relaxed text-left md:text-center">
               <p>
                 MYRA Golden Beach Resort was established with a clear vision: to create a
                 comfortable, welcoming and genuinely hospitable coastal retreat where guests
@@ -159,10 +159,10 @@ export default function AboutPage() {
       </section>
 
       {/* Beach Experience Section */}
-      <BeachExperienceSection className="bg-[#FCFAF6]" />
+      <BeachExperienceSection className="bg-[#F9FBFC]" />
 
       {/* Key highlights */}
-      <section className="py-16 md:py-24 bg-[#F3ECE0]">
+      <section className="py-16 md:py-24 bg-[#E8F6F7]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <FadeIn>
             <SectionHeading
@@ -210,15 +210,15 @@ export default function AboutPage() {
               const numStr = String(idx + 1).padStart(2, "0");
               return (
                 <FadeIn key={item.title} delay={idx * 0.05} className="h-full">
-                  <div className="h-full flex gap-3.5 sm:gap-5 p-4 sm:p-6 bg-white border border-[#E5D9C3] rounded-xl hover:border-[#E0B45C]/60 transition-all duration-300 shadow-sm hover:shadow-md">
-                    <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-full border border-[#E0B45C]/40 bg-[#072A32] flex items-center justify-center shrink-0">
-                      <span className="font-playfair font-bold text-xs sm:text-sm text-[#E0B45C]">
+                  <div className="h-full flex gap-3.5 sm:gap-5 p-4 sm:p-6 bg-white border border-[#D9EEF2] rounded-xl hover:border-[#F6C46A]/60 transition-all duration-300 shadow-sm hover:shadow-md">
+                    <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-full border border-[#F6C46A]/40 bg-[#063B49] flex items-center justify-center shrink-0">
+                      <span className="font-playfair font-bold text-xs sm:text-sm text-[#F6C46A]">
                         {numStr}
                       </span>
                     </div>
                     <div>
-                      <h3 className="text-[#072A32] font-semibold text-sm sm:text-base mb-1.5 sm:mb-2">{item.title}</h3>
-                      <p className="text-[#566970] text-xs sm:text-sm leading-relaxed">{item.desc}</p>
+                      <h3 className="text-[#063B49] font-semibold text-sm sm:text-base mb-1.5 sm:mb-2">{item.title}</h3>
+                      <p className="text-[#607780] text-xs sm:text-sm leading-relaxed">{item.desc}</p>
                     </div>
                   </div>
                 </FadeIn>
@@ -232,7 +232,7 @@ export default function AboutPage() {
       <RelatedPages currentPath="/about" />
 
       {/* CTA */}
-      <section className="py-16 md:py-20 bg-[#FCFAF6] text-center">
+      <section className="py-16 md:py-20 bg-[#F9FBFC] text-center">
         <div className="max-w-3xl mx-auto px-4 sm:px-6">
           <FadeIn>
             <SectionHeading

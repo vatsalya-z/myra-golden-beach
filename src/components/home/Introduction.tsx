@@ -9,7 +9,7 @@ import { FadeIn } from "@/components/animations/FadeIn";
 
 export function Introduction() {
   return (
-    <section id="intro-section" className="py-16 md:py-24 bg-[#FCFAF6] scroll-mt-12" aria-labelledby="intro-heading">
+    <section id="intro-section" className="py-16 md:py-24 bg-[#F9FBFC] scroll-mt-12" aria-labelledby="intro-heading">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         {/* Section Heading — Center Aligned */}
         <FadeIn className="text-center mb-12 lg:mb-16">
@@ -28,7 +28,7 @@ export function Introduction() {
             <div className="grid grid-cols-2 gap-3 sm:gap-4">
               <motion.div
                 whileHover={{ y: -4, transition: { duration: 0.3 } }}
-                className="relative h-52 sm:h-72 md:h-80 rounded-xl overflow-hidden shadow-lg border border-[#E5D9C3]"
+                className="relative h-52 sm:h-72 md:h-80 rounded-xl overflow-hidden shadow-lg border border-[#D9EEF2]"
               >
                 <Image
                   src="/images/gmaps/myra-resort-signboard.jpg"
@@ -40,7 +40,7 @@ export function Introduction() {
               </motion.div>
               <motion.div
                 whileHover={{ y: -4, transition: { duration: 0.3 } }}
-                className="relative h-52 sm:h-72 md:h-80 rounded-xl overflow-hidden shadow-lg mt-6 sm:mt-8 border border-[#E5D9C3]"
+                className="relative h-52 sm:h-72 md:h-80 rounded-xl overflow-hidden shadow-lg mt-6 sm:mt-8 border border-[#D9EEF2]"
               >
                 <Image
                   src="/images/gmaps/myra-beach-cottages.jpg"
@@ -57,16 +57,16 @@ export function Introduction() {
               whileInView={{ scale: 1, opacity: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.25, duration: 0.5 }}
-              className="absolute -bottom-5 left-1/2 -translate-x-1/2 bg-[#072A32] border-2 border-[#E0B45C] text-white text-center px-6 py-2.5 rounded-lg shadow-xl whitespace-nowrap"
+              className="absolute -bottom-5 left-1/2 -translate-x-1/2 bg-[#063B49] border-2 border-[#F6C46A] text-white text-center px-6 py-2.5 rounded-lg shadow-xl whitespace-nowrap"
             >
-              <span className="font-playfair font-bold text-lg text-[#E0B45C] block">Coastal</span>
+              <span className="font-playfair font-bold text-lg text-[#F6C46A] block">Coastal</span>
               <span className="text-[10px] tracking-[0.2em] uppercase text-white/80">Retreat</span>
             </motion.div>
           </FadeIn>
 
           {/* Text & Features */}
           <FadeIn direction="right" delay={0.1}>
-            <div className="space-y-4 text-[#566970] leading-relaxed">
+            <div className="space-y-4 text-[#607780] leading-relaxed">
               <p>
                 Whether you are visiting for a relaxing family holiday, a couple&apos;s
                 getaway or a group retreat, our resort provides warm Andhra hospitality,
@@ -80,7 +80,7 @@ export function Introduction() {
             </div>
 
             {/* Stats with spring reveal */}
-            <div className="grid grid-cols-3 gap-4 mt-8 pt-8 border-t border-[#E5D9C3]">
+            <div className="grid grid-cols-3 gap-4 mt-8 pt-8 border-t border-[#D9EEF2]">
               {[
                 { label: "Guest Rooms", value: "10+" },
                 { label: "Facilities", value: "8+" },
@@ -95,10 +95,10 @@ export function Introduction() {
                   whileHover={{ y: -3 }}
                   className="text-center p-2 rounded-lg transition-colors hover:bg-white/60"
                 >
-                  <div className="font-playfair text-3xl font-bold text-[#E0B45C]">
+                  <div className="font-playfair text-3xl font-bold text-[#F6C46A]">
                     {stat.value}
                   </div>
-                  <div className="text-xs text-[#566970] mt-1 font-medium tracking-wide">
+                  <div className="text-xs text-[#607780] mt-1 font-medium tracking-wide">
                     {stat.label}
                   </div>
                 </motion.div>

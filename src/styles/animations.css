@@ -74,11 +74,36 @@
 /* Gold shimmer for loading skeletons */
 .shimmer {
   background: linear-gradient(90deg,
-      #F3ECE0 25%,
-      #E5D9C3 50%,
-      #F3ECE0 75%);
+      #E8F6F7 25%,
+      #D9EEF2 50%,
+      #E8F6F7 75%);
   background-size: 200% 100%;
   animation: shimmer 1.5s infinite;
+}
+
+@keyframes coastalPalmFloat {
+  0%, 100% { transform: translate3d(0, 0, 0) rotate(0deg); }
+  50% { transform: translate3d(4px, -7px, 0) rotate(1.6deg); }
+}
+
+@keyframes coastalWaveFlow {
+  0%, 100% { transform: translate3d(0, 0, 0) scaleY(1); }
+  50% { transform: translate3d(-6px, 8px, 0) scaleY(1.035); }
+}
+
+.animate-palm-float {
+  animation: coastalPalmFloat 14s ease-in-out infinite;
+  will-change: transform;
+}
+
+.animate-palm-float-slow {
+  animation: coastalPalmFloat 18s ease-in-out infinite reverse;
+  will-change: transform;
+}
+
+.animate-wave-flow {
+  animation: coastalWaveFlow 16s ease-in-out infinite;
+  will-change: transform;
 }
 
 @media (prefers-reduced-motion: reduce) {

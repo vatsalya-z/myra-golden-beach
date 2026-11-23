@@ -7,20 +7,20 @@ export function TopBar() {
   const whatsappUrl = buildWhatsAppUrl(buildGeneralWhatsAppMessage());
 
   return (
-    <div className="bg-[#041B21] border-b border-[#E0B45C]/15 text-white/80 text-xs py-2.5 px-4 hidden md:block">
+    <div className="bg-[#082B38] border-b border-[#F6C46A]/20 text-white/85 text-xs py-2.5 px-4 hidden md:block">
       <div className="max-w-7xl mx-auto flex items-center justify-between gap-4">
         {/* Left: location + email */}
         <div className="flex items-center gap-5">
           <span className="flex items-center gap-1.5">
-            <HiMapPin size={13} className="text-[#E0B45C] shrink-0" />
+            <HiMapPin size={13} className="text-[#F6C46A] shrink-0" />
             <span>Kotha Peta Rural, Chirala, Andhra Pradesh 523157</span>
           </span>
           {siteConfig.email && (
             <a
               href={`mailto:${siteConfig.email}`}
-              className="flex items-center gap-1.5 hover:text-[#E0B45C] transition-colors"
+              className="flex items-center gap-1.5 hover:text-[#F6C46A] transition-colors"
             >
-              <HiEnvelope size={13} className="text-[#E0B45C] shrink-0" />
+              <HiEnvelope size={13} className="text-[#F6C46A] shrink-0" />
               <span>{siteConfig.email}</span>
             </a>
           )}
@@ -30,10 +30,10 @@ export function TopBar() {
         <div className="flex items-center gap-4">
           <a
             href={`tel:${siteConfig.phone}`}
-            className="flex items-center gap-1.5 hover:text-[#E0B45C] transition-colors"
+            className="flex items-center gap-1.5 hover:text-[#F6C46A] transition-colors"
             aria-label="Call us"
           >
-            <FaPhoneAlt size={11} className="text-[#E0B45C] shrink-0" />
+            <FaPhoneAlt size={11} className="text-[#F6C46A] shrink-0" />
             <span>{siteConfig.phoneDisplay}</span>
           </a>
           <a

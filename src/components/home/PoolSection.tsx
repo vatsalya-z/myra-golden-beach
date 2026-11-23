@@ -30,13 +30,13 @@ export function PoolSection() {
           sizes="100vw"
         />
         {/* Subtle edge vignette for text legibility without hiding the pool photo */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#041B21]/65 via-[#041B21]/25 to-[#041B21]/70" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#082B38]/65 via-[#082B38]/25 to-[#082B38]/70" />
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 text-center">
         <FadeIn>
           {/* Centered Section Heading */}
-          <div className="drop-shadow-[0_2px_12px_rgba(4,27,33,0.9)]">
+          <div className="drop-shadow-[0_2px_12px_rgba(8,43,56,0.9)]">
             <SectionHeading
               eyebrow="Resort Facilities"
               title="Dive into Relaxation"
@@ -59,9 +59,9 @@ export function PoolSection() {
                 viewport={{ once: true }}
                 transition={{ delay: 0.15 + idx * 0.1, duration: 0.5 }}
                 whileHover={{ y: -5, scale: 1.02, transition: { duration: 0.2 } }}
-                className="bg-[#041B21]/65 backdrop-blur-md hover:bg-[#072A32]/80 border border-white/25 hover:border-[#E0B45C]/70 rounded-xl p-4 sm:p-5 md:p-6 text-center transition-all shadow-[0_8px_24px_rgba(4,27,33,0.45)]"
+                className="bg-[#082B38]/65 backdrop-blur-md hover:bg-[#063B49]/80 border border-white/25 hover:border-[#F6C46A]/70 rounded-xl p-4 sm:p-5 md:p-6 text-center transition-all shadow-[0_8px_24px_rgba(8,43,56,0.45)]"
               >
-                <h3 className="text-[#E0B45C] font-semibold text-sm sm:text-base mb-1.5 sm:mb-2">
+                <h3 className="text-[#F6C46A] font-semibold text-sm sm:text-base mb-1.5 sm:mb-2">
                   {item.title}
                 </h3>
                 <p className="text-white/90 text-xs sm:text-sm leading-relaxed">{item.desc}</p>
@@ -75,7 +75,7 @@ export function PoolSection() {
               href="/contact"
               variant="ghost"
               size="lg"
-              className="w-full sm:w-auto min-w-[220px] bg-[#041B21]/60 backdrop-blur-md border-[#E0B45C]/60 hover:bg-[#E0B45C] hover:text-[#041B21]"
+              className="w-full sm:w-auto min-w-[220px] bg-[#082B38]/60 backdrop-blur-md border-[#F6C46A]/60 hover:bg-[#F6C46A] hover:text-[#082B38]"
             >
               Plan Your Poolside Stay
             </Button>
