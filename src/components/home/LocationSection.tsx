@@ -76,8 +76,13 @@ export function LocationSection() {
                 </div>
               </motion.div>
 
-              <div className="pt-4 flex flex-wrap justify-center sm:justify-start items-center gap-4 w-full border-t border-[#E5D9C3]">
-                <Button href="/contact" variant="primary" size="md" className="min-w-[160px]">
+              <div className="pt-4 grid grid-cols-1 sm:grid-cols-2 gap-3.5 w-full border-t border-[#E5D9C3]">
+                <Button
+                  href="/contact"
+                  variant="primary"
+                  size="md"
+                  className="w-full border-2 border-transparent"
+                >
                   Enquire Now
                 </Button>
                 <Button
@@ -85,7 +90,7 @@ export function LocationSection() {
                   variant="outline"
                   size="md"
                   external
-                  className="min-w-[160px]"
+                  className="w-full"
                 >
                   View on Google Maps
                 </Button>
