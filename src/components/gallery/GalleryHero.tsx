@@ -69,7 +69,7 @@ export function GalleryHero() {
       {/* Responsive HD Parallax Backdrop */}
       <div ref={bgRef} className="absolute inset-0 will-change-transform">
         <Image
-          src="/images/hero/hero-1-desktop.jpg"
+          src="/images/hero/myra-hero-1-desktop.jpg"
           alt="MYRA Golden Beach Resort beachfront cottages at twilight"
           fill
           priority

@@ -18,7 +18,7 @@ export const heroSlides: HeroSlide[] = [
     subtitle: "Beachfront bamboo cottages, pristine sands and warm Andhra hospitality near Chirala.",
     ctaLabel: "Explore Our Resort",
     ctaHref: "/about",
-    image: "/images/hero/hero-1-desktop.jpg",
+    image: "/images/hero/myra-hero-1-desktop.jpg",
     mobileImage: "/images/hero/hero-1-mobile.jpg",
     imageAlt:
       "Illuminated beachfront bamboo cottages on golden sands at MYRA Golden Beach Resort in Chirala, Andhra Pradesh",
@@ -30,8 +30,8 @@ export const heroSlides: HeroSlide[] = [
     subtitle: "Sparkling waters, evening ambient lighting and private cottages for the ultimate getaway.",
     ctaLabel: "View Gallery",
     ctaHref: "/gallery",
-    image: "/images/hero/hero-2-desktop.jpg",
-    mobileImage: "/images/hero/hero-2-mobile.jpg",
+    image: "/images/hero/myra-hero-2-desktop.jpg",
+    mobileImage: "/images/hero/myra-hero-2-mobile.jpg",
     imageAlt:
       "Illuminated swimming pool at night with decorated gazebo and cottages at MYRA Golden Beach Resort",
   },
@@ -42,8 +42,8 @@ export const heroSlides: HeroSlide[] = [
     subtitle: "Wake up to sweeping sea breezes and golden horizons from your private cottage veranda.",
     ctaLabel: "Explore Rooms",
     ctaHref: "/rooms",
-    image: "/images/hero/hero-3-desktop.jpg",
-    mobileImage: "/images/hero/hero-3-mobile.jpg",
+    image: "/images/hero/myra-hero-3-desktop.jpg",
+    mobileImage: "/images/hero/myra-hero-3-mobile.jpg",
     imageAlt:
       "Ocean view of the golden beach and sea waves from the cottage veranda at MYRA Golden Beach Resort in Andhra Pradesh",
   },

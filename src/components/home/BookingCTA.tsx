@@ -18,7 +18,7 @@ export function BookingCTA() {
       {/* Responsive Background Image: 16:9 Desktop + 9:16 Mobile */}
       <div className="absolute inset-0">
         <Image
-          src="/images/hero/hero-1-desktop.jpg"
+          src="/images/hero/myra-hero-1-desktop.jpg"
           alt="MYRA Golden Beach Resort — book your coastal stay"
           fill
           className="hidden md:block object-cover object-center"

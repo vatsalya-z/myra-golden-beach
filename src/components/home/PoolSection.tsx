@@ -16,14 +16,14 @@ export function PoolSection() {
       {/* Responsive Background Image: 16:9 Desktop + 9:16 Mobile */}
       <div className="absolute inset-0">
         <Image
-          src="/images/hero/hero-2-desktop.jpg"
+          src="/images/hero/myra-hero-2-desktop.jpg"
           alt="Outdoor illuminated swimming pool at MYRA Golden Beach Resort"
           fill
           className="hidden md:block object-cover object-center"
           sizes="100vw"
         />
         <Image
-          src="/images/hero/hero-2-mobile.jpg"
+          src="/images/hero/myra-hero-2-mobile.jpg"
           alt="Outdoor illuminated swimming pool at MYRA Golden Beach Resort"
           fill
           className="block md:hidden object-cover object-center"
