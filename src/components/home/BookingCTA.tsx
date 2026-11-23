@@ -12,38 +12,55 @@ export function BookingCTA() {
 
   return (
     <section
-      className="relative py-20 md:py-28 overflow-hidden"
+      className="relative py-14 sm:py-20 md:py-28 overflow-hidden"
       aria-label="Booking call to action"
     >
+      {/* Responsive Background Image: 16:9 Desktop + 9:16 Mobile */}
       <div className="absolute inset-0">
         <Image
           src="/images/hero/hero-1-desktop.jpg"
           alt="MYRA Golden Beach Resort — book your coastal stay"
           fill
-          className="object-cover"
+          className="hidden md:block object-cover object-center"
           sizes="100vw"
         />
+        <Image
+          src="/images/hero/hero-1-mobile.jpg"
+          alt="MYRA Golden Beach Resort — book your coastal stay"
+          fill
+          className="block md:hidden object-cover object-center"
+          sizes="100vw"
+        />
+        {/* Balanced gradient scrim for crisp text readability while keeping photo visible */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#041B21]/65 via-[#041B21]/40 to-[#041B21]/75" />
       </div>
 
       <div className="relative max-w-4xl mx-auto px-4 sm:px-6 text-center">
         <FadeIn>
           {/* Centered Section Heading */}
-          <SectionHeading
-            eyebrow="Plan Your Stay"
-            title="Ready for a Coastal Escape?"
-            subtitle="Contact us to check availability, get the latest rates and start planning your perfect stay at MYRA Golden Beach Resort."
-            align="center"
-            light
-          />
+          <div className="drop-shadow-[0_2px_12px_rgba(4,27,33,0.9)]">
+            <SectionHeading
+              eyebrow="Plan Your Stay"
+              title="Ready for a Coastal Escape?"
+              subtitle="Contact us to check availability, get the latest rates and start planning your perfect stay at MYRA Golden Beach Resort."
+              align="center"
+              light
+            />
+          </div>
 
           {/* Centered CTA Buttons */}
-          <SectionCTA className="mt-10">
-            <Button href="/contact" variant="primary" size="lg" className="min-w-[210px] w-full sm:w-auto font-bold">
+          <SectionCTA className="mt-8 sm:mt-10">
+            <Button
+              href="/contact"
+              variant="primary"
+              size="lg"
+              className="min-w-[210px] w-full sm:w-auto font-bold"
+            >
               Send an Enquiry
             </Button>
             <a
               href={`tel:${siteConfig.phone}`}
-              className="inline-flex items-center justify-center gap-2 px-7 py-4 border-2 border-white/30 text-white font-semibold rounded-sm hover:bg-white/10 transition-colors text-sm min-w-[210px] w-full sm:w-auto"
+              className="inline-flex items-center justify-center gap-2 px-7 py-4 bg-[#041B21]/65 backdrop-blur-md border-2 border-white/40 text-white font-semibold rounded-sm hover:bg-white/15 hover:border-[#E0B45C] transition-all text-sm min-w-[210px] w-full sm:w-auto shadow-md"
               aria-label={`Call ${siteConfig.phoneDisplay}`}
             >
               <FaPhoneAlt size={14} className="text-[#E0B45C]" />
@@ -53,7 +70,7 @@ export function BookingCTA() {
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 px-7 py-4 border-2 border-[#25D366]/50 text-[#25D366] font-semibold rounded-sm hover:bg-[#25D366]/10 transition-colors text-sm min-w-[210px] w-full sm:w-auto"
+              className="inline-flex items-center justify-center gap-2 px-7 py-4 bg-[#041B21]/65 backdrop-blur-md border-2 border-[#25D366]/65 text-[#25D366] font-semibold rounded-sm hover:bg-[#25D366] hover:text-[#041B21] transition-all text-sm min-w-[210px] w-full sm:w-auto shadow-md"
               aria-label="WhatsApp enquiry"
             >
               <FaWhatsapp size={17} />
