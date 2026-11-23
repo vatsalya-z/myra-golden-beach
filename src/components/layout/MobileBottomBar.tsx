@@ -15,7 +15,7 @@ export function MobileBottomBar() {
 
   return (
     <nav
-      className="fixed bottom-0 left-0 right-0 z-40 lg:hidden bg-[#123B2A] border-t border-[#C8A45D]/25 shadow-[0_-5px_25px_rgba(23,27,25,0.6)] pb-[env(safe-area-inset-bottom)]"
+      className="fixed bottom-0 left-0 right-0 z-40 lg:hidden bg-[#072A32] border-t border-[#E0B45C]/25 shadow-[0_-5px_25px_rgba(4,27,33,0.6)] pb-[env(safe-area-inset-bottom)]"
       aria-label="Mobile quick navigation"
     >
       <div className="grid grid-cols-3 h-15 max-w-lg mx-auto">
@@ -25,8 +25,8 @@ export function MobileBottomBar() {
           className={cn(
             "flex flex-col items-center justify-center gap-1 transition-all duration-200 active:scale-95",
             isHome
-              ? "text-[#C8A45D] font-semibold"
-              : "text-white/85 hover:text-[#C8A45D]"
+              ? "text-[#E0B45C] font-semibold"
+              : "text-white/85 hover:text-[#E0B45C]"
           )}
           aria-label="Go to Home"
           aria-current={isHome ? "page" : undefined}
@@ -35,7 +35,7 @@ export function MobileBottomBar() {
             size={22}
             className={cn(
               "transition-transform",
-              isHome && "scale-110 text-[#C8A45D]"
+              isHome && "scale-110 text-[#E0B45C]"
             )}
           />
           <span className="text-[11px] tracking-wide leading-none">Home</span>
@@ -59,12 +59,12 @@ export function MobileBottomBar() {
         {/* Button 3: Call */}
         <a
           href={`tel:${siteConfig.phone}`}
-          className="flex flex-col items-center justify-center gap-1 text-white/85 hover:text-[#C8A45D] transition-all duration-200 active:scale-95 group"
+          className="flex flex-col items-center justify-center gap-1 text-white/85 hover:text-[#E0B45C] transition-all duration-200 active:scale-95 group"
           aria-label={`Call ${siteConfig.phoneDisplay}`}
         >
           <FaPhoneAlt
             size={18}
-            className="group-hover:text-[#C8A45D] group-hover:scale-110 transition-transform text-[#C8A45D]"
+            className="group-hover:text-[#E0B45C] group-hover:scale-110 transition-transform text-[#E0B45C]"
           />
           <span className="text-[11px] tracking-wide leading-none">Call</span>
         </a>

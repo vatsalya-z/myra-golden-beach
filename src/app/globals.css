@@ -2,43 +2,43 @@
 @import "../styles/animations.css";
 
 :root {
-  --color-pine: #123b2a;
-  --color-pine-luxury: #123b2a;
-  --color-pine-dark: #0e281d;
-  --color-primary-dark: #123b2a;
-  --color-deep-green: #123b2a;
-  --color-secondary-dark: #1a4231;
+  --color-pine: #072A32;
+  --color-pine-luxury: #072A32;
+  --color-pine-dark: #041B21;
+  --color-primary-dark: #072A32;
+  --color-deep-green: #072A32;
+  --color-secondary-dark: #0E3E49;
 
-  --color-gold: #c8a45d;
-  --color-gold-hover: #b38e46;
+  --color-gold: #E0B45C;
+  --color-gold-hover: #C6953B;
 
-  --color-sand: #f0e9dc;
-  --color-ivory: #faf7f0;
+  --color-sand: #F3ECE0;
+  --color-ivory: #FCFAF6;
   --color-white: #ffffff;
 
-  --color-charcoal: #1f1f1f;
-  --color-text: #1f1f1f;
-  --color-muted: #74766f;
-  --color-border: #efe7d8;
+  --color-charcoal: #102026;
+  --color-text: #102026;
+  --color-muted: #566970;
+  --color-border: #E5D9C3;
 
   /* Legacy & compatibility aliases */
-  --primary: #123b2a;
-  --primary-foreground: #faf7f0;
-  --primary-dark: #123b2a;
-  --accent: #c8a45d;
-  --accent-hover: #b38e46;
-  --gold: #c8a45d;
-  --gold-hover: #b38e46;
-  --background: #faf7f0;
-  --section: #faf7f0;
-  --section-alt: #123b2a;
+  --primary: #072A32;
+  --primary-foreground: #FCFAF6;
+  --primary-dark: #072A32;
+  --accent: #E0B45C;
+  --accent-hover: #C6953B;
+  --gold: #E0B45C;
+  --gold-hover: #C6953B;
+  --background: #FCFAF6;
+  --section: #FCFAF6;
+  --section-alt: #072A32;
   --card: #ffffff;
-  --border-light: #efe7d8;
-  --text-dark: #1f1f1f;
-  --text-muted: #74766f;
+  --border-light: #E5D9C3;
+  --text-dark: #102026;
+  --text-muted: #566970;
   --text-light: #ffffff;
   --whatsapp: #25d366;
-  --shadow: 0 10px 30px rgba(18, 59, 42, 0.08);
+  --shadow: 0 10px 30px rgba(7, 42, 50, 0.08);
 }
 
 @theme inline {
@@ -109,7 +109,7 @@ body {
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: #F3ECE0;
 }
 ::-webkit-scrollbar-thumb {
   background: var(--accent);

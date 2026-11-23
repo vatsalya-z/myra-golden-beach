@@ -115,7 +115,7 @@ export default function RootLayout({
           />
         ))}
       </head>
-      <body className="font-inter bg-[#FAF7F0] text-[#1F1F1F] antialiased">
+      <body className="font-inter bg-[#FCFAF6] text-[#102026] antialiased">
         <ScrollProgress />
         <div className="flex flex-col min-h-screen">
           <Header />

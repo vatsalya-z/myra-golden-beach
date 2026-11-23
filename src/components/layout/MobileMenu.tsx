@@ -43,7 +43,7 @@ export function MobileMenu({ isOpen, onClose, currentPath }: MobileMenuProps) {
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
             transition={{ type: "tween", duration: 0.32, ease: [0.16, 1, 0.3, 1] }}
-            className="absolute top-0 right-0 bottom-0 h-full w-[55vw] min-w-[275px] max-w-[360px] bg-[#123B2A] border-l border-[#C8A45D]/20 shadow-[-10px_0_35px_rgba(0,0,0,0.5)] flex flex-col justify-between overflow-hidden"
+            className="absolute top-0 right-0 bottom-0 h-full w-[55vw] min-w-[275px] max-w-[360px] bg-[#072A32] border-l border-[#E0B45C]/20 shadow-[-10px_0_35px_rgba(0,0,0,0.5)] flex flex-col justify-between overflow-hidden"
           >
             {/* Drawer Header */}
             <div className="flex items-center justify-between px-5 py-4.5 border-b border-white/10 shrink-0">
@@ -58,7 +58,7 @@ export function MobileMenu({ isOpen, onClose, currentPath }: MobileMenuProps) {
                   />
                 </div>
                 <div className="flex flex-col leading-none">
-                  <span className="text-[#C8A45D] font-playfair font-bold text-sm tracking-wide">
+                  <span className="text-[#E0B45C] font-playfair font-bold text-sm tracking-wide">
                     MYRA GOLDEN
                   </span>
                   <span className="text-white/60 text-[9px] uppercase tracking-widest mt-0.5">
@@ -69,7 +69,7 @@ export function MobileMenu({ isOpen, onClose, currentPath }: MobileMenuProps) {
               <button
                 onClick={onClose}
                 aria-label="Close navigation menu"
-                className="text-white/70 hover:text-white hover:bg-white/10 rounded-full p-1.5 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C8A45D]"
+                className="text-white/70 hover:text-white hover:bg-white/10 rounded-full p-1.5 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#E0B45C]"
               >
                 <HiXMark size={22} />
               </button>
@@ -95,15 +95,15 @@ export function MobileMenu({ isOpen, onClose, currentPath }: MobileMenuProps) {
                         className={cn(
                           "flex items-center justify-between px-3.5 py-2.5 rounded-md text-[13px] font-medium transition-all duration-200",
                           isActive
-                            ? "bg-[#C8A45D]/15 text-[#C8A45D] font-semibold border-l-2 border-[#C8A45D]"
-                            : "text-white/85 hover:bg-white/5 hover:text-[#C8A45D]"
+                            ? "bg-[#E0B45C]/15 text-[#E0B45C] font-semibold border-l-2 border-[#E0B45C]"
+                            : "text-white/85 hover:bg-white/5 hover:text-[#E0B45C]"
                         )}
                         aria-current={isActive ? "page" : undefined}
                       >
                         <span>{link.label}</span>
                         {isActive && (
                           <span
-                            className="w-1.5 h-1.5 rounded-full bg-[#C8A45D]"
+                            className="w-1.5 h-1.5 rounded-full bg-[#E0B45C]"
                             aria-hidden="true"
                           />
                         )}
@@ -115,7 +115,7 @@ export function MobileMenu({ isOpen, onClose, currentPath }: MobileMenuProps) {
             </nav>
 
             {/* Drawer Footer — EXACTLY TWO BUTTONS: WhatsApp & Call Now */}
-            <div className="p-4 border-t border-white/10 bg-[#0E281D] space-y-2.5 shrink-0">
+            <div className="p-4 border-t border-white/10 bg-[#041B21] space-y-2.5 shrink-0">
               {/* Button 1: WhatsApp */}
               <a
                 href={whatsappUrl}
@@ -133,7 +133,7 @@ export function MobileMenu({ isOpen, onClose, currentPath }: MobileMenuProps) {
               <a
                 href={`tel:${siteConfig.phone}`}
                 onClick={onClose}
-                className="flex items-center justify-center gap-2 w-full py-2.5 px-3 bg-[#C8A45D] hover:bg-[#B38E46] text-[#123B2A] font-bold rounded-sm text-xs tracking-wide transition-colors shadow-sm"
+                className="flex items-center justify-center gap-2 w-full py-2.5 px-3 bg-[#E0B45C] hover:bg-[#C6953B] text-[#072A32] font-bold rounded-sm text-xs tracking-wide transition-colors shadow-sm"
                 aria-label={`Call ${siteConfig.phoneDisplay}`}
               >
                 <FaPhoneAlt size={13} />

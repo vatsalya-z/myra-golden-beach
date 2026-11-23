@@ -3,13 +3,13 @@ import { Button } from "@/components/common/Button";
 
 export default function NotFound() {
   return (
-    <div className="min-h-screen bg-[#FAF7F0] flex items-center justify-center px-4">
+    <div className="min-h-screen bg-[#FCFAF6] flex items-center justify-center px-4">
       <div className="text-center max-w-lg">
-        <div className="font-playfair text-8xl font-bold text-[#C8A45D] mb-4">404</div>
-        <h1 className="font-playfair text-3xl font-bold text-[#123B2A] mb-4">
+        <div className="font-playfair text-8xl font-bold text-[#E0B45C] mb-4">404</div>
+        <h1 className="font-playfair text-3xl font-bold text-[#072A32] mb-4">
           Page Not Found
         </h1>
-        <p className="text-[#74766F] mb-8 leading-relaxed">
+        <p className="text-[#566970] mb-8 leading-relaxed">
           The page you are looking for does not exist. Perhaps you were looking
           for our rooms, gallery or contact information?
         </p>

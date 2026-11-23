@@ -8,7 +8,7 @@ export function RoomsPreview() {
   const featured = rooms.filter((r) => r.featured).slice(0, 3);
 
   return (
-    <section className="py-16 md:py-24 bg-[#123B2A]" aria-labelledby="rooms-preview-heading">
+    <section className="py-16 md:py-24 bg-[#072A32]" aria-labelledby="rooms-preview-heading">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <FadeIn>
           <SectionHeading

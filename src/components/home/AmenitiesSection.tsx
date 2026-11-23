@@ -10,7 +10,7 @@ import { ScrollReveal } from "@/components/animations/ScrollReveal";
 export function AmenitiesSection() {
   return (
     <section
-      className="py-16 md:py-24 bg-[#FAF7F0] relative overflow-hidden"
+      className="py-16 md:py-24 bg-[#FCFAF6] relative overflow-hidden"
       aria-labelledby="amenities-heading"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 relative">
@@ -30,12 +30,12 @@ export function AmenitiesSection() {
               <motion.div
                 key={amenity.id}
                 whileHover={{ y: -6, transition: { duration: 0.25 } }}
-                className="h-full flex flex-col justify-between group bg-white border border-[#EFE7D8] hover:border-[#C8A45D]/60 rounded-xl overflow-hidden transition-colors shadow-sm hover:shadow-lg"
+                className="h-full flex flex-col justify-between group bg-white border border-[#E5D9C3] hover:border-[#E0B45C]/60 rounded-xl overflow-hidden transition-colors shadow-sm hover:shadow-lg"
               >
                 <div>
                   {/* Photo with hover effect */}
                   {amenity.image && (
-                    <div className="relative h-28 sm:h-36 md:h-40 w-full overflow-hidden bg-[#123B2A]">
+                    <div className="relative h-28 sm:h-36 md:h-40 w-full overflow-hidden bg-[#072A32]">
                       <Image
                         src={amenity.image}
                         alt={amenity.title}
@@ -43,9 +43,9 @@ export function AmenitiesSection() {
                         className="object-cover group-hover:scale-105 transition-transform duration-700"
                         sizes="(max-width: 768px) 50vw, 25vw"
                       />
-                      <div className="absolute inset-0 bg-[#123B2A]/30" />
+                      <div className="absolute inset-0 bg-[#072A32]/30" />
                       {/* Monogram Badge */}
-                      <span className="absolute top-2.5 left-2.5 inline-flex items-center justify-center w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#123B2A] border border-[#C8A45D]/70 font-playfair font-bold text-[10px] sm:text-xs text-[#C8A45D] shadow">
+                      <span className="absolute top-2.5 left-2.5 inline-flex items-center justify-center w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#072A32] border border-[#E0B45C]/70 font-playfair font-bold text-[10px] sm:text-xs text-[#E0B45C] shadow">
                         {indexStr}
                       </span>
                     </div>
@@ -53,10 +53,10 @@ export function AmenitiesSection() {
 
                   {/* Text Details */}
                   <div className="p-3.5 sm:p-5">
-                    <h3 className="text-[#123B2A] group-hover:text-[#C8A45D] transition-colors font-semibold text-xs sm:text-sm md:text-base mb-1.5 sm:mb-2 leading-snug">
+                    <h3 className="text-[#072A32] group-hover:text-[#E0B45C] transition-colors font-semibold text-xs sm:text-sm md:text-base mb-1.5 sm:mb-2 leading-snug">
                       {amenity.title}
                     </h3>
-                    <p className="text-[#74766F] text-[11px] sm:text-xs leading-relaxed line-clamp-3">
+                    <p className="text-[#566970] text-[11px] sm:text-xs leading-relaxed line-clamp-3">
                       {amenity.description}
                     </p>
                   </div>

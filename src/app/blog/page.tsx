@@ -63,7 +63,7 @@ export default function BlogPage() {
           sizes="100vw"
         />
         {/* Flat solid overlay — no gradient */}
-        <div className="absolute inset-0 bg-[#123B2A]/65" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#041B21]/80 via-[#072A32]/45 to-[#041B21]/85" />
         <div className="relative z-10 w-full max-w-4xl mx-auto px-4 sm:px-6 text-center flex flex-col items-center justify-center">
           <Breadcrumbs items={[{ label: "Blog", href: "/blog" }]} light />
           <h1 className="font-playfair text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mt-4 text-center leading-tight">
@@ -76,7 +76,7 @@ export default function BlogPage() {
       </section>
 
       {/* Blog content */}
-      <section className="py-16 md:py-24 bg-[#FAF7F0]">
+      <section className="py-16 md:py-24 bg-[#FCFAF6]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <FadeIn>
             <SectionHeading
@@ -99,8 +99,8 @@ export default function BlogPage() {
                       sizes="(max-width: 768px) 100vw, 50vw"
                     />
                   </div>
-                  <div className="bg-[#123B2A] p-8 md:p-10 flex flex-col justify-center">
-                    <span className="text-[#C8A45D] text-xs font-semibold tracking-widest uppercase mb-3">
+                  <div className="bg-gradient-to-br from-[#041B21] via-[#072A32] to-[#0E3E49] p-8 md:p-10 flex flex-col justify-center">
+                    <span className="text-[#E0B45C] text-xs font-semibold tracking-widest uppercase mb-3">
                       Featured · {featured.category}
                     </span>
                     <h2 className="font-playfair text-2xl md:text-3xl font-bold text-white mb-4 leading-tight">
@@ -114,7 +114,7 @@ export default function BlogPage() {
                       <span>·</span>
                       <span>{formatDate(featured.publishedAt)}</span>
                     </div>
-                    <span className="inline-flex items-center gap-2 text-[#C8A45D] text-sm font-semibold group/arrow">
+                    <span className="inline-flex items-center gap-2 text-[#E0B45C] text-sm font-semibold group/arrow">
                       Read Article &rarr;
                     </span>
                   </div>
@@ -127,7 +127,7 @@ export default function BlogPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 lg:gap-8 mt-8 sm:mt-12">
             {rest.map((post, idx) => (
               <FadeIn key={post.id} delay={idx * 0.1} className="h-full">
-                <article className="h-full flex flex-col justify-between group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1.5 border border-[#EFE7D8]">
+                <article className="h-full flex flex-col justify-between group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1.5 border border-[#E5D9C3]">
                   <Link href={`/blog/${post.slug}`} className="h-full flex flex-col justify-between">
                     <div>
                       <div className="relative h-48 sm:h-52 overflow-hidden">
@@ -140,20 +140,20 @@ export default function BlogPage() {
                         />
                       </div>
                       <div className="p-5 sm:p-6">
-                        <div className="flex items-center gap-2 text-xs text-[#74766F] mb-2.5">
-                          <span className="text-[#C8A45D] font-semibold">{post.category}</span>
+                        <div className="flex items-center gap-2 text-xs text-[#566970] mb-2.5">
+                          <span className="text-[#E0B45C] font-semibold">{post.category}</span>
                           <span>·</span>
                           <span>{post.readingTime} min read</span>
                         </div>
-                        <h2 className="font-playfair text-xl font-bold text-[#123B2A] mb-2.5 leading-snug group-hover:text-[#C8A45D] transition-colors">
+                        <h2 className="font-playfair text-xl font-bold text-[#072A32] mb-2.5 leading-snug group-hover:text-[#E0B45C] transition-colors">
                           {post.title}
                         </h2>
-                        <p className="text-[#74766F] text-xs sm:text-sm leading-relaxed mb-4 line-clamp-2">
+                        <p className="text-[#566970] text-xs sm:text-sm leading-relaxed mb-4 line-clamp-2">
                           {post.excerpt}
                         </p>
                       </div>
                     </div>
-                    <div className="px-5 pb-5 sm:px-6 sm:pb-6 pt-0 flex items-center gap-1.5 text-[#C8A45D] text-xs font-semibold">
+                    <div className="px-5 pb-5 sm:px-6 sm:pb-6 pt-0 flex items-center gap-1.5 text-[#E0B45C] text-xs font-semibold">
                       Read More &rarr;
                     </div>
                   </Link>

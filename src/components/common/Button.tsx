@@ -29,15 +29,15 @@ export function Button({
 
   const variants = {
     primary:
-      "bg-[#C8A45D] hover:bg-[#B38E46] text-[#123B2A] font-bold focus-visible:ring-[#C8A45D] shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0",
+      "bg-gradient-to-r from-[#C89435] via-[#EBC878] to-[#C89435] hover:from-[#B88428] hover:via-[#E0B45C] hover:to-[#B88428] text-[#041B21] font-bold focus-visible:ring-[#E0B45C] shadow-[0_6px_20px_rgba(224,180,92,0.3)] hover:shadow-[0_10px_28px_rgba(224,180,92,0.45)] hover:-translate-y-0.5 active:translate-y-0",
     secondary:
-      "bg-[#123B2A] hover:bg-[#C8A45D] text-white hover:text-[#123B2A] border border-[#C8A45D]/30 focus-visible:ring-[#123B2A] shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0",
+      "bg-gradient-to-r from-[#041B21] via-[#072A32] to-[#0E3E49] hover:from-[#C89435] hover:via-[#EBC878] hover:to-[#C89435] text-white hover:text-[#041B21] border border-[#E0B45C]/35 focus-visible:ring-[#072A32] shadow-md hover:shadow-[0_8px_24px_rgba(224,180,92,0.35)] hover:-translate-y-0.5 active:translate-y-0",
     outline:
-      "border-2 border-[#123B2A] text-[#123B2A] hover:border-[#C8A45D] hover:text-[#C8A45D] hover:bg-transparent focus-visible:ring-[#C8A45D] hover:-translate-y-0.5 active:translate-y-0",
+      "border-2 border-[#072A32] text-[#072A32] hover:border-[#E0B45C] hover:text-[#946B1E] hover:bg-[#E0B45C]/10 focus-visible:ring-[#E0B45C] hover:-translate-y-0.5 active:translate-y-0",
     ghost:
-      "border border-white/30 text-white hover:bg-white/10 hover:border-[#C8A45D] hover:text-[#C8A45D] focus-visible:ring-white/50",
+      "border border-white/35 text-white backdrop-blur-sm bg-white/5 hover:bg-white/15 hover:border-[#E0B45C] hover:text-[#F2D28B] focus-visible:ring-white/50",
     accent:
-      "bg-[#C8A45D] hover:bg-[#B38E46] text-[#123B2A] font-bold focus-visible:ring-[#C8A45D] shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0",
+      "bg-gradient-to-r from-[#C89435] via-[#EBC878] to-[#C89435] hover:from-[#B88428] hover:via-[#E0B45C] hover:to-[#B88428] text-[#041B21] font-bold focus-visible:ring-[#E0B45C] shadow-[0_6px_20px_rgba(224,180,92,0.3)] hover:shadow-[0_10px_28px_rgba(224,180,92,0.45)] hover:-translate-y-0.5 active:translate-y-0",
   };
 
   const sizes = {

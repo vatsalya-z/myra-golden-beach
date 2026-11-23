@@ -34,7 +34,7 @@ export function SectionHeading({
       {eyebrow && (
         <span
           className={cn(
-            "text-xs md:text-sm font-semibold tracking-[0.25em] uppercase text-[#C8A45D]"
+            "text-xs md:text-sm font-semibold tracking-[0.25em] uppercase text-[#E0B45C]"
           )}
         >
           {eyebrow}
@@ -45,7 +45,7 @@ export function SectionHeading({
         id={id}
         className={cn(
           "font-playfair text-[clamp(1.75rem,3.8vw,2.85rem)] font-bold leading-tight tracking-tight max-w-4xl",
-          light ? "text-white" : "text-[#123B2A]"
+          light ? "text-white" : "text-[#072A32]"
         )}
       >
         {title}
@@ -60,16 +60,16 @@ export function SectionHeading({
         )}
         aria-hidden="true"
       >
-        <div className="h-0.5 w-12 bg-[#C8A45D] rounded-full" />
-        <div className="h-0.5 w-4 bg-[#C8A45D]/50 rounded-full" />
-        <div className="h-0.5 w-2 bg-[#C8A45D]/25 rounded-full" />
+        <div className="h-0.5 w-14 bg-gradient-to-r from-[#C89435] via-[#F2D28B] to-[#C89435] rounded-full" />
+        <div className="h-0.5 w-4 bg-[#E0B45C]/60 rounded-full" />
+        <div className="h-0.5 w-2 bg-[#E0B45C]/30 rounded-full" />
       </div>
 
       {descText && (
         <p
           className={cn(
             "text-[clamp(0.925rem,1.2vw,1.1rem)] leading-relaxed max-w-2xl",
-            light ? "text-white/80" : "text-[#74766F]",
+            light ? "text-white/80" : "text-[#566970]",
             align === "center" && "mx-auto"
           )}
         >

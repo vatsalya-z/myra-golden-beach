@@ -11,7 +11,7 @@ export function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-[#123B2A] text-white/80" role="contentinfo">
+    <footer className="bg-gradient-to-b from-[#072A32] via-[#052128] to-[#041B21] border-t border-[#E0B45C]/30 text-white/80" role="contentinfo">
       {/* Main footer */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-14 lg:py-16">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
@@ -28,7 +28,7 @@ export function Footer() {
                 />
               </div>
               <div className="text-left">
-                <div className="text-[#C8A45D] font-playfair font-bold text-lg leading-none">
+                <div className="text-[#E0B45C] font-playfair font-bold text-lg leading-none">
                   MYRA GOLDEN
                 </div>
                 <div className="text-white/50 text-[10px] tracking-[0.2em] uppercase">
@@ -49,7 +49,7 @@ export function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Instagram"
-                  className="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center hover:border-[#C8A45D] hover:text-[#C8A45D] transition-colors text-xs font-bold"
+                  className="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center hover:border-[#E0B45C] hover:text-[#E0B45C] transition-colors text-xs font-bold"
                 >
                   Ig
                 </a>
@@ -60,7 +60,7 @@ export function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Facebook"
-                  className="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center hover:border-[#C8A45D] hover:text-[#C8A45D] transition-colors text-xs font-bold"
+                  className="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center hover:border-[#E0B45C] hover:text-[#E0B45C] transition-colors text-xs font-bold"
                 >
                   Fb
                 </a>
@@ -71,7 +71,7 @@ export function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="YouTube"
-                  className="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center hover:border-[#C8A45D] hover:text-[#C8A45D] transition-colors text-xs font-bold"
+                  className="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center hover:border-[#E0B45C] hover:text-[#E0B45C] transition-colors text-xs font-bold"
                 >
                   Yt
                 </a>
@@ -81,7 +81,7 @@ export function Footer() {
 
           {/* Quick Links / Navigation Links */}
           <div>
-            <h3 className="text-[#C8A45D] font-semibold text-sm uppercase tracking-widest mb-4 sm:mb-5 text-center sm:text-left">
+            <h3 className="text-[#E0B45C] font-semibold text-sm uppercase tracking-widest mb-4 sm:mb-5 text-center sm:text-left">
               Quick Links
             </h3>
             <ul className="grid grid-cols-2 sm:grid-cols-1 gap-x-4 gap-y-2.5">
@@ -89,9 +89,9 @@ export function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-sm text-white/70 hover:text-[#C8A45D] transition-colors flex items-center gap-2 group"
+                    className="text-sm text-white/70 hover:text-[#E0B45C] transition-colors flex items-center gap-2 group"
                   >
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#C8A45D]/50 group-hover:bg-[#C8A45D] transition-colors shrink-0" />
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#E0B45C]/50 group-hover:bg-[#E0B45C] transition-colors shrink-0" />
                     <span className="truncate">{link.label}</span>
                   </Link>
                 </li>
@@ -101,7 +101,7 @@ export function Footer() {
 
           {/* Facilities */}
           <div>
-            <h3 className="text-[#C8A45D] font-semibold text-sm uppercase tracking-widest mb-4 sm:mb-5 text-center sm:text-left">
+            <h3 className="text-[#E0B45C] font-semibold text-sm uppercase tracking-widest mb-4 sm:mb-5 text-center sm:text-left">
               Facilities
             </h3>
             <ul className="grid grid-cols-2 sm:grid-cols-1 gap-x-4 gap-y-2.5 text-sm text-white/70">
@@ -116,7 +116,7 @@ export function Footer() {
                 "24-Hour Reception",
               ].map((item) => (
                 <li key={item} className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#C8A45D]/50 shrink-0" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#E0B45C]/50 shrink-0" />
                   <span className="truncate">{item}</span>
                 </li>
               ))}
@@ -125,12 +125,12 @@ export function Footer() {
 
           {/* Contact */}
           <div>
-            <h3 className="text-[#C8A45D] font-semibold text-sm uppercase tracking-widest mb-5">
+            <h3 className="text-[#E0B45C] font-semibold text-sm uppercase tracking-widest mb-5">
               Contact Us
             </h3>
             <div className="space-y-4">
               <div className="flex gap-3">
-                <HiMapPin size={17} className="text-[#C8A45D] shrink-0 mt-0.5" />
+                <HiMapPin size={17} className="text-[#E0B45C] shrink-0 mt-0.5" />
                 <p className="text-sm text-white/70 leading-relaxed">
                   RC3F+QW, Kotha Peta Rural,
                   <br />
@@ -140,18 +140,18 @@ export function Footer() {
 
               <a
                 href={`tel:${siteConfig.phone}`}
-                className="flex items-center gap-3 text-sm text-white/70 hover:text-[#C8A45D] transition-colors"
+                className="flex items-center gap-3 text-sm text-white/70 hover:text-[#E0B45C] transition-colors"
               >
-                <FaPhoneAlt size={13} className="text-[#C8A45D] shrink-0" />
+                <FaPhoneAlt size={13} className="text-[#E0B45C] shrink-0" />
                 {siteConfig.phoneDisplay}
               </a>
 
               {siteConfig.email && (
                 <a
                   href={`mailto:${siteConfig.email}`}
-                  className="flex items-center gap-3 text-sm text-white/70 hover:text-[#C8A45D] transition-colors"
+                  className="flex items-center gap-3 text-sm text-white/70 hover:text-[#E0B45C] transition-colors"
                 >
-                  <HiEnvelope size={15} className="text-[#C8A45D] shrink-0" />
+                  <HiEnvelope size={15} className="text-[#E0B45C] shrink-0" />
                   {siteConfig.email}
                 </a>
               )}
@@ -170,7 +170,7 @@ export function Footer() {
                 href={siteConfig.googleBusinessProfile}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 mt-2 px-4 py-2 border border-[#C8A45D]/50 text-[#C8A45D] text-xs font-semibold rounded-sm hover:bg-[#C8A45D] hover:text-[#123B2A] transition-all"
+                className="inline-flex items-center gap-2 mt-2 px-4 py-2 border border-[#E0B45C]/50 text-[#E0B45C] text-xs font-semibold rounded-sm hover:bg-[#E0B45C] hover:text-[#072A32] transition-all"
               >
                 View on Google Maps
               </a>
@@ -192,7 +192,7 @@ export function Footer() {
                 href="https://www.zoomdigital.in/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#C8A45D] hover:text-[#B38E46] hover:underline font-medium transition-colors"
+                className="text-[#E0B45C] hover:text-[#C6953B] hover:underline font-medium transition-colors"
               >
                 Zoom Digital
               </a>

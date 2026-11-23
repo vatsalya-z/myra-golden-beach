@@ -58,7 +58,7 @@ export default function GalleryPage() {
           sizes="100vw"
         />
         {/* Flat solid overlay — no gradient */}
-        <div className="absolute inset-0 bg-[#123B2A]/65" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#041B21]/80 via-[#072A32]/45 to-[#041B21]/85" />
         <div className="relative z-10 w-full max-w-4xl mx-auto px-4 sm:px-6 text-center flex flex-col items-center justify-center">
           <Breadcrumbs items={[{ label: "Gallery", href: "/gallery" }]} light />
           <h1 className="font-playfair text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mt-4 text-center leading-tight">
@@ -71,7 +71,7 @@ export default function GalleryPage() {
       </section>
 
       {/* Gallery */}
-      <section className="py-16 md:py-24 bg-[#FAF7F0]">
+      <section className="py-16 md:py-24 bg-[#FCFAF6]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <FadeIn>
             <SectionHeading

@@ -9,7 +9,7 @@ import { FadeIn } from "@/components/animations/FadeIn";
 
 export function DiningSection() {
   return (
-    <section className="py-16 md:py-24 bg-[#123B2A]" aria-label="Restaurant and dining">
+    <section className="py-16 md:py-24 bg-[#072A32]" aria-label="Restaurant and dining">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         {/* Centered Section Heading */}
         <FadeIn className="text-center mb-12 lg:mb-16">
@@ -77,9 +77,9 @@ export function DiningSection() {
                   viewport={{ once: true }}
                   transition={{ delay: 0.15 + idx * 0.08, duration: 0.4 }}
                   whileHover={{ y: -3, transition: { duration: 0.2 } }}
-                  className="flex items-start gap-3 p-4 bg-white/10 backdrop-blur-md rounded-xl border border-white/15 hover:border-[#C8A45D]/50 transition-all text-white"
+                  className="flex items-start gap-3 p-4 bg-white/10 backdrop-blur-md rounded-xl border border-white/15 hover:border-[#E0B45C]/50 transition-all text-white"
                 >
-                  <div className="w-2 h-2 rounded-full bg-[#C8A45D] mt-1.5 shrink-0" />
+                  <div className="w-2 h-2 rounded-full bg-[#E0B45C] mt-1.5 shrink-0" />
                   <div>
                     <div className="text-sm font-semibold text-white">{item.label}</div>
                     <div className="text-xs text-white/75">{item.desc}</div>

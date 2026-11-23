@@ -22,7 +22,6 @@ export function PoolSection() {
           className="object-cover"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-[#123B2A]/85" />
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 text-center">
@@ -49,9 +48,9 @@ export function PoolSection() {
                 viewport={{ once: true }}
                 transition={{ delay: 0.15 + idx * 0.1, duration: 0.5 }}
                 whileHover={{ y: -5, scale: 1.02, transition: { duration: 0.2 } }}
-                className="bg-white/10 hover:bg-white/15 border border-white/20 hover:border-[#C8A45D]/60 rounded-xl p-5 text-center transition-colors shadow-lg"
+                className="bg-white/10 hover:bg-white/15 border border-white/20 hover:border-[#E0B45C]/60 rounded-xl p-5 text-center transition-colors shadow-lg"
               >
-                <h3 className="text-[#C8A45D] font-semibold text-sm mb-2">
+                <h3 className="text-[#E0B45C] font-semibold text-sm mb-2">
                   {item.title}
                 </h3>
                 <p className="text-white/80 text-xs leading-relaxed">{item.desc}</p>

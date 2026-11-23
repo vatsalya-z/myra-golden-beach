@@ -45,12 +45,12 @@ export function QuickBookingBar() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="bg-[#123B2A] border-2 border-[#C8A45D]/40 rounded-2xl shadow-[0_15px_40px_rgba(23,27,25,0.45)] p-5 sm:p-7 md:p-8 text-white"
+          className="bg-gradient-to-br from-[#041B21] via-[#072A32] to-[#0E3E49] border border-[#E0B45C]/45 rounded-2xl shadow-[0_20px_50px_rgba(4,27,33,0.45)] p-5 sm:p-7 md:p-8 text-white"
         >
           {/* Header */}
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-3 pb-5 mb-5 border-b border-white/10 text-center md:text-left">
             <div>
-              <span className="text-[#C8A45D] text-[11px] sm:text-xs font-semibold tracking-[0.25em] uppercase block mb-1">
+              <span className="text-[#E0B45C] text-[11px] sm:text-xs font-semibold tracking-[0.25em] uppercase block mb-1">
                 Direct Resort Reservation
               </span>
               <h2 className="font-playfair text-xl sm:text-2xl font-bold text-white">
@@ -61,7 +61,7 @@ export function QuickBookingBar() {
               <span>Prefer to talk?</span>
               <a
                 href={`tel:${siteConfig.phone}`}
-                className="inline-flex items-center gap-1.5 text-[#C8A45D] font-semibold hover:underline"
+                className="inline-flex items-center gap-1.5 text-[#E0B45C] font-semibold hover:underline"
               >
                 <FaPhoneAlt size={12} />
                 {siteConfig.phoneDisplay}
@@ -82,7 +82,7 @@ export function QuickBookingBar() {
                 min={today}
                 value={checkIn}
                 onChange={(e) => setCheckIn(e.target.value)}
-                className="w-full px-3.5 py-2.5 rounded-lg bg-white/10 border border-white/20 text-white text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-[#C8A45D] focus:border-transparent transition-all [color-scheme:dark]"
+                className="w-full px-3.5 py-2.5 rounded-lg bg-white/10 border border-white/20 text-white text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-[#E0B45C] focus:border-transparent transition-all [color-scheme:dark]"
               />
             </div>
 
@@ -97,7 +97,7 @@ export function QuickBookingBar() {
                 min={checkIn || today}
                 value={checkOut}
                 onChange={(e) => setCheckOut(e.target.value)}
-                className="w-full px-3.5 py-2.5 rounded-lg bg-white/10 border border-white/20 text-white text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-[#C8A45D] focus:border-transparent transition-all [color-scheme:dark]"
+                className="w-full px-3.5 py-2.5 rounded-lg bg-white/10 border border-white/20 text-white text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-[#E0B45C] focus:border-transparent transition-all [color-scheme:dark]"
               />
             </div>
 
@@ -110,7 +110,7 @@ export function QuickBookingBar() {
                 id="quick-guests"
                 value={guests}
                 onChange={(e) => setGuests(e.target.value)}
-                className="w-full px-3.5 py-2.5 rounded-lg bg-[#0E281D] border border-white/20 text-white text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-[#C8A45D] focus:border-transparent transition-all"
+                className="w-full px-3.5 py-2.5 rounded-lg bg-[#041B21] border border-white/20 text-white text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-[#E0B45C] focus:border-transparent transition-all"
               >
                 <option value="1 Adult">1 Adult</option>
                 <option value="2 Adults">2 Adults</option>
@@ -130,7 +130,7 @@ export function QuickBookingBar() {
                 id="quick-room"
                 value={roomType}
                 onChange={(e) => setRoomType(e.target.value)}
-                className="w-full px-3.5 py-2.5 rounded-lg bg-[#0E281D] border border-white/20 text-white text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-[#C8A45D] focus:border-transparent transition-all"
+                className="w-full px-3.5 py-2.5 rounded-lg bg-[#041B21] border border-white/20 text-white text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-[#E0B45C] focus:border-transparent transition-all"
               >
                 <option value="Deluxe Double Room">Deluxe Double Room</option>
                 <option value="Deluxe Triple Room">Deluxe Triple Room</option>
@@ -144,7 +144,7 @@ export function QuickBookingBar() {
             <div>
               <button
                 type="submit"
-                className="w-full flex items-center justify-center gap-2 px-5 py-2.5 bg-[#C8A45D] hover:bg-[#B38E46] text-[#123B2A] font-bold text-xs sm:text-sm rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5 tracking-wide h-[42px]"
+                className="w-full flex items-center justify-center gap-2 px-5 py-2.5 bg-[#E0B45C] hover:bg-[#C6953B] text-[#072A32] font-bold text-xs sm:text-sm rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5 tracking-wide h-[42px]"
               >
                 <FaWhatsapp size={16} />
                 <span>Check Availability</span>

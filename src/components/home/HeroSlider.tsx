@@ -74,7 +74,7 @@ export function HeroSlider() {
             className="object-cover w-full h-full"
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-[#123B2A]/60" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#041B21]/75 via-[#072A32]/35 to-[#041B21]/80" />
 
           {/* Centered Content */}
           <div className="absolute inset-0 flex items-center justify-center">
@@ -89,7 +89,7 @@ export function HeroSlider() {
                       initial="hidden"
                       animate="visible"
                       exit="exit"
-                      className="text-[#C8A45D] text-xs sm:text-sm font-semibold tracking-[0.3em] uppercase mb-4 text-center"
+                      className="text-[#E0B45C] text-xs sm:text-sm font-semibold tracking-[0.3em] uppercase mb-4 text-center"
                     >
                       {slide.eyebrow}
                     </motion.p>
@@ -129,7 +129,7 @@ export function HeroSlider() {
                     >
                       <Link
                         href={slide.ctaHref}
-                        className="inline-flex items-center justify-center px-8 py-3.5 bg-[#C8A45D] hover:bg-[#B38E46] text-[#123B2A] font-bold rounded-sm transition-all duration-300 hover:-translate-y-0.5 shadow-lg hover:shadow-xl tracking-wide text-sm min-w-[210px]"
+                        className="inline-flex items-center justify-center px-8 py-3.5 bg-[#E0B45C] hover:bg-[#C6953B] text-[#072A32] font-bold rounded-sm transition-all duration-300 hover:-translate-y-0.5 shadow-lg hover:shadow-xl tracking-wide text-sm min-w-[210px]"
                       >
                         {slide.ctaLabel}
                       </Link>
@@ -146,7 +146,7 @@ export function HeroSlider() {
       <button
         onClick={prev}
         aria-label="Previous slide"
-        className="absolute left-2.5 sm:left-4 top-1/2 -translate-y-1/2 z-10 w-9 h-9 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full bg-[#123B2A]/70 border border-white/20 text-white hover:bg-[#C8A45D] hover:text-[#123B2A] hover:border-[#C8A45D] transition-all duration-300 flex items-center justify-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C8A45D]"
+        className="absolute left-2.5 sm:left-4 top-1/2 -translate-y-1/2 z-10 w-9 h-9 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full bg-[#072A32]/70 border border-white/20 text-white hover:bg-[#E0B45C] hover:text-[#072A32] hover:border-[#E0B45C] transition-all duration-300 flex items-center justify-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#E0B45C]"
       >
         <HiChevronLeft size={20} className="sm:hidden" />
         <HiChevronLeft size={24} className="hidden sm:block" />
@@ -154,7 +154,7 @@ export function HeroSlider() {
       <button
         onClick={next}
         aria-label="Next slide"
-        className="absolute right-2.5 sm:right-4 top-1/2 -translate-y-1/2 z-10 w-9 h-9 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full bg-[#123B2A]/70 border border-white/20 text-white hover:bg-[#C8A45D] hover:text-[#123B2A] hover:border-[#C8A45D] transition-all duration-300 flex items-center justify-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C8A45D]"
+        className="absolute right-2.5 sm:right-4 top-1/2 -translate-y-1/2 z-10 w-9 h-9 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full bg-[#072A32]/70 border border-white/20 text-white hover:bg-[#E0B45C] hover:text-[#072A32] hover:border-[#E0B45C] transition-all duration-300 flex items-center justify-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#E0B45C]"
       >
         <HiChevronRight size={20} className="sm:hidden" />
         <HiChevronRight size={24} className="hidden sm:block" />
@@ -168,9 +168,9 @@ export function HeroSlider() {
             onClick={() => goTo(idx)}
             aria-label={`Go to slide ${idx + 1}`}
             aria-current={idx === current ? "true" : undefined}
-            className={`rounded-full transition-all duration-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C8A45D] ${
+            className={`rounded-full transition-all duration-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#E0B45C] ${
               idx === current
-                ? "w-8 h-2.5 bg-[#C8A45D]"
+                ? "w-8 h-2.5 bg-[#E0B45C]"
                 : "w-2.5 h-2.5 bg-white/40 hover:bg-white/70"
             }`}
           />
@@ -189,14 +189,14 @@ export function HeroSlider() {
         }}
         aria-label="Scroll down to explore resort"
       >
-        <span className="text-[10px] tracking-[0.25em] uppercase text-white/70 group-hover:text-[#C8A45D] transition-colors font-medium">
+        <span className="text-[10px] tracking-[0.25em] uppercase text-white/70 group-hover:text-[#E0B45C] transition-colors font-medium">
           Scroll
         </span>
-        <div className="w-5 h-8 rounded-full border-2 border-white/50 group-hover:border-[#C8A45D] flex items-start justify-center p-1 transition-colors">
+        <div className="w-5 h-8 rounded-full border-2 border-white/50 group-hover:border-[#E0B45C] flex items-start justify-center p-1 transition-colors">
           <motion.div
             animate={{ y: [0, 10, 0] }}
             transition={{ repeat: Infinity, duration: 1.6, ease: "easeInOut" }}
-            className="w-1 h-2 rounded-full bg-[#C8A45D]"
+            className="w-1 h-2 rounded-full bg-[#E0B45C]"
           />
         </div>
       </motion.button>

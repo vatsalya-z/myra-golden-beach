@@ -59,7 +59,7 @@ export default function RoomsPage() {
           sizes="100vw"
         />
         {/* Flat solid overlay — no gradient */}
-        <div className="absolute inset-0 bg-[#123B2A]/65" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#041B21]/80 via-[#072A32]/45 to-[#041B21]/85" />
         <div className="relative z-10 w-full max-w-4xl mx-auto px-4 sm:px-6 text-center flex flex-col items-center justify-center">
           <Breadcrumbs items={[{ label: "Rooms & Packages", href: "/rooms" }]} light />
           <h1 className="font-playfair text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mt-4 text-center leading-tight">
@@ -72,7 +72,7 @@ export default function RoomsPage() {
       </section>
 
       {/* Rooms */}
-      <section className="py-16 md:py-24 bg-[#FAF7F0]">
+      <section className="py-16 md:py-24 bg-[#FCFAF6]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <FadeIn>
             <SectionHeading
@@ -96,7 +96,7 @@ export default function RoomsPage() {
       <RelatedPages currentPath="/rooms" />
 
       {/* Enquiry Form */}
-      <section className="py-16 md:py-20 bg-[#F0E9DC]">
+      <section className="py-16 md:py-20 bg-[#F3ECE0]">
         <div className="max-w-3xl mx-auto px-4 sm:px-6">
           <FadeIn>
             <SectionHeading
@@ -105,7 +105,7 @@ export default function RoomsPage() {
               subtitle="Fill in the form below and our team will contact you to confirm availability and pricing."
             />
           </FadeIn>
-          <div className="mt-10 bg-white rounded-2xl p-6 md:p-10 shadow-lg border border-[#EFE7D8]">
+          <div className="mt-10 bg-white rounded-2xl p-6 md:p-10 shadow-lg border border-[#E5D9C3]">
             <EnquiryForm />
           </div>
         </div>

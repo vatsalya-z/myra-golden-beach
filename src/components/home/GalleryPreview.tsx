@@ -14,7 +14,7 @@ export function GalleryPreview() {
   const preview = galleryImages.slice(0, 6);
 
   return (
-    <section className="py-16 md:py-24 bg-[#123B2A]" aria-label="Gallery preview">
+    <section className="py-16 md:py-24 bg-[#072A32]" aria-label="Gallery preview">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <FadeIn>
           <SectionHeading
@@ -31,7 +31,7 @@ export function GalleryPreview() {
               <motion.button
                 whileHover={{ scale: 1.02, transition: { duration: 0.25 } }}
                 onClick={() => setLightbox(img.src)}
-                className="relative w-full overflow-hidden rounded-xl group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C8A45D] shadow-md border border-white/10"
+                className="relative w-full overflow-hidden rounded-xl group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#E0B45C] shadow-md border border-white/10"
                 style={{ paddingBottom: "75%" }}
                 aria-label={`View ${img.alt}`}
               >
@@ -42,8 +42,8 @@ export function GalleryPreview() {
                   className="object-cover group-hover:scale-110 transition-transform duration-700"
                   sizes="(max-width: 768px) 50vw, 33vw"
                 />
-                <div className="absolute inset-0 bg-[#123B2A]/0 group-hover:bg-[#123B2A]/30 transition-colors duration-300 flex items-center justify-center">
-                  <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-[#123B2A]/80 text-[#C8A45D] text-xs font-semibold px-3 py-1 rounded-full border border-[#C8A45D]/40 shadow">
+                <div className="absolute inset-0 bg-[#072A32]/0 group-hover:bg-[#072A32]/30 transition-colors duration-300 flex items-center justify-center">
+                  <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-[#072A32]/80 text-[#E0B45C] text-xs font-semibold px-3 py-1 rounded-full border border-[#E0B45C]/40 shadow">
                     View Photo
                   </span>
                 </div>
@@ -71,7 +71,7 @@ export function GalleryPreview() {
             onClick={() => setLightbox(null)}
           >
             <button
-              className="absolute top-5 right-5 text-white hover:text-[#C8A45D] transition-colors"
+              className="absolute top-5 right-5 text-white hover:text-[#E0B45C] transition-colors"
               aria-label="Close image"
               onClick={() => setLightbox(null)}
             >

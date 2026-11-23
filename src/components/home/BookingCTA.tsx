@@ -23,7 +23,6 @@ export function BookingCTA() {
           className="object-cover"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-[#123B2A]/88" />
       </div>
 
       <div className="relative max-w-4xl mx-auto px-4 sm:px-6 text-center">
@@ -47,7 +46,7 @@ export function BookingCTA() {
               className="inline-flex items-center justify-center gap-2 px-7 py-4 border-2 border-white/30 text-white font-semibold rounded-sm hover:bg-white/10 transition-colors text-sm min-w-[210px] w-full sm:w-auto"
               aria-label={`Call ${siteConfig.phoneDisplay}`}
             >
-              <FaPhoneAlt size={14} className="text-[#C8A45D]" />
+              <FaPhoneAlt size={14} className="text-[#E0B45C]" />
               {siteConfig.phoneDisplay}
             </a>
             <a

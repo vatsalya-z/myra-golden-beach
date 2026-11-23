@@ -35,10 +35,10 @@ export function GalleryGrid() {
             key={cat.value}
             onClick={() => setActive(cat.value)}
             aria-pressed={active === cat.value}
-            className={`px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-medium transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C8A45D] ${
+            className={`px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-medium transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#E0B45C] ${
               active === cat.value
-                ? "bg-[#C8A45D] text-[#123B2A] shadow-md font-bold"
-                : "bg-white text-[#74766F] border border-[#EFE7D8] hover:border-[#C8A45D] hover:text-[#123B2A]"
+                ? "bg-[#E0B45C] text-[#072A32] shadow-md font-bold"
+                : "bg-white text-[#566970] border border-[#E5D9C3] hover:border-[#E0B45C] hover:text-[#072A32]"
             }`}
           >
             {cat.label}
@@ -63,7 +63,7 @@ export function GalleryGrid() {
             >
               <button
                 onClick={() => setLightbox({ src: img.src, alt: img.alt })}
-                className="relative w-full overflow-hidden rounded-lg group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C8A45D]"
+                className="relative w-full overflow-hidden rounded-lg group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#E0B45C]"
                 style={{ paddingBottom: "75%" }}
                 aria-label={`View ${img.alt}`}
               >
@@ -74,8 +74,8 @@ export function GalleryGrid() {
                   className="object-cover group-hover:scale-110 transition-transform duration-700"
                   sizes="(max-width: 768px) 50vw, 25vw"
                 />
-                <div className="absolute inset-0 bg-[#123B2A]/0 group-hover:bg-[#123B2A]/30 transition-colors duration-300 flex items-center justify-center">
-                  <span className="opacity-0 group-hover:opacity-100 transition-opacity text-[#C8A45D] text-xs font-semibold bg-[#123B2A]/80 border border-[#C8A45D]/40 px-3 py-1 rounded-full">
+                <div className="absolute inset-0 bg-[#072A32]/0 group-hover:bg-[#072A32]/30 transition-colors duration-300 flex items-center justify-center">
+                  <span className="opacity-0 group-hover:opacity-100 transition-opacity text-[#E0B45C] text-xs font-semibold bg-[#072A32]/80 border border-[#E0B45C]/40 px-3 py-1 rounded-full">
                     View
                   </span>
                 </div>
@@ -86,7 +86,7 @@ export function GalleryGrid() {
       </motion.div>
 
       {filtered.length === 0 && (
-        <p className="text-center text-[#74766F] text-sm py-12">
+        <p className="text-center text-[#566970] text-sm py-12">
           No images in this category yet. Check back soon.
         </p>
       )}
@@ -106,7 +106,7 @@ export function GalleryGrid() {
             aria-label="Image viewer"
           >
             <button
-              className="absolute top-5 right-5 text-white/70 hover:text-[#C8A45D] transition-colors p-2"
+              className="absolute top-5 right-5 text-white/70 hover:text-[#E0B45C] transition-colors p-2"
               aria-label="Close image viewer"
               onClick={() => setLightbox(null)}
             >
