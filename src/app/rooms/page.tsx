@@ -1,0 +1,115 @@
+import type { Metadata } from "next";
+import Image from "next/image";
+import { Breadcrumbs } from "@/components/common/Breadcrumbs";
+import { SectionHeading } from "@/components/common/SectionHeading";
+import { FadeIn } from "@/components/animations/FadeIn";
+import { generateMetadata } from "@/lib/metadata";
+import { generateBreadcrumbSchema, generateWebPageSchema } from "@/lib/schema";
+import { rooms } from "@/data/rooms";
+import { EnquiryForm } from "@/components/common/EnquiryForm";
+import { RoomDetailCard } from "@/components/rooms/RoomDetailCard";
+import { RelatedPages } from "@/components/common/RelatedPages";
+
+export const metadata: Metadata = generateMetadata({
+  title: "Rooms at MYRA Golden Beach Resort | Accommodation Enquiries",
+  description:
+    "Explore air-conditioned rooms at MYRA Golden Beach Resort near Chirala, Andhra Pradesh. Deluxe Double, Triple Rooms and Family Suites with comfortable bedding and modern amenities.",
+  path: "/rooms",
+  keywords: [
+    "rooms at MYRA Golden Beach Resort",
+    "deluxe double room chirala",
+    "family suite beach resort andhra pradesh",
+    "deluxe triple room chirala",
+    "beach resort accommodation near vodarevu",
+    "resort rooms chirala andhra pradesh",
+  ],
+});
+
+export default function RoomsPage() {
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: "Home", href: "/" },
+    { name: "Rooms & Packages", href: "/rooms" },
+  ]);
+  const webPageSchema = generateWebPageSchema({
+    title: "Rooms at MYRA Golden Beach Resort | Accommodation Enquiries",
+    description:
+      "Explore air-conditioned rooms at MYRA Golden Beach Resort near Chirala, Andhra Pradesh. Deluxe Double, Triple Rooms and Family Suites with comfortable bedding and modern amenities.",
+    path: "/rooms",
+    image: "/images/rooms/myra-deluxe-room-ac.jpg",
+  });
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+      />
+      {/* Full-width Hero Section */}
+      <section className="relative w-full h-80 sm:h-96 md:h-[440px] lg:h-[480px] overflow-hidden flex items-center justify-center" aria-label="Rooms page hero">
+        <Image
+          src="/images/rooms/myra-deluxe-room-ac.jpg"
+          alt="Comfortable deluxe rooms at MYRA Golden Beach Resort"
+          fill
+          priority
+          className="object-cover w-full h-full"
+          sizes="100vw"
+        />
+        {/* Flat solid overlay — no gradient */}
+        <div className="absolute inset-0 bg-[#123B2A]/65" />
+        <div className="relative z-10 w-full max-w-4xl mx-auto px-4 sm:px-6 text-center flex flex-col items-center justify-center">
+          <Breadcrumbs items={[{ label: "Rooms & Packages", href: "/rooms" }]} light />
+          <h1 className="font-playfair text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mt-4 text-center leading-tight">
+            Rooms & Packages
+          </h1>
+          <p className="text-white/90 text-base sm:text-lg md:text-xl mt-3.5 max-w-2xl text-center leading-relaxed">
+            Comfortable accommodation with modern amenities and coastal charm
+          </p>
+        </div>
+      </section>
+
+      {/* Rooms */}
+      <section className="py-16 md:py-24 bg-[#FAF7F0]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <FadeIn>
+            <SectionHeading
+              eyebrow="Our Accommodation"
+              title="Choose Your Perfect Room"
+              subtitle="All rooms include air conditioning, free Wi-Fi, LED TV, hot water, comfortable bedding and daily housekeeping."
+            />
+          </FadeIn>
+
+          <div className="space-y-12 mt-12">
+            {rooms.map((room, idx) => (
+              <FadeIn key={room.id} delay={idx * 0.1}>
+                <RoomDetailCard room={room} index={idx} />
+              </FadeIn>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Related Pages Silo */}
+      <RelatedPages currentPath="/rooms" />
+
+      {/* Enquiry Form */}
+      <section className="py-16 md:py-20 bg-[#F0E9DC]">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6">
+          <FadeIn>
+            <SectionHeading
+              eyebrow="Book Your Room"
+              title="Send a Room Enquiry"
+              subtitle="Fill in the form below and our team will contact you to confirm availability and pricing."
+            />
+          </FadeIn>
+          <div className="mt-10 bg-white rounded-2xl p-6 md:p-10 shadow-lg border border-[#EFE7D8]">
+            <EnquiryForm />
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}
