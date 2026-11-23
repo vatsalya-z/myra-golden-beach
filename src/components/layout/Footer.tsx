@@ -83,12 +83,12 @@ export function Footer() {
             <h3 className="text-[#E0B45C] font-semibold text-xs sm:text-sm uppercase tracking-widest mb-3 sm:mb-5 text-center sm:text-left">
               Quick Links
             </h3>
-            <ul className="grid grid-cols-2 sm:grid-cols-1 gap-x-4 gap-y-2 sm:gap-y-2.5">
+            <ul className="grid grid-cols-2 sm:grid-cols-1 gap-x-6 gap-y-2 sm:gap-y-2.5 max-w-[300px] mx-auto pl-4 sm:pl-0 sm:max-w-none sm:mx-0">
               {navLinks.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-xs sm:text-sm text-white/75 hover:text-[#E0B45C] transition-colors flex items-center justify-center sm:justify-start gap-2 group"
+                    className="text-xs sm:text-sm text-white/75 hover:text-[#E0B45C] transition-colors flex items-center justify-start gap-2 group"
                   >
                     <span className="w-1.5 h-1.5 rounded-full bg-[#E0B45C]/50 group-hover:bg-[#E0B45C] transition-colors shrink-0" />
                     <span>{link.label}</span>
@@ -103,7 +103,7 @@ export function Footer() {
             <h3 className="text-[#E0B45C] font-semibold text-xs sm:text-sm uppercase tracking-widest mb-3 sm:mb-5 text-center sm:text-left">
               Facilities
             </h3>
-            <ul className="grid grid-cols-2 sm:grid-cols-1 gap-x-4 gap-y-2 sm:gap-y-2.5 text-xs sm:text-sm text-white/75">
+            <ul className="grid grid-cols-2 sm:grid-cols-1 gap-x-6 gap-y-2 sm:gap-y-2.5 text-xs sm:text-sm text-white/75 max-w-[310px] mx-auto pl-4 sm:pl-0 sm:max-w-none sm:mx-0">
               {[
                 "Swimming Pool",
                 "Beach Access",
@@ -114,7 +114,7 @@ export function Footer() {
                 "Event Space",
                 "24-Hour Reception",
               ].map((item) => (
-                <li key={item} className="flex items-center justify-center sm:justify-start gap-2">
+                <li key={item} className="flex items-center justify-start gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#E0B45C]/50 shrink-0" />
                   <span>{item}</span>
                 </li>
@@ -128,7 +128,7 @@ export function Footer() {
               Contact Us
             </h3>
             <div className="space-y-2.5 sm:space-y-4">
-              <div className="flex items-start justify-center sm:justify-start gap-2 sm:gap-3 text-center sm:text-left">
+              <div className="flex items-start justify-start gap-2 sm:gap-3 text-left max-w-[280px] mx-auto pl-4 sm:pl-0 sm:max-w-none sm:mx-0">
                 <HiMapPin size={16} className="text-[#E0B45C] shrink-0 mt-0.5" />
                 <p className="text-xs sm:text-sm text-white/75 leading-relaxed">
                   RC3F+QW, Kotha Peta Rural,
@@ -137,7 +137,7 @@ export function Footer() {
                 </p>
               </div>
 
-              <div className="flex flex-wrap items-center justify-center sm:justify-start gap-x-5 gap-y-2 sm:flex-col sm:items-start sm:gap-y-3">
+              <div className="flex flex-wrap items-center justify-center sm:justify-start gap-x-5 gap-y-2 pl-4 sm:pl-0 sm:flex-col sm:items-start sm:gap-y-3">
                 <a
                   href={`tel:${siteConfig.phone}`}
                   className="flex items-center gap-2.5 text-xs sm:text-sm text-white/75 hover:text-[#E0B45C] transition-colors"
