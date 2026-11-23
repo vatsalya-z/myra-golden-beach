@@ -87,7 +87,6 @@ export function HeroSlider() {
             className="block md:hidden object-cover object-center w-full h-full"
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#082B38]/75 via-[#063B49]/40 to-[#082B38]/80" />
 
           {/* Centered Content */}
           <div className="absolute inset-0 flex items-center justify-center">
