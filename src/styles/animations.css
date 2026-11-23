@@ -5,6 +5,7 @@
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -12,13 +13,28 @@
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes shimmer {
-  0% { background-position: -200% 0; }
-  100% { background-position: 200% 0; }
+  0% {
+    background-position: -200% 0;
+  }
+
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes sheenSweep {
+  0% { transform: translateX(-140%) skewX(-24deg); }
+  100% { transform: translateX(240%) skewX(-24deg); }
 }
 
 .animate-fade-up {
@@ -29,19 +45,44 @@
   animation: fadeIn 0.5s ease-out forwards;
 }
 
-/* Gold shimmer for loading skeletons */
-.shimmer {
+.luxury-btn-sheen {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.luxury-btn-sheen::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 45%;
   background: linear-gradient(
     90deg,
-    #F3ECE0 25%,
-    #E5D9C3 50%,
-    #F3ECE0 75%
+    transparent,
+    rgba(255, 255, 255, 0.35),
+    transparent
   );
+  transform: translateX(-140%) skewX(-24deg);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.luxury-btn-sheen:hover::after {
+  animation: sheenSweep 0.85s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* Gold shimmer for loading skeletons */
+.shimmer {
+  background: linear-gradient(90deg,
+      #F3ECE0 25%,
+      #E5D9C3 50%,
+      #F3ECE0 75%);
   background-size: 200% 100%;
   animation: shimmer 1.5s infinite;
 }
 
 @media (prefers-reduced-motion: reduce) {
+
   *,
   *::before,
   *::after {
