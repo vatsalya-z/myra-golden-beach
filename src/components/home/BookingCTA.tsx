@@ -17,7 +17,7 @@ export function BookingCTA() {
     >
       <div className="absolute inset-0">
         <Image
-          src="/images/hero/hero-1.jpg"
+          src="/images/hero/hero-1-desktop.jpg"
           alt="MYRA Golden Beach Resort — book your coastal stay"
           fill
           className="object-cover"

@@ -65,13 +65,26 @@ export function HeroSlider() {
           transition={{ duration: 1, ease: "easeInOut" }}
           className="absolute inset-0"
         >
+          {/* Desktop / Laptop HD Image (16:9) */}
           <Image
             src={slide.image}
             alt={slide.imageAlt}
             fill
             priority={slide.id === 1}
             loading={slide.id === 1 ? "eager" : "lazy"}
-            className="object-cover w-full h-full"
+            quality={95}
+            className="hidden md:block object-cover object-center w-full h-full"
+            sizes="100vw"
+          />
+          {/* Mobile / Android HD Image (9:16) */}
+          <Image
+            src={slide.mobileImage}
+            alt={slide.imageAlt}
+            fill
+            priority={slide.id === 1}
+            loading={slide.id === 1 ? "eager" : "lazy"}
+            quality={95}
+            className="block md:hidden object-cover object-center w-full h-full"
             sizes="100vw"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-[#041B21]/75 via-[#072A32]/35 to-[#041B21]/80" />
@@ -176,30 +189,6 @@ export function HeroSlider() {
           />
         ))}
       </div>
-
-      <motion.button
-        type="button"
-        initial={{ opacity: 0, y: -10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 1, duration: 0.8 }}
-        className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 hidden md:flex flex-col items-center gap-1.5 cursor-pointer group focus-visible:outline-none"
-        onClick={() => {
-          const el = document.getElementById("intro-section");
-          el?.scrollIntoView({ behavior: "smooth" });
-        }}
-        aria-label="Scroll down to explore resort"
-      >
-        <span className="text-[10px] tracking-[0.25em] uppercase text-white/70 group-hover:text-[#E0B45C] transition-colors font-medium">
-          Scroll
-        </span>
-        <div className="w-5 h-8 rounded-full border-2 border-white/50 group-hover:border-[#E0B45C] flex items-start justify-center p-1 transition-colors">
-          <motion.div
-            animate={{ y: [0, 10, 0] }}
-            transition={{ repeat: Infinity, duration: 1.6, ease: "easeInOut" }}
-            className="w-1 h-2 rounded-full bg-[#E0B45C]"
-          />
-        </div>
-      </motion.button>
 
       {/* Slide counter */}
       <div className="absolute bottom-6 right-6 z-10 text-white/50 text-xs font-mono tracking-widest">

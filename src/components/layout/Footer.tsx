@@ -8,7 +8,6 @@ import { buildWhatsAppUrl, buildGeneralWhatsAppMessage } from "@/lib/whatsapp";
 
 export function Footer() {
   const whatsappUrl = buildWhatsAppUrl(buildGeneralWhatsAppMessage());
-  const year = new Date().getFullYear();
 
   return (
     <footer className="bg-gradient-to-b from-[#072A32] via-[#052128] to-[#041B21] border-t border-[#E0B45C]/30 text-white/80" role="contentinfo">
@@ -181,26 +180,8 @@ export function Footer() {
 
       {/* Bottom bar */}
       <div className="border-t border-white/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-6 pb-20 lg:pb-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/50 text-center sm:text-left">
-          <div className="space-y-1.5">
-            <p>
-              &copy; {year} MYRA Golden Beach Resort. All Rights Reserved.
-            </p>
-            <p className="text-white/45">
-              Design And Developed By -{" "}
-              <a
-                href="https://www.zoomdigital.in/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[#E0B45C] hover:text-[#C6953B] hover:underline font-medium transition-colors"
-              >
-                Zoom Digital
-              </a>
-            </p>
-          </div>
-          <div className="text-white/40 text-center sm:text-right">
-            <p>Kotha Peta Rural, Chirala, Andhra Pradesh, India</p>
-          </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-5 pb-20 lg:pb-5 flex items-center justify-center sm:justify-end text-xs text-white/40 text-center sm:text-right">
+          <p>Kotha Peta Rural, Chirala, Andhra Pradesh, India</p>
         </div>
       </div>
     </footer>

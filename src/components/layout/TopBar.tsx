@@ -46,12 +46,6 @@ export function TopBar() {
             <FaWhatsapp size={13} className="text-[#25D366] shrink-0" />
             <span>WhatsApp</span>
           </a>
-          <a
-            href="/contact"
-            className="bg-gradient-to-r from-[#C89435] via-[#EBC878] to-[#C89435] hover:from-[#B88428] hover:via-[#E0B45C] hover:to-[#B88428] text-[#041B21] px-3.5 py-1 rounded-sm font-bold text-xs transition-all tracking-wide shadow-[0_2px_10px_rgba(224,180,92,0.25)]"
-          >
-            Book Your Stay
-          </a>
         </div>
       </div>
     </div>
