@@ -8,6 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE_URL}/`, changeFrequency: "weekly" as const, priority: 1.0, lastModified: now },
     { url: `${SITE_URL}/about`, changeFrequency: "monthly" as const, priority: 0.8, lastModified: now },
     { url: `${SITE_URL}/rooms`, changeFrequency: "monthly" as const, priority: 0.9, lastModified: now },
+    { url: `${SITE_URL}/facilities`, changeFrequency: "monthly" as const, priority: 0.85, lastModified: now },
     { url: `${SITE_URL}/gallery`, changeFrequency: "monthly" as const, priority: 0.7, lastModified: now },
     { url: `${SITE_URL}/blog`, changeFrequency: "weekly" as const, priority: 0.8, lastModified: now },
     { url: `${SITE_URL}/contact`, changeFrequency: "monthly" as const, priority: 0.9, lastModified: now },

@@ -9,6 +9,7 @@ export const primaryNavigationLinks: InternalLinkItem[] = [
   { href: "/", label: "Home", description: "Return to the official resort homepage" },
   { href: "/about", label: "About Us", description: "Discover our coastal retreat story and hospitality" },
   { href: "/rooms", label: "Rooms & Packages", description: "Comfortable air-conditioned rooms and suites for families and couples" },
+  { href: "/facilities", label: "Resort Facilities", description: "Swimming pool, direct beach access, dining, lawns and 24/7 concierge" },
   { href: "/gallery", label: "Photo Gallery", description: "High-resolution photographs of our cottages, pool, rooms and beachfront" },
   { href: "/blog", label: "Travel Blog", description: "Explore guides to Chirala, Vodarevu beach, and coastal Andhra Pradesh" },
   { href: "/contact", label: "Contact & Location", description: "Direct WhatsApp enquiry, phone reservations, and Google Maps directions" },
@@ -31,9 +32,14 @@ export const pageRelatedLinks: Record<string, InternalLinkItem[]> = {
     { href: "/about", label: "About Our Resort", description: "Read about our amenities, swimming pool, and dining facilities", badge: "About" },
     { href: "/contact", label: "Enquire on WhatsApp", description: "Send your check-in dates and guest count directly to our team", badge: "Enquiry" },
   ],
+  "/facilities": [
+    { href: "/rooms", label: "Rooms & Packages", description: "Explore beachfront cottages, villas, suites and curated packages", badge: "Stay" },
+    { href: "/gallery", label: "Photo Gallery", description: "Browse real photos of our illuminated pool, beach and gardens", badge: "Gallery" },
+    { href: "/contact", label: "Book or Enquire", description: "Message our reception team for stay bookings or day-outing passes", badge: "Contact" },
+  ],
   "/gallery": [
     { href: "/rooms", label: "Book a Room", description: "Choose between Deluxe Double, Triple or Family Suite accommodation", badge: "Rooms" },
-    { href: "/about", label: "Explore Facilities", description: "Learn about the swimming pool, garden walkway, and restaurant", badge: "Facilities" },
+    { href: "/facilities", label: "Explore Facilities", description: "Learn about the swimming pool, garden walkway, beach access and restaurant", badge: "Facilities" },
     { href: "/contact", label: "Location & Directions", description: "Find us on Google Maps near Chirala and Vodarevu beach", badge: "Location" },
   ],
   "/blog": [

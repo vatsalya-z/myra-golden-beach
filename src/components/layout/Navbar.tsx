@@ -14,6 +14,7 @@ import { cn } from "@/lib/utils";
 function getMobileScreenTitle(pathname: string): string | null {
   if (pathname === "/") return null;
   if (pathname.startsWith("/rooms")) return "Rooms & Packages";
+  if (pathname.startsWith("/facilities")) return "Resort Facilities";
   if (pathname.startsWith("/gallery")) return "Photo Gallery";
   if (pathname.startsWith("/about")) return "About Resort";
   if (pathname.startsWith("/blog")) return "Travel Journal";

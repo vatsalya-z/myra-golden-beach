@@ -6,21 +6,21 @@ import { generateMetadata } from "@/lib/metadata";
 import { generateBreadcrumbSchema, generateWebPageSchema } from "@/lib/schema";
 import { rooms } from "@/data/rooms";
 import { EnquiryForm } from "@/components/common/EnquiryForm";
-import { RoomDetailCard } from "@/components/rooms/RoomDetailCard";
+import { RoomsExplorer } from "@/components/rooms/RoomsExplorer";
+import { StayPackagesSection } from "@/components/rooms/StayPackagesSection";
 import { RelatedPages } from "@/components/common/RelatedPages";
-import { CoastalDecorations } from "@/components/common/CoastalDecorations";
 
 export const metadata: Metadata = generateMetadata({
-  title: "Rooms at MYRA Golden Beach Resort | Accommodation Enquiries",
+  title: "Rooms & Holiday Packages | MYRA Golden Beach Resort",
   description:
-    "Explore air-conditioned rooms at MYRA Golden Beach Resort near Chirala, Andhra Pradesh. Deluxe Double, Triple Rooms and Family Suites with comfortable bedding and modern amenities.",
+    "Explore 10 luxury coastal stays, villas & cottages plus 6 curated holiday packages at MYRA Golden Beach Resort near Chirala, Andhra Pradesh.",
   path: "/rooms",
   keywords: [
     "rooms at MYRA Golden Beach Resort",
-    "deluxe double room chirala",
-    "family suite beach resort andhra pradesh",
-    "deluxe triple room chirala",
-    "beach resort accommodation near vodarevu",
+    "beachfront cottage chirala",
+    "honeymoon suite chirala beach resort",
+    "poolside room chirala",
+    "family holiday package andhra pradesh",
     "resort rooms chirala andhra pradesh",
   ],
 });
@@ -31,11 +31,11 @@ export default function RoomsPage() {
     { name: "Rooms & Packages", href: "/rooms" },
   ]);
   const webPageSchema = generateWebPageSchema({
-    title: "Rooms at MYRA Golden Beach Resort | Accommodation Enquiries",
+    title: "Rooms & Holiday Packages | MYRA Golden Beach Resort",
     description:
-      "Explore air-conditioned rooms at MYRA Golden Beach Resort near Chirala, Andhra Pradesh. Deluxe Double, Triple Rooms and Family Suites with comfortable bedding and modern amenities.",
+      "Explore luxury coastal rooms, cottages, suites and curated stay packages at MYRA Golden Beach Resort near Chirala, Andhra Pradesh.",
     path: "/rooms",
-    image: "/images/rooms/myra-deluxe-room-ac.jpg",
+    image: "/images/rooms/myra-cottage-interior-hd.jpg",
   });
 
   return (
@@ -48,73 +48,67 @@ export default function RoomsPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
       />
-      {/* Full-width Hero Section */}
-      <section className="relative w-full h-[220px] sm:h-[270px] md:h-[440px] lg:h-[480px] overflow-hidden flex items-center justify-center" aria-label="Rooms page hero">
+
+      {/* Full-width Coastal Luxury Hero */}
+      <section
+        className="relative w-full h-[240px] sm:h-[290px] md:h-[440px] lg:h-[480px] overflow-hidden flex items-center justify-center"
+        aria-label="Rooms and packages hero"
+      >
         <Image
-          src="/images/rooms/myra-deluxe-room-ac.jpg"
-          alt="Comfortable deluxe rooms at MYRA Golden Beach Resort"
+          src="/images/rooms/myra-cottage-interior-hd.jpg"
+          alt="Beachfront Bamboo Cottage luxury interior looking onto golden beach at MYRA Golden Beach Resort"
           fill
           priority
+          loading="eager"
+          quality={95}
           className="object-cover w-full h-full"
           sizes="100vw"
         />
-        {/* Flat solid overlay — no gradient */}
         <div className="absolute inset-0 bg-gradient-to-b from-[#082B38]/80 via-[#063B49]/45 to-[#082B38]/85" />
         <div className="relative z-10 w-full max-w-4xl mx-auto px-4 sm:px-6 text-center flex flex-col items-center justify-center">
-          <h1 className="font-playfair text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white text-center leading-tight">
-            Rooms & Packages
+          <span className="text-[#F6C46A] text-[10px] sm:text-xs font-semibold uppercase tracking-[0.28em] mb-1.5 sm:mb-2.5">
+            Accommodation &amp; Curated Stays
+          </span>
+          <h1 className="font-playfair text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white text-center leading-tight drop-shadow-[0_4px_16px_rgba(8,43,56,0.65)]">
+            Rooms &amp; Packages
           </h1>
-          <p className="text-white/90 text-sm sm:text-lg md:text-xl mt-2 sm:mt-3.5 max-w-2xl text-center leading-relaxed">
-            Comfortable accommodation with modern amenities and coastal charm
+          <p className="text-white/90 text-xs sm:text-base md:text-xl mt-2 sm:mt-3.5 max-w-2xl text-center leading-relaxed">
+            Beachfront cottages, poolside rooms, suites &amp; exclusive coastal getaways
           </p>
+          <div className="mt-3 sm:mt-5 inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-[#082B38]/70 backdrop-blur-md border border-[#F6C46A]/35 text-[10px] sm:text-xs text-white/90 tracking-wide">
+            <span className="text-[#F6C46A] font-semibold">10 Stays &amp; Villas</span>
+            <span className="text-white/30">·</span>
+            <span className="text-[#F6C46A] font-semibold">6 Curated Packages</span>
+            <span className="text-white/30">·</span>
+            <span>Beach &amp; Pool</span>
+          </div>
         </div>
       </section>
 
-      {/* Rooms */}
-      <section className="relative overflow-hidden py-16 md:py-24 bg-[#F9FBFC]">
-        <CoastalDecorations
-          palmSide="left"
-          waveSide="right"
-          palmCorner="both"
-          tone="light"
-        />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
+      {/* Interactive Filter & 6 Coastal Stays */}
+      <RoomsExplorer rooms={rooms} />
+
+      {/* Curated Stay Packages */}
+      <StayPackagesSection />
+
+      {/* Direct Enquiry Form */}
+      <section id="room-enquiry" className="py-14 md:py-20 bg-[#E8F6F7] scroll-mt-20">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6">
           <FadeIn>
             <SectionHeading
-              eyebrow="Our Accommodation"
-              title="Choose Your Perfect Room"
-              subtitle="All rooms include air conditioning, free Wi-Fi, LED TV, hot water, comfortable bedding and daily housekeeping."
+              eyebrow="Book Your Stay"
+              title="Send a Room or Package Enquiry"
+              subtitle="Fill in your stay dates below and our reception team will reply quickly with best direct rates."
             />
           </FadeIn>
-
-          <div className="space-y-12 mt-12">
-            {rooms.map((room, idx) => (
-              <FadeIn key={room.id} delay={idx * 0.1}>
-                <RoomDetailCard room={room} index={idx} />
-              </FadeIn>
-            ))}
+          <div className="mt-8 sm:mt-10 bg-white rounded-2xl p-5 sm:p-6 md:p-10 shadow-lg border border-[#D9EEF2]">
+            <EnquiryForm />
           </div>
         </div>
       </section>
 
       {/* Related Pages Silo */}
       <RelatedPages currentPath="/rooms" />
-
-      {/* Enquiry Form */}
-      <section className="py-16 md:py-20 bg-[#E8F6F7]">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6">
-          <FadeIn>
-            <SectionHeading
-              eyebrow="Book Your Room"
-              title="Send a Room Enquiry"
-              subtitle="Fill in the form below and our team will contact you to confirm availability and pricing."
-            />
-          </FadeIn>
-          <div className="mt-10 bg-white rounded-2xl p-6 md:p-10 shadow-lg border border-[#D9EEF2]">
-            <EnquiryForm />
-          </div>
-        </div>
-      </section>
     </>
   );
 }

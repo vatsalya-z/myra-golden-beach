@@ -144,7 +144,7 @@ export default function RootLayout({
           />
         ))}
       </head>
-      <body className="font-inter bg-[#F9FBFC] text-[#17313B] antialiased">
+      <body suppressHydrationWarning className="font-inter bg-[#F9FBFC] text-[#17313B] antialiased">
         <MobileAppProvider>
           <ScrollProgress />
           <div className="flex flex-col min-h-screen">

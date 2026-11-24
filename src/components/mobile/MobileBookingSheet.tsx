@@ -300,6 +300,24 @@ export function MobileBookingSheet() {
                       onChange={(e) => setRoomType(e.target.value)}
                       className="w-full px-3 py-2.5 rounded-xl bg-[#082B38] border border-white/20 text-white text-xs focus:outline-none focus:ring-2 focus:ring-[#F6C46A]"
                     >
+                      <option value="Beachfront Bamboo Cottage">
+                        Beachfront Bamboo Cottage
+                      </option>
+                      <option value="Garden Courtyard Private Villa">
+                        Garden Courtyard Private Villa
+                      </option>
+                      <option value="Ocean View Honeymoon Suite">
+                        Ocean View Honeymoon Suite
+                      </option>
+                      <option value="Royal Chandelier King Suite">
+                        Royal Chandelier King Suite
+                      </option>
+                      <option value="Poolside Luxury Room">
+                        Poolside Luxury Room
+                      </option>
+                      <option value="Premier King Room">
+                        Premier King Room
+                      </option>
                       <option value="Deluxe Double Room">
                         Deluxe Double Room
                       </option>
@@ -307,8 +325,8 @@ export function MobileBookingSheet() {
                         Deluxe Triple Room
                       </option>
                       <option value="Family Suite">Family Suite</option>
-                      <option value="Beachfront Cottage">
-                        Beachfront Cottage
+                      <option value="Group & Corporate AC Suite">
+                        Group &amp; Corporate AC Suite
                       </option>
                       <option value="Any Available Room">
                         Any Available Room
