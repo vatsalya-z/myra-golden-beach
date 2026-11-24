@@ -1,4 +1,5 @@
 import { HeroSlider } from "@/components/home/HeroSlider";
+import { LiquidHeroReveal } from "@/components/animations/LiquidHeroReveal";
 import { Introduction } from "@/components/home/Introduction";
 import { BeachExperienceSection } from "@/components/common/BeachExperienceSection";
 import { AmenitiesSection } from "@/components/home/AmenitiesSection";
@@ -35,7 +36,9 @@ export default function HomePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
       />
-      <HeroSlider />
+      <LiquidHeroReveal>
+        <HeroSlider />
+      </LiquidHeroReveal>
       <Introduction />
       <BeachExperienceSection />
       <AmenitiesSection />

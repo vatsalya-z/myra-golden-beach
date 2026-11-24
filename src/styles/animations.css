@@ -116,6 +116,28 @@
   will-change: transform;
 }
 
+@keyframes oceanFlowVertical {
+  0% { transform: translate3d(0, -10%, 0); }
+  50% { transform: translate3d(0, 10%, 0); }
+  100% { transform: translate3d(0, -10%, 0); }
+}
+
+@keyframes oceanFlowHorizontal {
+  0% { transform: translate3d(-8%, 0, 0); }
+  50% { transform: translate3d(8%, 0, 0); }
+  100% { transform: translate3d(-8%, 0, 0); }
+}
+
+.ocean-fallback-vertical {
+  animation: oceanFlowVertical 18s ease-in-out infinite;
+  will-change: transform;
+}
+
+.ocean-fallback-horizontal {
+  animation: oceanFlowHorizontal 22s ease-in-out infinite;
+  will-change: transform;
+}
+
 @media (prefers-reduced-motion: reduce) {
 
   *,

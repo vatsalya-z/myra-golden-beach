@@ -13,6 +13,7 @@ import { ScrollToTop } from "@/components/common/ScrollToTop";
 import { ScrollProgress } from "@/components/common/ScrollProgress";
 import { MobileBottomBar } from "@/components/layout/MobileBottomBar";
 import { PageTransition } from "@/components/animations/PageTransition";
+import { OceanWaterEffect } from "@/components/animations/OceanWaterEffect";
 import { MobileAppProvider } from "@/components/mobile/MobileAppProvider";
 
 export const viewport: Viewport = {
@@ -146,6 +147,7 @@ export default function RootLayout({
       </head>
       <body suppressHydrationWarning className="font-inter bg-[#F9FBFC] text-[#17313B] antialiased">
         <MobileAppProvider>
+          <OceanWaterEffect />
           <ScrollProgress />
           <div className="flex flex-col min-h-screen">
             <Header />
