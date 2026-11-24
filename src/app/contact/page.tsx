@@ -83,10 +83,10 @@ export default function ContactPage() {
       </section>
 
       {/* Contact + Form */}
-      <section className="py-16 md:py-24 bg-[#F9FBFC]">
+      <section className="py-10 sm:py-16 md:py-24 bg-[#F9FBFC]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           {/* Centered Main Section Heading */}
-          <FadeIn className="text-center mb-12 lg:mb-16">
+          <FadeIn className="text-center mb-8 lg:mb-16">
             <SectionHeading
               eyebrow="Get in Touch"
               title="Reach Out to Us"
@@ -95,7 +95,7 @@ export default function ContactPage() {
             />
           </FadeIn>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 items-start">
             {/* Contact details */}
             <FadeIn direction="left">
               <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-[#D9EEF2]">
@@ -183,17 +183,36 @@ export default function ContactPage() {
               </div>
             </FadeIn>
 
-            {/* Form */}
+            {/* Form (Android Native Elevated Card) */}
             <FadeIn direction="right" delay={0.1}>
-              <div className="bg-white rounded-2xl p-6 sm:p-10 shadow-sm border border-[#D9EEF2]">
-                <h2 className="font-playfair text-xl md:text-2xl font-bold text-[#063B49] mb-2 text-center sm:text-left">
-                  Send a Room Enquiry
-                </h2>
-                <p className="text-[#607780] text-sm mb-7 leading-relaxed text-center sm:text-left">
-                  Fill in the form below and our team will respond to confirm
-                  availability and share rates. This is an enquiry, not a booking.
-                </p>
-                <EnquiryForm />
+              <div className="bg-white rounded-3xl shadow-[0_14px_40px_rgba(6,59,73,0.12)] border border-[#D9EEF2] overflow-hidden">
+                {/* Compact Deep Ocean Teal Top App Header Strip */}
+                <div className="bg-gradient-to-r from-[#063B49] to-[#082B38] px-4 py-3.5 sm:px-6 sm:py-4 flex items-center justify-between gap-3 text-white">
+                  <div className="min-w-0">
+                    <span className="block text-[10px] sm:text-xs font-semibold text-[#F6C46A] tracking-[0.2em] uppercase">
+                      Direct Reservations Desk
+                    </span>
+                    <h2 className="font-playfair text-lg sm:text-xl font-bold text-white leading-snug">
+                      Send a Room Enquiry
+                    </h2>
+                    <p className="text-[11px] sm:text-xs text-white/75 mt-0.5 truncate">
+                      Check availability &amp; best direct resort rates
+                    </p>
+                  </div>
+
+                  <a
+                    href={`tel:${siteConfig.phone}`}
+                    aria-label={`Call ${siteConfig.phoneDisplay}`}
+                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/10 hover:bg-[#F6C46A] hover:text-[#082B38] border border-[#F6C46A]/40 text-[#F6C46A] text-xs font-semibold transition-colors shrink-0"
+                  >
+                    <FaPhoneAlt size={11} />
+                    <span>Call Desk</span>
+                  </a>
+                </div>
+
+                <div className="p-4 sm:p-6 md:p-7">
+                  <EnquiryForm />
+                </div>
               </div>
             </FadeIn>
           </div>

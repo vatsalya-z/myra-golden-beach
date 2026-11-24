@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import { FaPhoneAlt } from "react-icons/fa";
 import { SectionHeading } from "@/components/common/SectionHeading";
 import { FadeIn } from "@/components/animations/FadeIn";
 import { generateMetadata } from "@/lib/metadata";
 import { generateBreadcrumbSchema, generateWebPageSchema } from "@/lib/schema";
 import { rooms } from "@/data/rooms";
+import { siteConfig } from "@/data/site";
 import { EnquiryForm } from "@/components/common/EnquiryForm";
 import { RoomsExplorer } from "@/components/rooms/RoomsExplorer";
 import { StayPackagesSection } from "@/components/rooms/StayPackagesSection";
@@ -91,8 +93,8 @@ export default function RoomsPage() {
       {/* Curated Stay Packages */}
       <StayPackagesSection />
 
-      {/* Direct Enquiry Form */}
-      <section id="room-enquiry" className="py-14 md:py-20 bg-[#E8F6F7] scroll-mt-20">
+      {/* Direct Enquiry Form (Android Native Elevated Card) */}
+      <section id="room-enquiry" className="py-10 sm:py-14 md:py-20 bg-[#E8F6F7] scroll-mt-20">
         <div className="max-w-3xl mx-auto px-4 sm:px-6">
           <FadeIn>
             <SectionHeading
@@ -101,8 +103,32 @@ export default function RoomsPage() {
               subtitle="Fill in your stay dates below and our reception team will reply quickly with best direct rates."
             />
           </FadeIn>
-          <div className="mt-8 sm:mt-10 bg-white rounded-2xl p-5 sm:p-6 md:p-10 shadow-lg border border-[#D9EEF2]">
-            <EnquiryForm />
+
+          <div className="mt-6 sm:mt-10 bg-white rounded-3xl shadow-[0_14px_40px_rgba(6,59,73,0.12)] border border-[#D9EEF2] overflow-hidden">
+            {/* Native Top App Strip */}
+            <div className="bg-gradient-to-r from-[#063B49] to-[#082B38] px-4 py-3 sm:px-6 sm:py-4 flex items-center justify-between text-white">
+              <div className="min-w-0">
+                <span className="block text-[11px] sm:text-xs font-semibold text-[#F6C46A] tracking-wide uppercase">
+                  Instant Reply &middot; Direct Desk
+                </span>
+                <p className="font-playfair font-bold text-sm sm:text-base text-white truncate">
+                  MYRA Reservations
+                </p>
+              </div>
+
+              <a
+                href={`tel:${siteConfig.phone}`}
+                aria-label={`Call ${siteConfig.phoneDisplay}`}
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/10 hover:bg-[#F6C46A] hover:text-[#082B38] border border-[#F6C46A]/40 text-[#F6C46A] text-xs font-semibold transition-colors shrink-0"
+              >
+                <FaPhoneAlt size={11} />
+                <span>Call Desk</span>
+              </a>
+            </div>
+
+            <div className="p-4 sm:p-6 md:p-8">
+              <EnquiryForm />
+            </div>
           </div>
         </div>
       </section>

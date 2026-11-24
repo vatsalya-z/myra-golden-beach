@@ -1,12 +1,13 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import {
   HiWifi,
   HiSparkles,
   HiShieldCheck,
   HiArrowDown,
+  HiBars3,
 } from "react-icons/hi2";
 import { FaSwimmingPool } from "react-icons/fa";
 import type { Room, RoomCategory } from "@/types/room";
@@ -14,12 +15,14 @@ import { SectionHeading } from "@/components/common/SectionHeading";
 import { CoastalDecorations } from "@/components/common/CoastalDecorations";
 import { RoomDetailCard } from "@/components/rooms/RoomDetailCard";
 import { triggerHaptic } from "@/lib/haptics";
+import { useReducedMotion } from "@/hooks/useReducedMotion";
 
 interface RoomsExplorerProps {
   rooms: Room[];
 }
 
 type FilterOption = "All" | RoomCategory;
+type MobileViewMode = "grid" | "list";
 
 const CATEGORIES: FilterOption[] = [
   "All",
@@ -56,6 +59,8 @@ const INCLUDED_PERKS = [
 
 export function RoomsExplorer({ rooms }: RoomsExplorerProps) {
   const [selectedCategory, setSelectedCategory] = useState<FilterOption>("All");
+  const [mobileView, setMobileView] = useState<MobileViewMode>("grid");
+  const reducedMotion = useReducedMotion();
 
   const filteredRooms = useMemo(() => {
     if (selectedCategory === "All") return rooms;
@@ -89,7 +94,7 @@ export function RoomsExplorer({ rooms }: RoomsExplorerProps) {
 
       {/* Sticky Native-App Category Filter Bar */}
       <div className="sticky top-16 lg:top-[72px] z-20 bg-[#F9FBFC]/95 backdrop-blur-xl border-y border-[#D9EEF2] py-2.5 sm:py-3 mb-8 sm:mb-12 app-chrome">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between gap-3">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between gap-2.5 sm:gap-3">
           <div className="flex items-center gap-2 overflow-x-auto scrollbar-none py-0.5 flex-1">
             {CATEGORIES.map((category) => {
               const active = selectedCategory === category;
@@ -131,14 +136,67 @@ export function RoomsExplorer({ rooms }: RoomsExplorerProps) {
             })}
           </div>
 
-          <a
-            href="#stay-packages"
-            onClick={() => triggerHaptic(8)}
-            className="shrink-0 inline-flex items-center gap-1 px-3 sm:px-4 py-2 rounded-full bg-[#F6C46A] hover:bg-[#DCA94F] text-[#082B38] text-[11px] sm:text-xs font-bold tracking-wide shadow-sm active:scale-95 transition-all"
-          >
-            <span>Packages</span>
-            <HiArrowDown size={13} />
-          </a>
+          <div className="flex items-center gap-2 shrink-0">
+            {/* Mobile-only 2-Column Grid / List Switcher */}
+            <div
+              className="md:hidden flex items-center bg-white border border-[#D9EEF2] rounded-full p-0.5 shadow-xs"
+              role="group"
+              aria-label="Switch mobile view layout"
+            >
+              <button
+                type="button"
+                onClick={() => {
+                  triggerHaptic(8);
+                  setMobileView("grid");
+                }}
+                aria-label="Grid view"
+                aria-pressed={mobileView === "grid"}
+                className={`w-7 h-7 rounded-full flex items-center justify-center transition-colors ${
+                  mobileView === "grid"
+                    ? "bg-[#063B49] text-[#F6C46A]"
+                    : "text-[#607780]"
+                }`}
+              >
+                <svg
+                  width="13"
+                  height="13"
+                  viewBox="0 0 16 16"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <rect x="1" y="1" width="6" height="6" rx="1.4" />
+                  <rect x="9" y="1" width="6" height="6" rx="1.4" />
+                  <rect x="1" y="9" width="6" height="6" rx="1.4" />
+                  <rect x="9" y="9" width="6" height="6" rx="1.4" />
+                </svg>
+              </button>
+              <button
+                type="button"
+                onClick={() => {
+                  triggerHaptic(8);
+                  setMobileView("list");
+                }}
+                aria-label="List view"
+                aria-pressed={mobileView === "list"}
+                className={`w-7 h-7 rounded-full flex items-center justify-center transition-colors ${
+                  mobileView === "list"
+                    ? "bg-[#063B49] text-[#F6C46A]"
+                    : "text-[#607780]"
+                }`}
+              >
+                <HiBars3 size={14} />
+              </button>
+            </div>
+
+            <a
+              href="#stay-packages"
+              onClick={() => triggerHaptic(8)}
+              className="inline-flex items-center gap-1 px-3 sm:px-4 py-2 rounded-full bg-[#F6C46A] hover:bg-[#DCA94F] text-[#082B38] text-[11px] sm:text-xs font-bold tracking-wide shadow-sm active:scale-95 transition-all"
+            >
+              <span>Packages</span>
+              <HiArrowDown size={13} />
+            </a>
+          </div>
         </div>
       </div>
 
@@ -174,19 +232,48 @@ export function RoomsExplorer({ rooms }: RoomsExplorerProps) {
           })}
         </div>
 
-        {/* Rooms Stack */}
-        <div className="space-y-6 sm:space-y-10 mt-8 sm:mt-12">
-          {filteredRooms.map((room, idx) => (
-            <motion.div
-              key={room.id}
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.32, delay: idx * 0.05 }}
-            >
-              <RoomDetailCard room={room} index={idx} />
-            </motion.div>
-          ))}
-        </div>
+        {/* Rooms 2-Column Mobile Grid / Desktop Showcase with Spring Layout Motion */}
+        <motion.div
+          layout={!reducedMotion}
+          className={
+            mobileView === "grid"
+              ? "grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-1 md:gap-8 lg:gap-10 mt-7 sm:mt-12"
+              : "grid grid-cols-1 gap-5 md:gap-8 lg:gap-10 mt-7 sm:mt-12"
+          }
+        >
+          <AnimatePresence mode="popLayout">
+            {filteredRooms.map((room, idx) => (
+              <motion.div
+                key={room.id}
+                layout={!reducedMotion}
+                initial={
+                  reducedMotion
+                    ? false
+                    : { opacity: 0, y: 24, scale: 0.94 }
+                }
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                exit={
+                  reducedMotion
+                    ? { opacity: 0 }
+                    : { opacity: 0, scale: 0.92 }
+                }
+                transition={{
+                  type: "spring",
+                  stiffness: 320,
+                  damping: 28,
+                  delay: reducedMotion ? 0 : Math.min(idx * 0.04, 0.24),
+                }}
+                className="h-full"
+              >
+                <RoomDetailCard
+                  room={room}
+                  index={idx}
+                  compactGrid={mobileView === "grid"}
+                />
+              </motion.div>
+            ))}
+          </AnimatePresence>
+        </motion.div>
       </div>
     </section>
   );
