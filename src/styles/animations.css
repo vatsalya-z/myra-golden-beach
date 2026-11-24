@@ -86,6 +86,11 @@
   50% { transform: translate3d(4px, -7px, 0) rotate(1.6deg); }
 }
 
+@keyframes coastalPalmFloatFast {
+  0%, 100% { transform: translate3d(0, 0, 0) rotate(0deg); }
+  50% { transform: translate3d(9px, -13px, 0) rotate(3.2deg); }
+}
+
 @keyframes coastalWaveFlow {
   0%, 100% { transform: translate3d(0, 0, 0) scaleY(1); }
   50% { transform: translate3d(-6px, 8px, 0) scaleY(1.035); }
@@ -93,6 +98,11 @@
 
 .animate-palm-float {
   animation: coastalPalmFloat 14s ease-in-out infinite;
+  will-change: transform;
+}
+
+.animate-palm-float-fast {
+  animation: coastalPalmFloatFast 4.2s ease-in-out infinite;
   will-change: transform;
 }
 

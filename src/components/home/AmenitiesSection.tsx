@@ -19,6 +19,7 @@ export function AmenitiesSection() {
         waveSide="right"
         palmCorner="top"
         tone="light"
+        palmSpeed="fast"
       />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
         <SectionHeading

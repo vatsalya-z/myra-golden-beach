@@ -8,6 +8,7 @@ interface CoastalDecorationsProps {
   tone?: "light" | "dark";
   showPalm?: boolean;
   showWave?: boolean;
+  palmSpeed?: "normal" | "fast";
 }
 
 function TropicalPalmSvg({
@@ -17,8 +18,8 @@ function TropicalPalmSvg({
   tone: "light" | "dark";
   className?: string;
 }) {
-  const primaryFill = tone === "dark" ? "#D9EEF2" : "#063B49";
-  const secondaryFill = "#5B8990";
+  const primaryFill = tone === "dark" ? "#E8F6F7" : "#063B49";
+  const secondaryFill = tone === "dark" ? "#8EC5CC" : "#2D6A73";
 
   return (
     <svg
@@ -163,18 +164,23 @@ export function CoastalDecorations({
   tone = "light",
   showPalm = true,
   showWave = true,
+  palmSpeed = "normal",
 }: CoastalDecorationsProps) {
+  const topPalmAnim =
+    palmSpeed === "fast" ? "animate-palm-float-fast" : "animate-palm-float";
+  const bottomPalmAnim =
+    palmSpeed === "fast" ? "animate-palm-float-fast" : "animate-palm-float-slow";
   const palmMirror = palmSide === "right" ? "-scale-x-100" : "";
   const palmHorizontalPos =
     palmSide === "left"
-      ? "-left-12 sm:-left-10"
-      : "-right-12 sm:-right-10";
+      ? "-left-3 sm:-left-6 lg:-left-8"
+      : "-right-3 sm:-right-6 lg:-right-8";
 
   const waveMirror = waveSide === "left" ? "-scale-x-100" : "";
   const waveHorizontalPos =
     waveSide === "right"
-      ? "-right-16 sm:-right-10"
-      : "-left-16 sm:-left-10";
+      ? "-right-10 sm:-right-10"
+      : "-left-10 sm:-left-10";
 
   const showTopPalm = showPalm && (palmCorner === "top" || palmCorner === "both");
   const showBottomPalm = showPalm && (palmCorner === "bottom" || palmCorner === "both");
@@ -188,12 +194,14 @@ export function CoastalDecorations({
       {showTopPalm && (
         <div
           className={cn(
-            "absolute -top-8 sm:-top-6 w-44 sm:w-64 lg:w-88 opacity-[0.08] sm:opacity-[0.12] lg:opacity-[0.16]",
+            "absolute -top-2 sm:-top-3 lg:-top-4 w-44 sm:w-64 lg:w-88 opacity-[0.16] sm:opacity-[0.18] lg:opacity-[0.20]",
             palmHorizontalPos
           )}
         >
-          <div className={cn("animate-palm-float", palmMirror)}>
-            <TropicalPalmSvg tone={tone} className="w-full h-auto" />
+          <div className={cn("-scale-y-100", palmMirror)}>
+            <div className={topPalmAnim}>
+              <TropicalPalmSvg tone={tone} className="w-full h-auto" />
+            </div>
           </div>
         </div>
       )}
@@ -201,12 +209,14 @@ export function CoastalDecorations({
       {showBottomPalm && (
         <div
           className={cn(
-            "absolute -bottom-10 sm:-bottom-8 w-44 sm:w-64 lg:w-88 opacity-[0.08] sm:opacity-[0.12] lg:opacity-[0.16]",
+            "absolute -bottom-2 sm:-bottom-3 lg:-bottom-4 w-44 sm:w-64 lg:w-88 opacity-[0.16] sm:opacity-[0.18] lg:opacity-[0.20]",
             palmHorizontalPos
           )}
         >
-          <div className={cn("animate-palm-float-slow -scale-y-100", palmMirror)}>
-            <TropicalPalmSvg tone={tone} className="w-full h-auto" />
+          <div className={palmMirror}>
+            <div className={bottomPalmAnim}>
+              <TropicalPalmSvg tone={tone} className="w-full h-auto" />
+            </div>
           </div>
         </div>
       )}
@@ -215,12 +225,14 @@ export function CoastalDecorations({
       {showWave && (
         <div
           className={cn(
-            "absolute top-1/2 -translate-y-1/2 w-48 sm:w-72 lg:w-[420px] opacity-[0.10] sm:opacity-[0.15] lg:opacity-[0.20]",
+            "absolute top-1/2 -translate-y-1/2 w-48 sm:w-72 lg:w-[420px] opacity-[0.14] sm:opacity-[0.16] lg:opacity-[0.20]",
             waveHorizontalPos
           )}
         >
-          <div className={cn("animate-wave-flow", waveMirror)}>
-            <OceanWavesSvg tone={tone} className="w-full h-auto" />
+          <div className={waveMirror}>
+            <div className="animate-wave-flow">
+              <OceanWavesSvg tone={tone} className="w-full h-auto" />
+            </div>
           </div>
         </div>
       )}

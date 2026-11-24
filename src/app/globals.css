@@ -121,6 +121,19 @@ textarea {
   -webkit-touch-callout: none;
 }
 
+.coastal-pool-texture {
+  background-image:
+    radial-gradient(circle at 22% 28%, rgba(232, 246, 247, 0.24) 0%, transparent 45%),
+    radial-gradient(circle at 80% 72%, rgba(11, 114, 133, 0.28) 0%, transparent 48%),
+    repeating-linear-gradient(
+      135deg,
+      rgba(217, 238, 242, 0.14) 0px,
+      rgba(217, 238, 242, 0.14) 1px,
+      transparent 1px,
+      transparent 14px
+    );
+}
+
 .font-playfair {
   font-family: var(--font-playfair, Georgia, serif);
 }

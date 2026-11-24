@@ -19,7 +19,7 @@ export function LocationSection() {
       <CoastalDecorations
         palmSide="right"
         waveSide="left"
-        palmCorner="bottom"
+        palmCorner="both"
         tone="light"
       />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">

@@ -14,7 +14,7 @@ export function DiningSection() {
       <CoastalDecorations
         palmSide="right"
         waveSide="left"
-        palmCorner="bottom"
+        palmCorner="both"
         tone="dark"
       />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
