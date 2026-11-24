@@ -63,13 +63,13 @@ export function GalleryHero() {
   return (
     <section
       ref={sectionRef}
-      className="relative w-full h-[380px] sm:h-[440px] md:h-[500px] lg:h-[540px] overflow-hidden flex items-center justify-center bg-[#082B38]"
+      className="relative w-full h-[270px] sm:h-[320px] md:h-[500px] lg:h-[540px] overflow-hidden flex items-center justify-center bg-[#082B38]"
       aria-label="Gallery page hero"
     >
       {/* Responsive HD Parallax Backdrop */}
       <div ref={bgRef} className="absolute inset-0 will-change-transform">
         <Image
-          src="/images/hero/myra-hero-1-desktop.jpg"
+          src="/images/hero/myra-hero-1-desktop-v2.jpg"
           alt="MYRA Golden Beach Resort beachfront cottages at twilight"
           fill
           priority
@@ -78,7 +78,7 @@ export function GalleryHero() {
           sizes="100vw"
         />
         <Image
-          src="/images/hero/hero-1-mobile.jpg"
+          src="/images/hero/myra-hero-1-mobile-v2.jpg"
           alt="MYRA Golden Beach Resort beachfront cottages at twilight"
           fill
           priority
@@ -135,7 +135,7 @@ export function GalleryHero() {
           initial={reducedMotion ? false : { opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-          className="inline-flex items-center gap-3 mb-4"
+          className="inline-flex items-center gap-3 mb-2.5 sm:mb-4"
         >
           <span className="h-px w-6 sm:w-10 bg-gradient-to-r from-transparent to-[#F6C46A]" />
           <span className="text-[#F6C46A] text-[10px] sm:text-xs font-semibold uppercase tracking-[0.32em]">
@@ -145,7 +145,7 @@ export function GalleryHero() {
         </motion.div>
 
         {/* Word-by-word Editorial Serif Title */}
-        <h1 className="font-playfair text-4xl sm:text-5xl md:text-6xl lg:text-[4.25rem] font-bold text-white leading-[1.08] tracking-tight drop-shadow-[0_6px_24px_rgba(8,43,56,0.65)]">
+        <h1 className="font-playfair text-3xl sm:text-5xl md:text-6xl lg:text-[4.25rem] font-bold text-white leading-[1.08] tracking-tight drop-shadow-[0_6px_24px_rgba(8,43,56,0.65)]">
           <span className="inline-block overflow-hidden align-bottom pb-1">
             <span data-hero-word className="inline-block">
               Photo
@@ -166,7 +166,7 @@ export function GalleryHero() {
           initial={reducedMotion ? false : { opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.75, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-          className="text-white/85 text-sm sm:text-base md:text-lg mt-4 max-w-xl leading-relaxed"
+          className="text-white/85 text-xs sm:text-base md:text-lg mt-2.5 sm:mt-4 max-w-xl leading-relaxed"
         >
           A curated visual journey through our beachfront cottages, illuminated
           poolside, coastal dining and serene Bay of Bengal shoreline.
@@ -177,7 +177,7 @@ export function GalleryHero() {
           initial={reducedMotion ? false : { opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.75, delay: 0.45, ease: [0.22, 1, 0.36, 1] }}
-          className="mt-6 inline-flex items-center gap-3 px-4 py-1.5 rounded-full bg-white/[0.07] backdrop-blur-md border border-[#F6C46A]/30 text-[11px] sm:text-xs text-white/85 tracking-wider"
+          className="mt-3.5 sm:mt-6 inline-flex items-center gap-3 px-4 py-1.5 rounded-full bg-white/[0.07] backdrop-blur-md border border-[#F6C46A]/30 text-[11px] sm:text-xs text-white/85 tracking-wider"
         >
           <span className="text-[#F6C46A] font-mono font-semibold">
             {galleryImages.length}

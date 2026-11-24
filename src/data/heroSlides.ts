@@ -18,8 +18,8 @@ export const heroSlides: HeroSlide[] = [
     subtitle: "Beachfront bamboo cottages, pristine sands and warm Andhra hospitality near Chirala.",
     ctaLabel: "Explore Our Resort",
     ctaHref: "/about",
-    image: "/images/hero/myra-hero-1-desktop.jpg",
-    mobileImage: "/images/hero/hero-1-mobile.jpg",
+    image: "/images/hero/myra-hero-1-desktop-v2.jpg",
+    mobileImage: "/images/hero/myra-hero-1-mobile-v2.jpg",
     imageAlt:
       "Illuminated beachfront bamboo cottages on golden sands at MYRA Golden Beach Resort in Chirala, Andhra Pradesh",
   },

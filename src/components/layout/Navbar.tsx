@@ -4,10 +4,8 @@ import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { HiBars3, HiXMark, HiArrowLeft } from "react-icons/hi2";
-import { FaPhoneAlt } from "react-icons/fa";
 import Image from "next/image";
 import { navLinks } from "@/data/navigation";
-import { siteConfig } from "@/data/site";
 import { useScrollPosition } from "@/hooks/useScrollPosition";
 import { triggerHaptic } from "@/lib/haptics";
 import { MobileMenu } from "./MobileMenu";
@@ -121,15 +119,6 @@ export function Navbar() {
             )}
 
             <div className="flex items-center gap-1 shrink-0">
-              <a
-                href={`tel:${siteConfig.phone}`}
-                onClick={() => triggerHaptic(8)}
-                aria-label={`Call ${siteConfig.phoneDisplay}`}
-                className="flex items-center justify-center w-9 h-9 rounded-full bg-white/[0.06] border border-[#F6C46A]/25 text-[#F6C46A] active:scale-90 transition-transform"
-              >
-                <FaPhoneAlt size={13} />
-              </a>
-
               <button
                 ref={menuBtnRef}
                 onClick={() => {

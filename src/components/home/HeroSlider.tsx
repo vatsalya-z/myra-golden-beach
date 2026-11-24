@@ -68,7 +68,7 @@ export function HeroSlider() {
   return (
     <section
       aria-label="Resort highlights slider"
-      className="relative w-full overflow-hidden h-[calc(100svh-7.25rem)] min-h-[520px] max-h-[780px] md:h-[clamp(560px,90vh,100vh)] md:max-h-none"
+      className="relative w-full overflow-hidden h-[430px] sm:h-[480px] md:h-[clamp(560px,90vh,100vh)]"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
       onTouchStart={handleTouchStart}
@@ -81,7 +81,7 @@ export function HeroSlider() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 1, ease: "easeInOut" }}
+          transition={{ duration: 0.55, ease: "easeInOut" }}
           className="absolute inset-0"
         >
           {/* Desktop / Laptop HD Image (16:9) */}
@@ -120,7 +120,7 @@ export function HeroSlider() {
                       initial="hidden"
                       animate="visible"
                       exit="exit"
-                      className="text-[#E0B45C] text-xs sm:text-sm font-semibold tracking-[0.3em] uppercase mb-4 text-center"
+                      className="text-[#E0B45C] text-[11px] sm:text-sm font-semibold tracking-[0.26em] sm:tracking-[0.3em] uppercase mb-2.5 sm:mb-4 text-center"
                     >
                       {slide.eyebrow}
                     </motion.p>
@@ -132,7 +132,7 @@ export function HeroSlider() {
                       initial="hidden"
                       animate="visible"
                       exit="exit"
-                      className="font-playfair text-[clamp(1.95rem,5.5vw,4rem)] font-bold text-white leading-tight mb-5 text-center drop-shadow-[0_4px_18px_rgba(8,43,56,0.55)]"
+                      className="font-playfair text-[clamp(1.65rem,5.2vw,4rem)] font-bold text-white leading-tight mb-3 sm:mb-5 text-center drop-shadow-[0_4px_18px_rgba(8,43,56,0.55)]"
                     >
                       {slide.heading}
                     </motion.h1>
@@ -144,7 +144,7 @@ export function HeroSlider() {
                       initial="hidden"
                       animate="visible"
                       exit="exit"
-                      className="text-white/90 text-sm sm:text-base md:text-lg leading-relaxed mb-8 max-w-2xl mx-auto text-center"
+                      className="text-white/90 text-xs sm:text-base md:text-lg leading-relaxed mb-5 sm:mb-8 max-w-2xl mx-auto text-center"
                     >
                       {slide.subtitle}
                     </motion.p>
@@ -160,7 +160,7 @@ export function HeroSlider() {
                     >
                       <Link
                         href={slide.ctaHref}
-                        className="luxury-btn-sheen inline-flex items-center justify-center px-8 py-3.5 bg-[#F6C46A] hover:bg-[#DCA94F] text-[#082B38] font-bold rounded-md transition-all duration-300 hover:-translate-y-0.5 shadow-lg hover:shadow-xl tracking-wide text-sm min-w-[210px]"
+                        className="luxury-btn-sheen inline-flex items-center justify-center px-6 py-2.5 sm:px-8 sm:py-3.5 bg-[#F6C46A] hover:bg-[#DCA94F] text-[#082B38] font-bold rounded-md transition-all duration-300 hover:-translate-y-0.5 shadow-lg hover:shadow-xl tracking-wide text-xs sm:text-sm min-w-[180px] sm:min-w-[210px]"
                       >
                         {slide.ctaLabel}
                       </Link>
@@ -192,7 +192,7 @@ export function HeroSlider() {
       </button>
 
       {/* Dots */}
-      <div className="absolute bottom-6 left-6 z-10 flex items-center gap-2.5">
+      <div className="absolute bottom-3.5 left-4 sm:bottom-6 sm:left-6 z-10 flex items-center gap-2.5">
         {heroSlides.map((_, idx) => (
           <button
             key={idx}
@@ -208,7 +208,7 @@ export function HeroSlider() {
       </div>
 
       {/* Slide counter */}
-      <div className="absolute bottom-6 right-6 z-10 text-white/50 text-xs font-mono tracking-widest">
+      <div className="absolute bottom-3.5 right-4 sm:bottom-6 sm:right-6 z-10 text-white/50 text-xs font-mono tracking-widest">
         {String(current + 1).padStart(2, "0")} / {String(total).padStart(2, "0")}
       </div>
     </section>

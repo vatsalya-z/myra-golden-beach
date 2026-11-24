@@ -52,7 +52,7 @@ export default function ContactPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
       />
       {/* Full-width Hero Section */}
-      <section className="relative w-full h-80 sm:h-96 md:h-[440px] lg:h-[480px] overflow-hidden flex items-center justify-center" aria-label="Contact page hero">
+      <section className="relative w-full h-[220px] sm:h-[270px] md:h-[440px] lg:h-[480px] overflow-hidden flex items-center justify-center" aria-label="Contact page hero">
         <Image
           src="/images/hero/contact-reception-desktop.jpg"
           alt="Open-air coastal resort reception pavilion overlooking the golden beach at MYRA Golden Beach Resort, Chirala"
@@ -73,10 +73,10 @@ export default function ContactPage() {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-[#082B38]/65 via-[#063B49]/35 to-[#082B38]/75" />
         <div className="relative z-10 w-full max-w-4xl mx-auto px-4 sm:px-6 text-center flex flex-col items-center justify-center">
-          <h1 className="font-playfair text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white text-center leading-tight">
+          <h1 className="font-playfair text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white text-center leading-tight">
             Contact Us
           </h1>
-          <p className="text-white/90 text-base sm:text-lg md:text-xl mt-3.5 max-w-2xl text-center leading-relaxed">
+          <p className="text-white/90 text-sm sm:text-lg md:text-xl mt-2 sm:mt-3.5 max-w-2xl text-center leading-relaxed">
             We&apos;d love to hear from you and help plan your stay
           </p>
         </div>

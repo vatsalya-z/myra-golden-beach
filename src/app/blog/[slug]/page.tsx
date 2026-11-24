@@ -71,7 +71,7 @@ export default async function BlogPostPage({ params }: PageProps) {
       />
 
       {/* Full-width Hero Section */}
-      <section className="relative w-full h-80 sm:h-96 md:h-[440px] lg:h-[480px] overflow-hidden flex items-center justify-center" aria-label={post.title}>
+      <section className="relative w-full h-[250px] sm:h-[300px] md:h-[440px] lg:h-[480px] overflow-hidden flex items-center justify-center" aria-label={post.title}>
         <Image
           src={post.coverImage}
           alt={post.title}
@@ -90,10 +90,10 @@ export default async function BlogPostPage({ params }: PageProps) {
             ]}
             light
           />
-          <h1 className="font-playfair text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold text-white mt-4 leading-tight max-w-3xl text-center">
+          <h1 className="font-playfair text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold text-white mt-2.5 sm:mt-4 leading-tight max-w-3xl text-center">
             {post.title}
           </h1>
-          <div className="flex flex-wrap items-center justify-center gap-3 mt-4 text-white/80 text-xs sm:text-sm">
+          <div className="flex flex-wrap items-center justify-center gap-3 mt-2.5 sm:mt-4 text-white/80 text-xs sm:text-sm">
             <span className="text-[#F6C46A] font-semibold">{post.category}</span>
             <span>·</span>
             <span>{post.readingTime} min read</span>
