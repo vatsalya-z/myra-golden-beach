@@ -28,14 +28,22 @@ export function RoomsPreview() {
           />
         </FadeIn>
 
-        {/* Responsive Grid: 1 col on mobile, 2 cols on md, 3 cols on lg */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7 mt-10 md:mt-14">
+        {/* Mobile horizontal snap-scroll carousel (< md) + Responsive Grid (md+) */}
+        <div className="flex overflow-x-auto snap-x snap-mandatory gap-4 -mx-4 px-4 pb-3 scrollbar-none md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-7 md:overflow-visible md:mx-0 md:px-0 md:pb-0 mt-10 md:mt-14">
           {featured.map((room, idx) => (
-            <FadeIn key={room.id} delay={idx * 0.1} className="h-full">
+            <FadeIn
+              key={room.id}
+              delay={idx * 0.1}
+              className="w-[84vw] max-w-[340px] shrink-0 snap-center md:w-auto md:max-w-none h-full"
+            >
               <RoomCard room={room} />
             </FadeIn>
           ))}
         </div>
+
+        <p className="md:hidden text-center text-[11px] font-medium tracking-wider uppercase text-[#F6C46A]/85 mt-2">
+          Swipe to explore rooms &rarr;
+        </p>
 
         <div className="flex justify-center items-center mt-10 sm:mt-12 w-full">
           <Button href="/rooms" variant="accent" size="lg" className="min-w-[200px]">

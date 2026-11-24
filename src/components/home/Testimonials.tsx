@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { FaStar } from "react-icons/fa";
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi2";
 import { motion, AnimatePresence } from "framer-motion";
@@ -9,13 +9,31 @@ import { siteConfig } from "@/data/site";
 import { SectionHeading } from "@/components/common/SectionHeading";
 import { FadeIn } from "@/components/animations/FadeIn";
 import { CoastalDecorations } from "@/components/common/CoastalDecorations";
+import { triggerHaptic } from "@/lib/haptics";
 
 export function Testimonials() {
   const [current, setCurrent] = useState(0);
+  const touchStartX = useRef<number | null>(null);
   const total = testimonials.length;
 
   const next = () => setCurrent((prev) => (prev + 1) % total);
   const prev = () => setCurrent((prev) => (prev - 1 + total) % total);
+
+  const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
+    touchStartX.current = e.touches[0]?.clientX ?? null;
+  };
+
+  const handleTouchEnd = (e: React.TouchEvent<HTMLDivElement>) => {
+    if (touchStartX.current === null) return;
+    const endX = e.changedTouches[0]?.clientX ?? touchStartX.current;
+    const deltaX = endX - touchStartX.current;
+    touchStartX.current = null;
+    if (Math.abs(deltaX) > 45) {
+      triggerHaptic(8);
+      if (deltaX < 0) next();
+      else prev();
+    }
+  };
 
   const t = testimonials[current];
 
@@ -37,7 +55,11 @@ export function Testimonials() {
         </FadeIn>
 
         <div className="mt-12 relative">
-          <div className="bg-white rounded-2xl shadow-md border border-[#D9EEF2] p-8 md:p-12 text-center relative overflow-hidden">
+          <div
+            onTouchStart={handleTouchStart}
+            onTouchEnd={handleTouchEnd}
+            className="bg-white rounded-2xl shadow-md border border-[#D9EEF2] p-8 md:p-12 text-center relative overflow-hidden"
+          >
             {/* Elegant typographic quote watermark */}
             <span
               className="text-[#F6C46A]/15 font-playfair text-8xl absolute top-0 left-6 select-none pointer-events-none"

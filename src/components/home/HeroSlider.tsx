@@ -7,6 +7,7 @@ import { motion, AnimatePresence, type Variants } from "framer-motion";
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi2";
 import { heroSlides } from "@/data/heroSlides";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
+import { triggerHaptic } from "@/lib/haptics";
 
 const AUTOPLAY_DELAY = 5500;
 
@@ -15,6 +16,7 @@ export function HeroSlider() {
   const [paused, setPaused] = useState(false);
   const reducedMotion = useReducedMotion();
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const touchStartX = useRef<number | null>(null);
   const total = heroSlides.length;
 
   const next = useCallback(() => {
@@ -26,6 +28,22 @@ export function HeroSlider() {
   }, [total]);
 
   const goTo = (idx: number) => setCurrent(idx);
+
+  const handleTouchStart = (e: React.TouchEvent<HTMLElement>) => {
+    touchStartX.current = e.touches[0]?.clientX ?? null;
+  };
+
+  const handleTouchEnd = (e: React.TouchEvent<HTMLElement>) => {
+    if (touchStartX.current === null) return;
+    const endX = e.changedTouches[0]?.clientX ?? touchStartX.current;
+    const deltaX = endX - touchStartX.current;
+    touchStartX.current = null;
+    if (Math.abs(deltaX) > 45) {
+      triggerHaptic(8);
+      if (deltaX < 0) next();
+      else prev();
+    }
+  };
 
   useEffect(() => {
     if (paused || reducedMotion) return;
@@ -50,10 +68,11 @@ export function HeroSlider() {
   return (
     <section
       aria-label="Resort highlights slider"
-      className="relative w-full overflow-hidden"
-      style={{ height: "clamp(560px, 90vh, 100vh)" }}
+      className="relative w-full overflow-hidden h-[calc(100svh-7.25rem)] min-h-[520px] max-h-[780px] md:h-[clamp(560px,90vh,100vh)] md:max-h-none"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
+      onTouchStart={handleTouchStart}
+      onTouchEnd={handleTouchEnd}
     >
       {/* Slides */}
       <AnimatePresence initial={false}>

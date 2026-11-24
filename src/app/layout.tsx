@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { SITE_NAME, SITE_URL, THEME_COLOR } from "@/lib/constants";
 import {
@@ -13,9 +13,41 @@ import { ScrollToTop } from "@/components/common/ScrollToTop";
 import { ScrollProgress } from "@/components/common/ScrollProgress";
 import { MobileBottomBar } from "@/components/layout/MobileBottomBar";
 import { PageTransition } from "@/components/animations/PageTransition";
+import { MobileAppProvider } from "@/components/mobile/MobileAppProvider";
+
+export const viewport: Viewport = {
+  themeColor: THEME_COLOR,
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  viewportFit: "cover",
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
+  applicationName: SITE_NAME,
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "black-translucent",
+    title: "MYRA Resort",
+  },
+  formatDetection: {
+    telephone: false,
+  },
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icons/icon-192.png", sizes: "192x192", type: "image/png" },
+      { url: "/icons/icon-512.png", sizes: "512x512", type: "image/png" },
+    ],
+    apple: [
+      {
+        url: "/icons/apple-touch-icon.png",
+        sizes: "180x180",
+        type: "image/png",
+      },
+    ],
+  },
   title: {
     default: `${SITE_NAME} | Beach Resort in Chirala, Andhra Pradesh`,
     template: `%s | ${SITE_NAME}`,
@@ -72,7 +104,6 @@ export const metadata: Metadata = {
     },
   },
   other: {
-    "theme-color": THEME_COLOR,
     "geo.region": "IN-AP",
     "geo.placename": "Chirala, Andhra Pradesh",
     "geo.position": "15.804438;80.424813",
@@ -94,8 +125,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <meta name="theme-color" content={THEME_COLOR} />
         {/* Preconnect to Google Fonts */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
@@ -116,17 +145,19 @@ export default function RootLayout({
         ))}
       </head>
       <body className="font-inter bg-[#F9FBFC] text-[#17313B] antialiased">
-        <ScrollProgress />
-        <div className="flex flex-col min-h-screen">
-          <Header />
-          <main id="main-content" className="flex-1 pb-16 lg:pb-0">
-            <PageTransition>{children}</PageTransition>
-          </main>
-          <Footer />
-          <MobileBottomBar />
-          <FloatingContact />
-          <ScrollToTop />
-        </div>
+        <MobileAppProvider>
+          <ScrollProgress />
+          <div className="flex flex-col min-h-screen">
+            <Header />
+            <main id="main-content" className="flex-1 pb-[calc(4.75rem+env(safe-area-inset-bottom))] lg:pb-0">
+              <PageTransition>{children}</PageTransition>
+            </main>
+            <Footer />
+            <MobileBottomBar />
+            <FloatingContact />
+            <ScrollToTop />
+          </div>
+        </MobileAppProvider>
       </body>
     </html>
   );
