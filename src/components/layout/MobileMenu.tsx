@@ -4,13 +4,12 @@ import Link from "next/link";
 import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 import { FaWhatsapp, FaPhoneAlt } from "react-icons/fa";
-import { HiXMark, HiArrowUpRight, HiMapPin, HiDevicePhoneMobile } from "react-icons/hi2";
+import { HiXMark, HiArrowUpRight, HiMapPin } from "react-icons/hi2";
 import { navLinks } from "@/data/navigation";
 import { siteConfig } from "@/data/site";
 import { buildWhatsAppUrl, buildGeneralWhatsAppMessage } from "@/lib/whatsapp";
 import { cn } from "@/lib/utils";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
-import { useMobileApp } from "@/components/mobile/MobileAppProvider";
 
 interface MobileMenuProps {
   isOpen: boolean;
@@ -21,7 +20,6 @@ interface MobileMenuProps {
 export function MobileMenu({ isOpen, onClose, currentPath }: MobileMenuProps) {
   const whatsappUrl = buildWhatsAppUrl(buildGeneralWhatsAppMessage());
   const reducedMotion = useReducedMotion();
-  const { canInstall, isIos, isStandalone, promptInstall } = useMobileApp();
 
   return (
     <AnimatePresence>
@@ -189,34 +187,6 @@ export function MobileMenu({ isOpen, onClose, currentPath }: MobileMenuProps) {
                   })}
                 </ul>
               </div>
-
-              {/* Install MYRA App shortcut (shown on mobile when installable) */}
-              {!isStandalone && (canInstall || isIos) && (
-                <button
-                  type="button"
-                  onClick={async () => {
-                    onClose();
-                    await promptInstall();
-                  }}
-                  className="mt-5 w-full flex items-center justify-between gap-3 px-4 py-3 rounded-xl bg-[#F6C46A]/15 hover:bg-[#F6C46A]/25 border border-[#F6C46A]/45 text-left active:scale-[0.98] transition-all"
-                >
-                  <div className="flex items-center gap-2.5 min-w-0">
-                    <HiDevicePhoneMobile
-                      size={18}
-                      className="text-[#F6C46A] shrink-0"
-                    />
-                    <div className="min-w-0">
-                      <p className="text-xs font-bold text-[#F6C46A] tracking-wide">
-                        Install MYRA App
-                      </p>
-                      <p className="text-[10px] text-white/65 truncate">
-                        Add to Home Screen for instant access
-                      </p>
-                    </div>
-                  </div>
-                  <HiArrowUpRight size={15} className="text-[#F6C46A] shrink-0" />
-                </button>
-              )}
 
               {/* Concierge Hospitality Card (eliminates dead empty space with real guest utility) */}
               <motion.div
